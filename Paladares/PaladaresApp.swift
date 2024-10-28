@@ -12,6 +12,7 @@ struct PaladaresApp: App {
     var body: some Scene {
         WindowGroup {
             HomeView()
+            Divider()
             FormsView()
         }
     }

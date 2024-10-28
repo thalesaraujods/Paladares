@@ -10,23 +10,27 @@ import SwiftUI
 
 class PreferencesViewModel: ObservableObject {
     
-    @Published var chefs: Int = 1
-    @Published var consumers: Int = 1
+    @Published var quantitychefs: Int = 2
+    @Published var quantityconsumers: Int = 1
     @Published var recipeLevel: RecipeLevel = .beginner
     
+    // Singleton
+    static var shared: PreferencesViewModel = PreferencesViewModel()
+    
     func incrementChefs() {
-        if chefs < 10 { chefs += 1 }
+        if quantitychefs < 4 { quantitychefs += 1 }
     }
     
     func decrementChefs() {
-        if chefs > 1 { chefs -= 1 }
+        if quantitychefs > 2 { quantitychefs -= 1 }
     }
     
     func incrementConsumers() {
-        if consumers < 10 { consumers += 1 }
+        if quantityconsumers < 10 { quantityconsumers += 1 }
     }
     
     func decrementConsumers() {
-        if consumers > 1 { consumers -= 1 }
+        if quantityconsumers > 1 { quantityconsumers -= 1 }
     }
 }
+

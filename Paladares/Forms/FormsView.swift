@@ -9,85 +9,135 @@ import SwiftUI
 
 struct FormsView: View {
     
-    @State private var quantityChefs: Int = 2
-    @State private var quantityConsumers: Int = 1
-    @State private var selectedChefs: [Int] = []
-    @State private var navigateToNextView = false
+    //    @State private var selectedChefs: [Int] = []
+    //    @State private var navigateToNextView = false
+    @StateObject private var preferencesViewModel: PreferencesViewModel = PreferencesViewModel.shared
     
     var body: some View {
         NavigationStack {
-            VStack {
+            ZStack{
+                
+                Rectangle()
+                    .frame(width: 650, height: 300)
+                    .foregroundStyle(.white)
+                    .shadow(color: .gray, radius: 20)
+                    
+                
                 VStack {
-                    //quantidade de chefs
-                  Text("Chefs:")
-                        .position(x: -10, y: 5)
-                    
-                    HStack {
+                    VStack {
+                        //quantidade de chefs
+                        Text("Chefs de cozinha")
+                            .padding(.bottom, -20)
+                            .padding(.horizontal, -270)
+                            .font(.title3)
                         
-                        Button(action: {
-                            quantityChefs -= 1
+                        HStack {
                             
-                        }, label: {
-                            Text("Retirar")
-                        })
-                        
-                        Text("\(quantityChefs)")
-                            .font(.largeTitle)
-                       
-                            .foregroundStyle(.black)
-                            .padding(20)
-                        
-                        Button(action: {
-                            quantityChefs += 1
+                            Button(action: {
+                                preferencesViewModel.decrementChefs()
+                                
+                            }, label: {
+                                Text("-")
+                                    .font(.largeTitle)
+                            })
                             
-                        }, label: {
-                            Text("Adicionar")
-                        })
-
-                    }.position(x: 400)
+                            Text("\(preferencesViewModel.quantitychefs)")
+                                .font(.largeTitle)
+                            
+                                .foregroundStyle(.black)
+                                .padding(20)
+                            
+                            Button(action: {
+                                preferencesViewModel.incrementChefs()
+                                print()
+                                
+                            }, label: {
+                                Text("+")
+                                    .font(.largeTitle)
+                            })
+                            
+                        }.position(x: 400)
                         //fim da quantidade de chefs
-                    
-                //quantidade de consumidores
-                  Text("Consumers:")
-                        .position(x: 10, y: 50)
-                    
-                    
-                    
-                }.padding(400)
-                
-                VStack{
-                    Button(action: {
-                        selectedChefs.removeAll()
-                        selectedChefs = (1...quantityChefs).shuffled()
-                        navigateToNextView = true
                         
-                    }, label: {
-                        Text("Iniciar")
-                    })
-                    .position(x: 590, y: -200)
+                        //quantidade de consumidores
+                        Text("Consumidores")
+                            .position(x: -20, y: 50)
+                            .font(.title3)
+                        
+                        HStack {
+                            
+                            Button(action: {
+                                preferencesViewModel.decrementConsumers()
+                                
+                            }, label: {
+                                Text("-")
+                                    .font(.largeTitle)
+                            })
+                            
+                            Text("\(preferencesViewModel.quantityconsumers)")
+                                .font(.largeTitle)
+                            
+                                .foregroundStyle(.black)
+                                .padding(20)
+                            
+                            Button(action: {
+                                preferencesViewModel.incrementConsumers()
+                                print()
+                                
+                            }, label: {
+                                Text("+")
+                                    .font(.largeTitle)
+                            })
+                            
+                        }.position(x: 400, y: 40)
+                        //fim da quantidade de consumers
+                        
+                        //início do nível de receitas
+                        Text("Nível das Receitas")
+                            .position(x: -3, y: 95)
+                            .font(.title3)
+                        
+                        HStack {
+                            
+                            //ver na view model sobre os tipos de níveis
+                        }
+                        
+                    }.padding(400)
+                        .padding(.bottom, 100)
                     
-//                    NavigationLink(destination: CountryView(), isActive: $navigateToNextView){
-//                        EmptyView()
-//                    }.position(x: 590, y: -300)
-                }
-                HStack {
-                    ForEach(selectedChefs, id: \.self) { chef in
-                        Text("\(chef)")
-                            .font(.headline)
-                            .padding()
+                    VStack{
+                        //                    Button(action: {
+                        //                        selectedChefs.removeAll()
+                        //                        selectedChefs = (1...quantityChefs).shuffled()
+                        //                        navigateToNextView = true
+                        //
+                        //                    }, label: {
+                        //                        Text("Iniciar")
+                        //                    })
+                        //                    .position(x: 590, y: -200)
+                        
+                        //                    NavigationLink(destination: CountryView(), isActive: $navigateToNextView){
+                        //                        EmptyView()
+                        //                    }.position(x: 590, y: -300)
                     }
+                    //                HStack {
+                    //                    ForEach(selectedChefs, id: \.self) { chef in
+                    //                        Text("\(chef)")
+                    //                            .font(.headline)
+                    //                            .padding()
+                    //                    }
+                    //                }
+                    .position(x: 590, y: -100)
+                    
+                    //teste
                 }
-                .position(x: 590, y: -100)
                 
-                //teste
+                .padding()
             }
-            
-            .padding()
+            // .navigationViewStyle(StackNavigationViewStyle())
         }
-       // .navigationViewStyle(StackNavigationViewStyle())
     }
 }
-
 #Preview {
     FormsView()
 }
