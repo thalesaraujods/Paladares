@@ -66,9 +66,9 @@ struct FormsView: View {
                     })
                     .position(x: 590, y: -200)
                     
-                    NavigationLink(destination: CountryView(), isActive: $navigateToNextView){
-                        EmptyView()
-                    }.position(x: 590, y: -300)
+//                    NavigationLink(destination: CountryView(), isActive: $navigateToNextView){
+//                        EmptyView()
+//                    }.position(x: 590, y: -300)
                 }
                 HStack {
                     ForEach(selectedChefs, id: \.self) { chef in
