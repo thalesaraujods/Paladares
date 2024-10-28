@@ -13,6 +13,7 @@ struct FormsView: View {
     @State private var quantityConsumers: Int = 1
     @State private var selectedChefs: [Int] = []
     @State private var navigateToNextView = false
+    @State var count: Int = 0
     
     var body: some View {
         NavigationStack {
@@ -80,6 +81,29 @@ struct FormsView: View {
                 .position(x: 590, y: -100)
                 
                 //teste
+                HStack {
+                    
+                    Button(action: {
+                        count -= 1
+                        
+                    }, label: {
+                        Text("Retirar")
+                    })
+                    
+                    Text("\(count)")
+                        .font(.largeTitle)
+                   
+                        .foregroundStyle(.black)
+                        .padding(20)
+                    
+                    Button(action: {
+                        count += 1
+                        
+                    }, label: {
+                        Text("Adicionar")
+                    })
+
+                }.position(x: 590, y: -100)
             }
             
             .padding()
