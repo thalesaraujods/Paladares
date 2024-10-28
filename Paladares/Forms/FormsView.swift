@@ -1,4 +1,3 @@
-//
 //  FormsView.swift
 //  Paladares
 //
@@ -8,46 +7,87 @@
 import Foundation
 import SwiftUI
 
-struct FormsRecipe: View {
+struct FormsView: View {
     
-    @State private var quantityChefs = 2
-    @State private var quantityConsumers = 1
-    @State private var selectedChef: Int? = nil
+    @State private var quantityChefs: Int = 2
+    @State private var quantityConsumers: Int = 1
+    @State private var selectedChefs: [Int] = []
+    @State private var navigateToNextView = false
     
     var body: some View {
-        NavigationView{
+        NavigationStack {
             VStack {
-                VStack{
-                    Stepper("Chefs: \(quantityChefs)", value: $quantityChefs, in: 2...4)
-                        .position(x: 190, y: 0)
+                VStack {
+                    //quantidade de chefs
+                  Text("Chefs:")
+                        .position(x: -10, y: 5)
                     
-                    Stepper("Consumers: \(quantityConsumers)", value: $quantityConsumers, in: 1...100)
-                        .position(x: 190, y: 50)
+                    HStack {
+                        
+                        Button(action: {
+                            quantityChefs -= 1
+                            
+                        }, label: {
+                            Text("Retirar")
+                        })
+                        
+                        Text("\(quantityChefs)")
+                            .font(.largeTitle)
+                       
+                            .foregroundStyle(.black)
+                            .padding(20)
+                        
+                        Button(action: {
+                            quantityChefs += 1
+                            
+                        }, label: {
+                            Text("Adicionar")
+                        })
+
+                    }.position(x: 400)
+                        //fim da quantidade de chefs
+                    
+                //quantidade de consumidores
+                  Text("Consumers:")
+                        .position(x: 10, y: 50)
+                    
+                    
                     
                 }.padding(400)
-                //NavigationLink(destination: CountryView()){
+                
+                VStack{
                     Button(action: {
-                        selectedChef = Int.random(in: 1...quantityChefs)
+                        selectedChefs.removeAll()
+                        selectedChefs = (1...quantityChefs).shuffled()
+                        navigateToNextView = true
                         
                     }, label: {
                         Text("Iniciar")
-                        
-                    }).position(x: 590, y: -300)
+                    })
+                    .position(x: 590, y: -200)
                     
-               // }.position(x: 680, y: -300)
+                    NavigationLink(destination: CountryView(), isActive: $navigateToNextView){
+                        EmptyView()
+                    }.position(x: 590, y: -300)
+                }
+                HStack {
+                    ForEach(selectedChefs, id: \.self) { chef in
+                        Text("\(chef)")
+                            .font(.headline)
+                            .padding()
+                    }
+                }
+                .position(x: 590, y: -100)
                 
-                if let chef = selectedChef {
-                                Text("Chef sorteado: \(chef)")
-                                    .font(.headline)
-                                    .position(x: 590, y: -200)
-                            }
+                //teste
             }
+            
             .padding()
-        }.navigationViewStyle(StackNavigationViewStyle())
+        }
+        .navigationViewStyle(StackNavigationViewStyle())
     }
 }
 
 #Preview {
-    FormsRecipe()
+    FormsView()
 }
-
