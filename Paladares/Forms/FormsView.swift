@@ -1,4 +1,3 @@
-//
 //  FormsView.swift
 //  Paladares
 //
@@ -10,21 +9,49 @@ import SwiftUI
 
 struct FormsView: View {
     
-    @State private var quantityChefs = 2
-    @State private var quantityConsumers = 1
+    @State private var quantityChefs: Int = 2
+    @State private var quantityConsumers: Int = 1
     @State private var selectedChefs: [Int] = []
     @State private var navigateToNextView = false
-    @State var count: Int = 0
     
     var body: some View {
         NavigationStack {
             VStack {
                 VStack {
-                    Stepper("Chefs: \(quantityChefs)", value: $quantityChefs, in: 2...4)
-                        .position(x: 190, y: 0)
+                    //quantidade de chefs
+                  Text("Chefs:")
+                        .position(x: -10, y: 5)
                     
-                    Stepper("Consumers: \(quantityConsumers)", value: $quantityConsumers, in: 1...100)
-                        .position(x: 190, y: 50)
+                    HStack {
+                        
+                        Button(action: {
+                            quantityChefs -= 1
+                            
+                        }, label: {
+                            Text("Retirar")
+                        })
+                        
+                        Text("\(quantityChefs)")
+                            .font(.largeTitle)
+                       
+                            .foregroundStyle(.black)
+                            .padding(20)
+                        
+                        Button(action: {
+                            quantityChefs += 1
+                            
+                        }, label: {
+                            Text("Adicionar")
+                        })
+
+                    }.position(x: 400)
+                        //fim da quantidade de chefs
+                    
+                //quantidade de consumidores
+                  Text("Consumers:")
+                        .position(x: 10, y: 50)
+                    
+                    
                     
                 }.padding(400)
                 
@@ -39,9 +66,9 @@ struct FormsView: View {
                     })
                     .position(x: 590, y: -200)
                     
-                    NavigationLink(destination: CountryView(), isActive: $navigateToNextView){
-                        EmptyView()
-                    }.position(x: 590, y: -300)
+//                    NavigationLink(destination: CountryView(), isActive: $navigateToNextView){
+//                        EmptyView()
+//                    }.position(x: 590, y: -300)
                 }
                 HStack {
                     ForEach(selectedChefs, id: \.self) { chef in
@@ -53,34 +80,11 @@ struct FormsView: View {
                 .position(x: 590, y: -100)
                 
                 //teste
-                HStack {
-                    
-                    Button(action: {
-                        count -= 1
-                        
-                    }, label: {
-                        Text("Retirar")
-                    })
-                    
-                    Text("\(count)")
-                        .font(.largeTitle)
-                   
-                        .foregroundStyle(.black)
-                        .padding(20)
-                    
-                    Button(action: {
-                        count += 1
-                        
-                    }, label: {
-                        Text("Adicionar")
-                    })
-
-                }.position(x: 590, y: -100)
             }
             
             .padding()
         }
-        .navigationViewStyle(StackNavigationViewStyle())
+       // .navigationViewStyle(StackNavigationViewStyle())
     }
 }
 
