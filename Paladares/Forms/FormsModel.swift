@@ -7,9 +7,18 @@
 
 import Foundation
 
-enum RecipeLevel: String, CaseIterable, Identifiable {
-    case beginner = "Iniciante"
-    case advanced = "Avançado"
-    
-    var id: String { self.rawValue }
+enum Anchor {
+    case top
+    case bottom
 }
+
+struct RecipeLevel: Identifiable, Hashable{
+    let id = UUID()
+    let name: String
+}
+
+var levels: [RecipeLevel] = [
+    RecipeLevel(name: "Iniciante"),
+    RecipeLevel(name: "Avançado")
+]
+

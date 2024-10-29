@@ -1,41 +1,28 @@
-//  FormsView.swift
-//  Paladares
-//
-//  Created by Amanda Rabelo on 23/10/24.
-//
-
 import Foundation
 import SwiftUI
 
 struct FormsView: View {
-    
-    //    @State private var selectedChefs: [Int] = []
-    //    @State private var navigateToNextView = false
     @StateObject private var preferencesViewModel: PreferencesViewModel = PreferencesViewModel.shared
-    
+
     var body: some View {
         NavigationStack {
-            ZStack{
-                
+            ZStack {
                 Rectangle()
                     .frame(width: 650, height: 300)
                     .foregroundStyle(.white)
                     .shadow(color: .gray, radius: 20)
-                    
                 
                 VStack {
                     VStack {
-                        //quantidade de chefs
+                        // quantidade de chefs
                         Text("Chefs de cozinha")
                             .padding(.bottom, -20)
                             .padding(.horizontal, -270)
                             .font(.title3)
                         
                         HStack {
-                            
                             Button(action: {
                                 preferencesViewModel.decrementChefs()
-                                
                             }, label: {
                                 Text("-")
                                     .font(.largeTitle)
@@ -43,32 +30,26 @@ struct FormsView: View {
                             
                             Text("\(preferencesViewModel.quantitychefs)")
                                 .font(.largeTitle)
-                            
                                 .foregroundStyle(.black)
                                 .padding(20)
                             
                             Button(action: {
                                 preferencesViewModel.incrementChefs()
-                                print()
-                                
                             }, label: {
                                 Text("+")
                                     .font(.largeTitle)
                             })
-                            
-                        }.position(x: 400)
-                        //fim da quantidade de chefs
+                        }
+                        .position(x: 400)
                         
-                        //quantidade de consumidores
+                        // quantidade de consumidores
                         Text("Consumidores")
-                            .position(x: -20, y: 50)
+                            .position(x: -18, y: 50)
                             .font(.title3)
                         
                         HStack {
-                            
                             Button(action: {
                                 preferencesViewModel.decrementConsumers()
-                                
                             }, label: {
                                 Text("-")
                                     .font(.largeTitle)
@@ -76,68 +57,91 @@ struct FormsView: View {
                             
                             Text("\(preferencesViewModel.quantityconsumers)")
                                 .font(.largeTitle)
-                            
                                 .foregroundStyle(.black)
                                 .padding(20)
                             
                             Button(action: {
                                 preferencesViewModel.incrementConsumers()
-                                print()
-                                
                             }, label: {
                                 Text("+")
                                     .font(.largeTitle)
                             })
-                            
-                        }.position(x: 400, y: 40)
-                        //fim da quantidade de consumers
-                        
-                        //início do nível de receitas
-                        Text("Nível das Receitas")
-                            .position(x: -3, y: 95)
-                            .font(.title3)
-                        
-                        HStack {
-                            
-                            //ver na view model sobre os tipos de níveis
                         }
+                        .position(x: 400, y: 40)
                         
-                    }.padding(400)
-                        .padding(.bottom, 100)
-                    
-                    VStack{
-                        //                    Button(action: {
-                        //                        selectedChefs.removeAll()
-                        //                        selectedChefs = (1...quantityChefs).shuffled()
-                        //                        navigateToNextView = true
-                        //
-                        //                    }, label: {
-                        //                        Text("Iniciar")
-                        //                    })
-                        //                    .position(x: 590, y: -200)
                         
-                        //                    NavigationLink(destination: CountryView(), isActive: $navigateToNextView){
-                        //                        EmptyView()
-                        //                    }.position(x: 590, y: -300)
+                        // nível de receitas
+                        HStack{
+                            Text("Nível das Receitas")
+                                .padding(.top, 80)
+                                .padding(.horizontal, -210)
+                                .font(.title3)
+                            
+                            DropDownLevel(
+                                hint: "Select",
+                                levels: levels
+                            )
+                            .padding(.top, 80)
+                            .padding(.leading, 20)
+                        }
                     }
-                    //                HStack {
-                    //                    ForEach(selectedChefs, id: \.self) { chef in
-                    //                        Text("\(chef)")
-                    //                            .font(.headline)
-                    //                            .padding()
-                    //                    }
-                    //                }
-                    .position(x: 590, y: -100)
-                    
-                    //teste
                 }
-                
+                .padding(400)
+                .padding(.top, 10)
                 .padding()
             }
-            // .navigationViewStyle(StackNavigationViewStyle())
         }
     }
 }
+
+struct DropDownLevel: View {
+    var hint: String
+    var levels: [RecipeLevel]
+    @State private var selectedLevel: RecipeLevel?
+    @Environment(\.colorScheme) private var colorScheme
+    @State private var showsLevels = false
+
+    var body: some View {
+        VStack {
+            
+            HStack{
+                Text(selectedLevel?.name ?? hint)
+                    .foregroundColor(selectedLevel == nil ? .gray : .primary)
+                    .onTapGesture {
+                        showsLevels.toggle()
+                    }
+                
+                Image(systemName: "chevron.down")
+                    .font(.title3)
+                    .foregroundColor(.gray)
+                    .rotationEffect(.init(degrees: showsLevels ? -180 : 0))
+            }
+            if showsLevels {
+                VStack {
+                    ForEach(levels, id: \.self) { level in
+                        Text(level.name)
+                            .onTapGesture {
+                                selectedLevel = level
+                                showsLevels = false
+                            }
+                            .padding()
+                            .background(Color.white)
+                            .cornerRadius(5)
+                    }
+                }
+                .padding(.top, 5)
+                .background(Color.white)
+                .cornerRadius(10)
+                .shadow(radius: 5)
+            }
+        }
+        .padding()
+        .background((colorScheme == .dark ? Color.black : Color.white).shadow(.drop(color: .primary.opacity(0.15), radius: 4)))
+    }
+}
+
+
 #Preview {
     FormsView()
 }
+

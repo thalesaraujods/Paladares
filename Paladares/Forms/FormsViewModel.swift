@@ -12,7 +12,8 @@ class PreferencesViewModel: ObservableObject {
     
     @Published var quantitychefs: Int = 2
     @Published var quantityconsumers: Int = 1
-    @Published var recipeLevel: RecipeLevel = .beginner
+    @Published var selectionLevel: String?
+    @Published var showsLevels: Bool = false
     
     // Singleton
     static var shared: PreferencesViewModel = PreferencesViewModel()
@@ -32,5 +33,27 @@ class PreferencesViewModel: ObservableObject {
     func decrementConsumers() {
         if quantityconsumers > 1 { quantityconsumers -= 1 }
     }
+    
+    func LevelsView() -> some View {
+        VStack{
+            ForEach(levels, id: \.name){ level in
+                HStack{
+                    Text(level.name)
+                }
+                .animation(.none, value: PreferencesViewModel().selectionLevel)
+                .onTapGesture {
+                    withAnimation(.snappy){
+                        self.selectionLevel = level.name
+                        self.showsLevels = false
+                    }
+                }
+            }
+        }.padding(.horizontal, 15)
+    }
 }
+
+
+
+
+
 
