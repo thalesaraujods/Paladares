@@ -12,10 +12,6 @@ class CountryViewModel: ObservableObject {
     @Published var selectedCountry: Country?
     
     func selectCountry(_ country: Country) {
-        if selectedCountry == country {
-            selectedCountry = nil // Desmarca o país se já estiver selecionado
-        } else {
-            selectedCountry = country
-        }
+        selectedCountry = country // Define o país selecionado
     }
 }
