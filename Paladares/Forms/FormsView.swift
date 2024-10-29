@@ -21,7 +21,7 @@ struct FormsView: View {
                     .frame(width: 650, height: 300)
                     .foregroundStyle(.white)
                     .shadow(color: .gray, radius: 20)
-                    
+                
                 
                 VStack {
                     VStack {
@@ -61,7 +61,7 @@ struct FormsView: View {
                         
                         //quantidade de consumidores
                         Text("Consumidores")
-                            .position(x: -20, y: 50)
+                            .position(x: -18, y: 50)
                             .font(.title3)
                         
                         HStack {
@@ -94,7 +94,8 @@ struct FormsView: View {
                         
                         //início do nível de receitas
                         Text("Nível das Receitas")
-                            .position(x: -3, y: 95)
+                            .padding(.top, 80)
+                            .padding(.horizontal, -270)
                             .font(.title3)
                         
                         HStack {
@@ -102,39 +103,15 @@ struct FormsView: View {
                             //ver na view model sobre os tipos de níveis
                         }
                         
+                        Menu(RecipeLevel.beginner.rawValue){
+                            
+                        }
                     }.padding(400)
-                        .padding(.bottom, 100)
+                     .padding(.top, 10)
                     
-                    VStack{
-                        //                    Button(action: {
-                        //                        selectedChefs.removeAll()
-                        //                        selectedChefs = (1...quantityChefs).shuffled()
-                        //                        navigateToNextView = true
-                        //
-                        //                    }, label: {
-                        //                        Text("Iniciar")
-                        //                    })
-                        //                    .position(x: 590, y: -200)
-                        
-                        //                    NavigationLink(destination: CountryView(), isActive: $navigateToNextView){
-                        //                        EmptyView()
-                        //                    }.position(x: 590, y: -300)
-                    }
-                    //                HStack {
-                    //                    ForEach(selectedChefs, id: \.self) { chef in
-                    //                        Text("\(chef)")
-                    //                            .font(.headline)
-                    //                            .padding()
-                    //                    }
-                    //                }
-                    .position(x: 590, y: -100)
-                    
-                    //teste
+                                        .padding()
                 }
-                
-                .padding()
             }
-            // .navigationViewStyle(StackNavigationViewStyle())
         }
     }
 }

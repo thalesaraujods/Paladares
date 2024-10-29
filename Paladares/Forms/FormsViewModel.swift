@@ -32,5 +32,8 @@ class PreferencesViewModel: ObservableObject {
     func decrementConsumers() {
         if quantityconsumers > 1 { quantityconsumers -= 1 }
     }
+    
+    @Published var selectionNivel: String?
 }
+
 
