@@ -10,6 +10,8 @@ import SwiftUI
 struct StepView: View {
     let quantityChefs: Int
     
+    let colors: [Color] = [.green, .red, .yellow, .blue]
+    
     var body: some View {
         NavigationStack {
             ZStack {
@@ -22,13 +24,16 @@ struct StepView: View {
                     .padding(.horizontal, -520)
                 
                 VStack {
-                    ForEach(0..<quantityChefs, id: \.self) { _ in
+                    ForEach(0..<quantityChefs, id: \.self) { index in
                         Circle()
-                            .fill(Color.blue)
-                            .frame(width: 50, height: 50)
-                            .padding(5)
+                            .fill(colors[index % colors.count])
+                            .frame(width: 85, height: 85)
+                            .padding(7)
+                        Text("Chef \(index + 1)")
                     }
                 }
+                .padding(.top, 70)
+                .padding(.horizontal, -450)
             }
         }
     }
@@ -36,7 +41,7 @@ struct StepView: View {
 
 
 #Preview {
-    StepView(quantityChefs: 2)
+    StepView(quantityChefs: 4)
 }
 
 
