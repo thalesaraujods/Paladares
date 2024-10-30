@@ -1,5 +1,5 @@
 //
-//  RecipeListCuriosidadeView.swift
+//  RecipeDetailCuriousView.swift
 //  Paladares
 //
 //  Created by Amanda Rabelo on 30/10/24.
@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct RecipeListCuriosidadeView: View {
+struct RecipeDetailCuriousView: View {
 
     @State var recipe: Recipe
 
@@ -36,5 +36,5 @@ struct RecipeListCuriosidadeView: View {
 }
 
 #Preview {
-    RecipeListCuriosidadeView(recipe: recipes[0])
+    RecipeDetailCuriousView(recipe: recipes[0])
 }
