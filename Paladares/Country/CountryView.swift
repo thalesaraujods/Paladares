@@ -31,8 +31,9 @@ struct CountryView: View {
                     }
                 }
             }
-            .padding()
+            .padding(.horizontal, 50)
         }
+        .navigationBarTitle("Sua lista está pronta!")
         .padding()
         .frame(width: 1158, alignment: .center)
     }
