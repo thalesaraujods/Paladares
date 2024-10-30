@@ -5,6 +5,7 @@
 //  Created by Thales Araújo on 28/10/24.
 //
 
+
 import Foundation
 import SwiftUI
 
@@ -14,7 +15,7 @@ class PreferencesViewModel: ObservableObject {
     @Published var quantityconsumers: Int = 1
     @Published var selectionLevel: String?
     @Published var showsLevels: Bool = false
-    
+
     // Singleton
     static var shared: PreferencesViewModel = PreferencesViewModel()
     
@@ -34,6 +35,12 @@ class PreferencesViewModel: ObservableObject {
         if quantityconsumers > 1 { quantityconsumers -= 1 }
     }
     
+    func isFormComplete() -> Bool {
+            return quantitychefs > 0 &&
+                   quantityconsumers > 0 &&
+                   selectionLevel != nil
+        }
+    
     func LevelsView() -> some View {
         VStack{
             ForEach(levels, id: \.name){ level in
@@ -51,9 +58,3 @@ class PreferencesViewModel: ObservableObject {
         }.padding(.horizontal, 15)
     }
 }
-
-
-
-
-
-

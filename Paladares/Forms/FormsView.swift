@@ -74,25 +74,51 @@ struct FormsView: View {
                         HStack{
                             Text("Nível das Receitas")
                                 .padding(.top, 80)
-                                .padding(.horizontal, -210)
+                                .padding(.horizontal, -80)
                                 .font(.title3)
+                            
+                            Spacer()
                             
                             DropDownLevel(
                                 hint: "Select",
                                 levels: levels
+                                
                             )
-                            .padding(.top, 80)
+                            .position(x: 370)
                             .padding(.leading, 20)
+                            .padding(.top, 80)
                         }
+                        
+                        
                     }
+                    
+                    
                 }
                 .padding(400)
                 .padding(.top, 10)
                 .padding()
             }
+            
+            Button(action: {
+                                   // Ação de confirmação do forms preenchido
+                               }) {
+                                   Text("Avançar")
+                                       .font(.custom("SF Pro", size: 25))
+                                       .padding()
+                                       .frame(width: 250, height: 75)
+                                       .background(preferencesViewModel.isFormComplete() ? Color.blue : Color.gray)
+                                       .foregroundColor(.white)
+                                       .cornerRadius(20)
+                                       .padding(.horizontal, 40)
+                               }
+                               .disabled(!preferencesViewModel.isFormComplete())
+                               .frame(width: 750, height: 95, alignment: .center)
+                               .position(x: 600, y: -200)
         }
     }
 }
+
+//consertar essa subida do dropdownlevel
 
 struct DropDownLevel: View {
     var hint: String
@@ -100,43 +126,45 @@ struct DropDownLevel: View {
     @State private var selectedLevel: RecipeLevel?
     @Environment(\.colorScheme) private var colorScheme
     @State private var showsLevels = false
-
+    
     var body: some View {
-        VStack {
-            
-            HStack{
-                Text(selectedLevel?.name ?? hint)
-                    .foregroundColor(selectedLevel == nil ? .gray : .primary)
-                    .onTapGesture {
-                        showsLevels.toggle()
-                    }
+        ZStack{
+            VStack {
                 
-                Image(systemName: "chevron.down")
-                    .font(.title3)
-                    .foregroundColor(.gray)
-                    .rotationEffect(.init(degrees: showsLevels ? -180 : 0))
-            }
-            if showsLevels {
-                VStack {
-                    ForEach(levels, id: \.self) { level in
-                        Text(level.name)
-                            .onTapGesture {
-                                selectedLevel = level
-                                showsLevels = false
-                            }
-                            .padding()
-                            .background(Color.white)
-                            .cornerRadius(5)
-                    }
+                HStack{
+                    Text(selectedLevel?.name ?? hint)
+                        .foregroundColor(selectedLevel == nil ? .gray : .primary)
+                        .onTapGesture {
+                            showsLevels.toggle()
+                        }
+                    
+                    Image(systemName: "chevron.down")
+                        .font(.title3)
+                        .foregroundColor(.gray)
+                        .rotationEffect(.init(degrees: showsLevels ? -180 : 0))
                 }
-                .padding(.top, 5)
-                .background(Color.white)
-                .cornerRadius(10)
-                .shadow(radius: 5)
+                
+                if showsLevels {
+                    VStack {
+                        ForEach(levels, id: \.self) { level in
+                            Text(level.name)
+                                .onTapGesture {
+                                    selectedLevel = level
+                                    showsLevels = false
+                                }
+                                .padding()
+                                .background(Color.white)
+                                .cornerRadius(5)
+                        }
+                    }
+                    .background(Color.white)
+                    .cornerRadius(10)
+                    .shadow(radius: 5)
+                }
             }
+            .padding()
+            .background((colorScheme == .dark ? Color.black : Color.white).shadow(.drop(color: .primary.opacity(0.15), radius: 4)))
         }
-        .padding()
-        .background((colorScheme == .dark ? Color.black : Color.white).shadow(.drop(color: .primary.opacity(0.15), radius: 4)))
     }
 }
 
@@ -144,4 +172,3 @@ struct DropDownLevel: View {
 #Preview {
     FormsView()
 }
-
