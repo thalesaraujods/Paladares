@@ -21,36 +21,20 @@ struct CountryView: View {
     ]
     
     var body: some View {
-        VStack {
-            VStack(alignment: .center, spacing: 25) {
-                LazyVGrid(columns: columns, spacing: 25) {
-                    ForEach(countries, id: \.id) { country in
-                        Button(action: {
-                            viewModel.selectCountry(country)
-                        }) {
-                            VStack(alignment: .center, spacing: 10) {
-                                FlagView(countryCode: country.flagName, style: .circle)
-                                    .frame(width: 125, height: 125)
-                                
-                                Text(country.name)
-                                    .font(Font.custom("SF Pro", size: 24))
-                                    .multilineTextAlignment(.center)
-                                    .frame(width: 159, height: 55, alignment: .center)
-                                    .foregroundColor(.black)
-                                
-                                
-                            }
-                            .frame(width: 159, alignment: .center)
-                        }
+        VStack(alignment: .center, spacing: 25) {
+            LazyVGrid(columns: columns, spacing: 29) {
+                ForEach(countries, id: \.id) { country in
+                    Button(action: {
+                        viewModel.selectCountry(country)
+                    }) {
+                        CountryItemView(country: country)
                     }
                 }
-                .padding()
             }
-            .frame(width: 1158, alignment: .center)
-            .padding(.horizontal, 104)
-            .padding(.bottom, 100)
+            .padding()
         }
         .padding()
+        .frame(width: 1158, alignment: .center)
     }
 }
 
