@@ -18,7 +18,7 @@ struct RecipeDetailCuriousView: View {
             Text("Curiosidade")
                 .font(.system(size: 36))
                 .fontWeight(.bold)
-                .padding(.bottom, 20)
+                .padding(.bottom, 40)
                 .padding(.horizontal, -400)
             
             ZStack{
@@ -29,7 +29,9 @@ struct RecipeDetailCuriousView: View {
                     .foregroundStyle(.white)
                 
                 Text(recipe.curiosidade)
-                    .padding(200)
+                    .font(.custom("SF Pro", size: 21))
+                    .frame(width: 700, height: 100)
+                    //.padding(300)
             }
         }
     }
