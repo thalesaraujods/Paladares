@@ -10,6 +10,7 @@ import SwiftUI
 
 struct FormsView: View {
     @StateObject private var preferencesViewModel: PreferencesViewModel = PreferencesViewModel.shared
+    @State private var isActive = false
     
     var body: some View {
         NavigationStack {
@@ -34,21 +35,26 @@ struct FormsView: View {
                             .padding(.leading, -480)
                     }
                     
-                    Button(action: {
-                      
-                    })
-                    {
-                        Text("Continuar")
-                            .font(.custom("SF Pro", size: 25))
-                            .frame(width: 200, height: 60)
-                            .background(preferencesViewModel.isFormComplete() ? Color.backBotao : Color.gray)
-                            .foregroundColor(preferencesViewModel.isFormComplete() ? Color.palavraBotao : Color.white)
-                            .foregroundColor(Color.palavraBotao)
-                            .cornerRadius(20)
-                            .padding(.top, 30)
+                    NavigationLink(destination: CountryView(),isActive: $isActive){
+                        Button(action: {
+                            if preferencesViewModel.isFormComplete() {
+                                isActive = true // Navega para a próxima tela
+                            }
+                            
+                        })
+                        {
+                            Text("Continuar")
+                                .font(.custom("SF Pro", size: 25))
+                                .frame(width: 200, height: 60)
+                                .background(preferencesViewModel.isFormComplete() ? Color.backBotao : Color.gray)
+                                .foregroundColor(preferencesViewModel.isFormComplete() ? Color.palavraBotao : Color.white)
+                                .foregroundColor(Color.palavraBotao)
+                                .cornerRadius(20)
+                                .padding(.top, 30)
+                        }
                     }
+                    .padding(.bottom, 70)
                 }
-                .padding(.bottom, 70)
             }
         }
     }
