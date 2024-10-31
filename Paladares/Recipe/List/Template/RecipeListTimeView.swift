@@ -8,31 +8,30 @@
 import SwiftUI
 
 struct RecipeListTimeView: View {
-    @Binding var timer: String
+    var timer: String
     var body: some View {
-        ZStack {
+        ZStack{
             Rectangle()
-                .foregroundColor(.black) //clear
+                .foregroundColor(.clear)
+                .frame(width: 89, height: 29)
                 .background(.white.opacity(0.74))
                 .cornerRadius(35.5)
-                .frame(width: 218, height: 71, alignment: .center)
-//            HStack {
-//                Text(timer)
-//                    .font(.custom("SF Pro", size: 24))
-//                    .font(.body)
-//                    .fontWeight(.semibold)
-//                    .foregroundColor(Color("corCinza"))
-//                    .multilineTextAlignment(.center)
-//                    .frame(width: 10, height: 10, alignment: .center)
-//            }
+            HStack {
+                Image(systemName: "clock.fill")
+                    .padding(.leading)
+                    .frame(width: 23, height: 23)
+                    .foregroundColor(Color.corCinza)
+                Text(timer)
+                    .font(.custom("SF Pro", size: 13))
+                    .foregroundColor(Color.corCinza)
+                    .fontWeight(.semibold)
+                    .padding(.trailing, 5)
+                    .frame(width: 60, height: 13)
+            }
         }
-        frame(width: 89, height: 29)
-        
     }
 }
 
 #Preview {
-    @Previewable @State var timer: String = "2 horas"
-    
-    RecipeListTimeView(timer: $timer)
+    RecipeListTimeView(timer: "3 horas")
 }

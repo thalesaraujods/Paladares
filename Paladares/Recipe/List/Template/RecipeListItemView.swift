@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct RecipeListItemView: View {
-    @Binding var recipe: Recipe
+    var recipe: Recipe
     
     var body: some View {
         ZStack {
@@ -29,11 +29,7 @@ struct RecipeListItemView: View {
                 .foregroundColor(.white)
                 .frame(width: 286, height: 46, alignment: .leading)
                 .padding(.bottom, 144)
-            Rectangle()
-                .foregroundColor(.clear)
-                .frame(width: 89, height: 29)
-                .background(.white.opacity(0.74))
-                .cornerRadius(35.5)
+            RecipeListTimeView(timer: recipe.time)
                 .padding(.top, 135)
                 .padding(.leading, 200)
         }
@@ -41,7 +37,5 @@ struct RecipeListItemView: View {
 }
 
 #Preview {
-    @Previewable @State var recipeView = Recipe(name: "Acarajé", imagem: "acaraje", time: "40 min", curiosidade: "", utensílios: "", ingredientes: "", sugestoes: "")
-    
-    RecipeListItemView(recipe: $recipeView)
+    RecipeListItemView(recipe: Recipe(name: "Acarajé", imagem: "acaraje", time: "40 min", curiosidade: "", utensílios: "", ingredientes: "", sugestoes: ""))
 }
