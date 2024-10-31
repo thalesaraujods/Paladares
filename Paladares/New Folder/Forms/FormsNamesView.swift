@@ -63,25 +63,4 @@ struct FormsNamesView: View {
 #Preview {
     FormsNamesView()
 }
-//fork.knife
 
-//Button(action: {
-//    // Implementar a ação do botão, como navegar para a próxima view
-//    print("Avançando para a próxima etapa...")
-//}) {
-//    Text("Avançar")
-//        .font(.custom("SF Pro", size: 25))
-//        .padding()
-//        .frame(width: 250, height: 75)
-//        .background(preferencesViewModel.isFormComplete() ? Color.backBotao : Color.gray)
-//        .foregroundColor(preferencesViewModel.isFormComplete() ? Color.palavraBotao : Color.white)
-//        .cornerRadius(20)
-//        .padding(.horizontal, 40)
-//        .padding(.top, 550)
-//}
-//.disabled(!preferencesViewModel.isFormComplete()) // Desabilita se o formulário não estiver completo
-//.frame(width: 750, height: 95)
-//Label("Degustadores", systemImage: "fork.knife")
-//    .font(.system(size: 36))
-//    .padding(.bottom, 40)
-//    .padding(.horizontal, -375)

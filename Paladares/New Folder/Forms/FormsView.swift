@@ -25,6 +25,7 @@ struct FormsView: View {
                         .font(.system(size: 33))
                         .fontWeight(.bold)
                         .frame(width: 700, height: 200)
+                    
                         
                     HStack{
                         FormsNamesView()
@@ -34,8 +35,22 @@ struct FormsView: View {
                         FormsQuantityView()
                             .padding(.leading, -480)
                     }
+                    
+                    Button(action: {
+                      
+                    })
+                    {
+                        Text("Continuar")
+                            .font(.custom("SF Pro", size: 25))
+                            .frame(width: 200, height: 60)
+                            .background(preferencesViewModel.isFormComplete() ? Color.backBotao : Color.gray)
+                            .foregroundColor(preferencesViewModel.isFormComplete() ? Color.palavraBotao : Color.white)
+                            .foregroundColor(Color.palavraBotao)
+                            .cornerRadius(20)
+                            .padding(.top, 30)
+                    }
                 }
-                .padding(.bottom, 140)
+                .padding(.bottom, 70)
             }
         }
     }
@@ -43,5 +58,4 @@ struct FormsView: View {
 #Preview {
     FormsView()
 }
-
 
