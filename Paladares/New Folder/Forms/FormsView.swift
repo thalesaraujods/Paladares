@@ -25,8 +25,6 @@ struct FormsView: View {
                         .font(.system(size: 33))
                         .fontWeight(.bold)
                         .frame(width: 700, height: 200)
-                    
-                        
                     HStack{
                         FormsNamesView()
                             .padding(.leading, 620)
