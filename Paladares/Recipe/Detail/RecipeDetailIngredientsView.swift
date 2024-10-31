@@ -1,21 +1,21 @@
 //
-//  RecipeDetailCuriousView.swift
+//  RecipeDetailIngredientsView.swift
 //  Paladares
 //
-//  Created by Amanda Rabelo on 30/10/24.
+//  Created by Amanda Rabelo on 31/10/24.
 //
 
 import Foundation
 import SwiftUI
 
-struct RecipeDetailCuriousView: View {
+struct RecipeDetailIngredientsView: View {
 
     @State var recipe: Recipe
 
     var body: some View {
         VStack {
 
-            Text("Curiosidade")
+            Text("Ingredientes")
                 .font(.system(size: 36))
                 .fontWeight(.bold)
                 .padding(.bottom, 40)
@@ -23,14 +23,15 @@ struct RecipeDetailCuriousView: View {
             
             ZStack{
                 Rectangle()
-                    .frame(width: 840, height: 250)
+                    .frame(width: 840, height: 750)
                     .cornerRadius(35)
                     .shadow(radius: 10)
                     .foregroundStyle(.white)
                 
-                Text(recipe.curiosidade)
+                Text(recipe.ingredientes)
                     .font(.custom("SF Pro", size: 31))
-                    .frame(width: 700, height: 200)
+                    .frame(width: 550, height: 700)
+                    .lineSpacing(20)
                     //.padding(300)
             }
         }
@@ -38,5 +39,6 @@ struct RecipeDetailCuriousView: View {
 }
 
 #Preview {
-    RecipeDetailCuriousView(recipe: recipes[0])
+    RecipeDetailIngredientsView(recipe: recipes[0])
 }
+

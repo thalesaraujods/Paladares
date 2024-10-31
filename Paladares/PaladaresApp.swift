@@ -9,10 +9,10 @@ import SwiftUI
 
 @main
 struct PaladaresApp: App {
+    
     var body: some Scene {
         WindowGroup {
-            
-            FormsView()
+            RecipeDetailView(recipe: recipes[0])
         }
     }
 }

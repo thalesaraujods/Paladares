@@ -1,21 +1,21 @@
 //
-//  RecipeDetailCuriousView.swift
+//  RecipeDetailUtensilsView.swift
 //  Paladares
 //
-//  Created by Amanda Rabelo on 30/10/24.
+//  Created by Amanda Rabelo on 31/10/24.
 //
 
 import Foundation
 import SwiftUI
 
-struct RecipeDetailCuriousView: View {
+struct RecipeDetailUtensilsView: View {
 
     @State var recipe: Recipe
 
     var body: some View {
         VStack {
 
-            Text("Curiosidade")
+            Text("Utensílios Essenciais:")
                 .font(.system(size: 36))
                 .fontWeight(.bold)
                 .padding(.bottom, 40)
@@ -28,9 +28,12 @@ struct RecipeDetailCuriousView: View {
                     .shadow(radius: 10)
                     .foregroundStyle(.white)
                 
-                Text(recipe.curiosidade)
+                Text(recipe.utensílios)
+                //ver como deixar no modelo da Tay ("lista" mesmo)
                     .font(.custom("SF Pro", size: 31))
-                    .frame(width: 700, height: 200)
+                    .frame(width: 1000, height: 200)
+                    .lineSpacing(20)
+                    .padding(.leading, -300)
                     //.padding(300)
             }
         }
@@ -38,5 +41,5 @@ struct RecipeDetailCuriousView: View {
 }
 
 #Preview {
-    RecipeDetailCuriousView(recipe: recipes[0])
+    RecipeDetailUtensilsView(recipe: recipes[0])
 }
