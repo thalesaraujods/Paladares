@@ -76,21 +76,26 @@ struct FormsQuantityView: View {
                 }
             }
             
-            //Ajustar esse nome do picker que não está aparecendo 
-            Picker("Iniciante", selection: $preferencesViewModel.selectionLevel) {
-                ForEach(levels, id: \.self) { level in
-                    Text(level.name).tag(level) // Define o nível selecionado
+            ZStack{
+               
+                Rectangle()
+                    .frame(width: 170, height: 50)
+                    .cornerRadius(15)
+                    .shadow(radius: 2)
+                    .foregroundStyle(.white)
+                
+                Picker("Iniciante", selection: $preferencesViewModel.selectionLevel) {
+                    ForEach(levels, id: \.self) { level in
+                        Text(level.name).tag(level) // Define o nível selecionado
+                    }
                 }
+                .pickerStyle(MenuPickerStyle())
+                .padding()
+                
+                .cornerRadius(8)
+                
+                .padding()
             }
-            .pickerStyle(MenuPickerStyle())
-            .padding()
-            
-            .cornerRadius(8)
-            .overlay(
-                RoundedRectangle(cornerRadius: 8)
-                    .stroke(Color.gray, lineWidth: 1) // Borda cinza
-            )
-            .padding()
         }
         //.padding(.leading, 520)
     }
