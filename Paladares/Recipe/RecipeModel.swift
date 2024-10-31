@@ -1,5 +1,5 @@
 //
-//  RecipeListModel.swift
+//  RecipeModel.swift
 //  Paladares
 //
 //  Created by Amanda Rabelo on 30/10/24.
