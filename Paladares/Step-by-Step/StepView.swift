@@ -19,63 +19,15 @@ struct StepView: View {
 
     var body: some View {
         NavigationStack {
-            ZStack {
-                // Botão de navegação
+            HStack {
+                StepChefsView(quantityChefs: 4)
                 
-                Button(action: {
-                    // Ação para o botão, se necessário
-                }) {
-                    Image(systemName: "xmark.circle.fill")
-                        .resizable()
-                        .frame(width: 40, height: 40)
-                        .foregroundStyle(Color.corCinza2)
-                        .opacity(0.5)
-                        .padding(.horizontal, -600)
-                        .padding(.top, 250)
-                }
-                //.padding(.top, 50)
-            }
-            ZStack {
-                Rectangle()
-                    .frame(width: 240, height: 650)
-                    .cornerRadius(40)
-                    .foregroundStyle(.white)
-                    .shadow(color: shadowColor, radius: 10) // Usando a cor do shadow
-                    .padding(.top, 70)
-                    .padding(.horizontal, -520)
-
-                VStack {
-                    ForEach(0..<quantityChefs, id: \.self) { index in
-                        Button(action: {
-                            // Atualiza a cor do shadow com base no chef clicado
-                            shadowColor = colorsHats[index]
-                            print("Clicou no Chef \(index + 1)")
-                        }) {
-                            ZStack {
-                                Circle()
-                                    .frame(width: 85, height: 85)
-                                    .padding(7)
-                                    .foregroundStyle(Color.white)
-                                    .shadow(radius: 5)
-
-                                hatsChefs[index]
-                                    .resizable()
-                                    .frame(width: 65, height: 65)
-                                    .colorMultiply(colorsHats[index])
-                            }
-                        }
-                        .buttonStyle(PlainButtonStyle()) // Remove o estilo padrão do botão
-
-                        Text("Chef \(index + 1)")
-                    }
-                }
-                .padding(.top, 70)
-                .padding(.horizontal, -450)
                 HStack{
                     StepbyStepView()
+                        .padding(.top, 150)
                 }
             }
-            .padding(.bottom, 240)
+            .padding(.bottom, 40)
             
         }
         
