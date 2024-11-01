@@ -10,7 +10,6 @@ import FlagsKit
 
 struct CountryView: View {
     @ObservedObject var viewModel = CountryViewModel()
-    @State private var isActive = false
     
     let columns = [
         GridItem(.flexible()),
@@ -22,37 +21,14 @@ struct CountryView: View {
     ]
     
     var body: some View {
-        NavigationStack{
-            
-            Text("Escolha um País")
-                .font(.system(size: 36))
-                .fontWeight(.bold)
-                .padding(.bottom, 150)
-                .padding(.horizontal, -500)
-            
-            VStack(alignment: .center, spacing: 25) {
-                LazyVGrid(columns: columns, spacing: 29) {
-                    ForEach(countries, id: \.id) { country in
-                        
-                        //ajeitar depois pra onde essa navegação vai
-                        //tem um bug, precisa consertar
-                        NavigationLink(destination: RecipeDetailView(recipe: recipes[0]),isActive: $isActive){
-                            Button(action: {
-                                viewModel.selectCountry(country)
-                                isActive = true
-                            }) {
-                                CountryItemView(country: country)
-                            }
-                        }
-                    }
-                }
-                .padding(.horizontal, 50)
+        LazyVGrid(columns: columns, spacing: 29) {
+            ForEach(countries, id: \.id) { country in
+                CountryItemView(country: country)
             }
-            //.navigationBarTitle("Sua lista está pronta!")
-            .padding()
-            .frame(width: 1158, alignment: .center)
-            .padding(.bottom, 150)
         }
+        .padding(.horizontal, 50)
+        .padding(.bottom, 150)
+        .frame(width: 1158, alignment: .center)
     }
 }
 #Preview {
