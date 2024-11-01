@@ -23,19 +23,25 @@ struct CountryView: View {
     
     var body: some View {
         NavigationStack{
-            VStack(alignment: .center, spacing: 25) {
-                LazyVGrid(columns: columns, spacing: 29) {
-                    ForEach(countries, id: \.id) { country in
-                        
-                        //ajeitar depois pra onde essa navegação vai
-                        //tem um bug, precisa consertar
-                        NavigationLink(destination: RecipeDetailView(recipe: recipes[0]),isActive: $isActive){
-                            Button(action: {
-                                viewModel.selectCountry(country)
-                                isActive = true
-                            }) {
-                                CountryItemView(country: country)
-                            }
+            
+            Text("Escolha um País")
+                .font(.system(size: 36))
+                .fontWeight(.bold)
+                .padding(.bottom, 150)
+                .padding(.horizontal, -500)
+            
+        VStack(alignment: .center, spacing: 25) {
+            LazyVGrid(columns: columns, spacing: 29) {
+                ForEach(countries, id: \.id) { country in
+                    
+                    //ajeitar depois pra onde essa navegação vai
+                    //tem um bug, precisa consertar
+                    NavigationLink(destination: RecipeDetailView(recipe: recipes[0]),isActive: $isActive){
+                        Button(action: {
+                            viewModel.selectCountry(country)
+                            isActive = true
+                        }) {
+                            CountryItemView(country: country)
                         }
                     }
                 }
@@ -45,6 +51,7 @@ struct CountryView: View {
         .navigationBarTitle("Sua lista está pronta!")
         .padding()
         .frame(width: 1158, alignment: .center)
+        .padding(.bottom, 150)
     }
 }
 
