@@ -12,6 +12,7 @@ struct StepView: View {
     let quantityChefs: Int
     let hatsChefs: [Image] = [Image("chef2"), Image("chef4"), Image("chef1"), Image("chef3")]
     let colorsHats: [Color] = [.corHat1, .corHat2, .corHat3, .corHat4]
+    @ObservedObject var data = ReadJsonStepData()
     
     // Estado para armazenar a cor do shadow
     @State private var shadowColor: Color = .gray
@@ -20,6 +21,7 @@ struct StepView: View {
         NavigationStack {
             ZStack {
                 // Botão de navegação
+                
                 Button(action: {
                     // Ação para o botão, se necessário
                 }) {
@@ -29,7 +31,9 @@ struct StepView: View {
                         .foregroundStyle(Color.corCinza2)
                         .opacity(0.5)
                         .padding(.horizontal, -600)
+                        .padding(.top, 250)
                 }
+                //.padding(.top, 50)
             }
             ZStack {
                 Rectangle()
@@ -67,15 +71,16 @@ struct StepView: View {
                 }
                 .padding(.top, 70)
                 .padding(.horizontal, -450)
+                HStack{
+                    StepbyStepView()
+                }
             }
-            .padding(.bottom, 80)
+            .padding(.bottom, 240)
+            
         }
+        
         .navigationBarBackButtonHidden(true)
     }
-}
-
-#Preview {
-    StepView(quantityChefs: 4)
 }
 
 #Preview {

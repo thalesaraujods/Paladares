@@ -30,31 +30,31 @@ struct CountryView: View {
                 .padding(.bottom, 150)
                 .padding(.horizontal, -500)
             
-        VStack(alignment: .center, spacing: 25) {
-            LazyVGrid(columns: columns, spacing: 29) {
-                ForEach(countries, id: \.id) { country in
-                    
-                    //ajeitar depois pra onde essa navegação vai
-                    //tem um bug, precisa consertar
-                    NavigationLink(destination: RecipeDetailView(recipe: recipes[0]),isActive: $isActive){
-                        Button(action: {
-                            viewModel.selectCountry(country)
-                            isActive = true
-                        }) {
-                            CountryItemView(country: country)
+            VStack(alignment: .center, spacing: 25) {
+                LazyVGrid(columns: columns, spacing: 29) {
+                    ForEach(countries, id: \.id) { country in
+                        
+                        //ajeitar depois pra onde essa navegação vai
+                        //tem um bug, precisa consertar
+                        NavigationLink(destination: RecipeDetailView(recipe: recipes[0]),isActive: $isActive){
+                            Button(action: {
+                                viewModel.selectCountry(country)
+                                isActive = true
+                            }) {
+                                CountryItemView(country: country)
+                            }
                         }
                     }
                 }
+                .padding(.horizontal, 50)
             }
-            .padding(.horizontal, 50)
+            //.navigationBarTitle("Sua lista está pronta!")
+            .padding()
+            .frame(width: 1158, alignment: .center)
+            .padding(.bottom, 150)
         }
-        .navigationBarTitle("Sua lista está pronta!")
-        .padding()
-        .frame(width: 1158, alignment: .center)
-        .padding(.bottom, 150)
     }
 }
-
 #Preview {
     CountryView()
 }
