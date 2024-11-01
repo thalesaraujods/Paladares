@@ -46,7 +46,6 @@ struct CountryView: View {
                     }
                 }
             }
-            }
             .padding(.horizontal, 50)
         }
         .navigationBarTitle("Sua lista está pronta!")

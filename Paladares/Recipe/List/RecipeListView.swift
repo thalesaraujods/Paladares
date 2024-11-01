@@ -8,8 +8,22 @@
 import SwiftUI
 
 struct RecipeListView: View {
+    @ObservedObject var viewModel = RecipeViewModel()
+    
+    let columns = [
+        GridItem(.flexible(), spacing: 70),
+        GridItem(.flexible(), spacing: 70),
+        GridItem(.flexible(), spacing: 70)
+    ]
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        LazyVGrid(columns: columns) {
+            ForEach(recipes, id: \.id) { recipe in
+                RecipeGridView(recipe: recipe)
+            }
+        }
+        .padding()
+        .frame(width: 1024)
     }
 }
 
