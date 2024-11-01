@@ -75,7 +75,7 @@ struct StepChefsView: View {
                 
               
             }
-            .border(.red)
+           // .border(.red)
 //            .padding(.bottom, 240)
             
         }

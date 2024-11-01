@@ -19,13 +19,25 @@ struct StepView: View {
 
     var body: some View {
         NavigationStack {
-            HStack {
+            
+            HStack(spacing: 20) {
                 StepChefsView(quantityChefs: 4)
-                
-                HStack{
+                    .padding(.top, 70)
                     StepbyStepView()
-                        .padding(.top, 150)
+                        
+                ZStack {
+                    Circle()
+                        .frame(width: 50, height: 50)
+                        .foregroundStyle(.corHat1)
+                        .padding(.top, 650)// Cor do círculo, ajuste conforme necessário
+                    
+                    Image(systemName: "arrowshape.right.circle") // Substitua "info.circle" pelo ícone desejado
+                        .resizable()
+                        .frame(width: 30, height: 30)
+                        .foregroundColor(.white)
+                        .padding(.top, 650)
                 }
+               
             }
             .padding(.bottom, 40)
             

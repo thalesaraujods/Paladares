@@ -13,9 +13,11 @@ struct StepbyStepView: View {
     @ObservedObject var step = ReadJsonStepData()
     
     var body: some View {
+        
         TabView {
             ForEach(step.steps) { step in
                 VStack {
+                    
                     Text(step.passos)
                         .font(.custom("SF Pro", size: 48))
                         .foregroundStyle(.corCinza2)
@@ -34,22 +36,14 @@ struct StepbyStepView: View {
                     }
 
                     // Ícone em formato de círculo
-                    ZStack {
-                        Circle()
-                            .frame(width: 50, height: 50)
-                            .colorMultiply(.corHat1) // Cor do círculo, ajuste conforme necessário
-                        
-                        Image(systemName: "arrowshape.right.circle") // Substitua "info.circle" pelo ícone desejado
-                            .resizable()
-                            .frame(width: 30, height: 30)
-                            .foregroundColor(.white)
-                    }
-                    .padding(.leading, 700) // Ajuste este valor para mover o círculo para a direita
-                                       .padding(.top, 20)
+                   
+//                    .padding(.leading, 700) // Ajuste este valor para mover o círculo para a direita
+//                                       .padding(.top, 20)
                 }
-                .padding(.leading, 350)
+                //.padding(.leading, 350)
             }
         }
+        .frame(width: 800, height: 1000)
         .tabViewStyle(PageTabViewStyle())
         .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .always)) // Para exibir os pontos
     }
