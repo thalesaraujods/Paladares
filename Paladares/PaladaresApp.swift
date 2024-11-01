@@ -12,7 +12,7 @@ struct PaladaresApp: App {
     
     var body: some Scene {
         WindowGroup {
-            RecipeDetailView(recipe: recipes[0])
+            StepView(quantityChefs: 4)
         }
     }
 }

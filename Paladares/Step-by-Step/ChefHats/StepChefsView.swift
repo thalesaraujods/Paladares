@@ -13,12 +13,10 @@ struct StepChefsView: View {
     let hatsChefs: [Image] = [Image("chef2"), Image("chef4"), Image("chef1"), Image("chef3")]
     let colorsHats: [Color] = [.corHat1, .corHat2, .corHat3, .corHat4]
     
-    // Estado para armazenar a cor do shadow
-    @State private var shadowColor: Color = .gray
+    @Binding var shadowColor: Color // Binding para a cor da sombra
 
     var body: some View {
         NavigationStack {
-
             ZStack {
                 Rectangle()
                     .frame(width: 240, height: 650)
@@ -58,6 +56,5 @@ struct StepChefsView: View {
 }
 
 #Preview {
-    StepChefsView(quantityChefs: 4)
+    StepChefsView(quantityChefs: 4, shadowColor: .constant(.gray))
 }
-
