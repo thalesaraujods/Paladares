@@ -29,8 +29,11 @@ struct StepView: View {
                 ZStack{
                     StepArrowView()
                         .padding(.top, 80)
-                    // Botão para voltar, visível apenas no passo 2
-                    if currentStepIndex == 1 { // Passo 2 tem índice 1
+
+                }
+                ZStack{
+                    StepbyStepView(currentStepIndex: $currentStepIndex) // Passando o índice atual
+                    if currentStepIndex > 0 { // Passo 2 tem índice 1
                         Button(action: {
                             // Ação para voltar ao passo anterior
                             currentStepIndex -= 1
@@ -48,10 +51,9 @@ struct StepView: View {
                             
                         }
                         .padding(.top, 650)
+                        .padding(.leading, 22)
                     }
                 }
-                StepbyStepView(currentStepIndex: $currentStepIndex) // Passando o índice atual
-                
                 VStack {
                     Button(action: {
                         // Ação para passar para o próximo passo
@@ -69,8 +71,10 @@ struct StepView: View {
                                 .frame(width: 30, height: 30)
                                 .foregroundColor(.white)
                         }
+                        
                     }
-                    .padding(.top, 650) // Ajuste conforme necessário
+                    .padding(.top, 650)
+                  // Ajuste conforme necessário
                 }
             }
             .padding(.bottom, 40)
