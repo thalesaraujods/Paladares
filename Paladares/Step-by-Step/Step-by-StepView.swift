@@ -11,12 +11,15 @@ import SwiftUI
 struct StepbyStepView: View {
 
     @ObservedObject var step = ReadJsonStepData()
+    @Binding var currentStepIndex: Int // Binding para o índice atual
     
     var body: some View {
-        TabView {
-            ForEach(step.steps) { step in
+        
+        TabView(selection: $currentStepIndex) {
+            ForEach(step.steps.indices, id: \.self) { index in
                 VStack {
-                    Text(step.passos)
+                    
+                    Text(step.steps[index].passos)
                         .font(.custom("SF Pro", size: 48))
                         .foregroundStyle(.corCinza2)
                         .padding(.leading, -300)
@@ -27,35 +30,22 @@ struct StepbyStepView: View {
                             .cornerRadius(35)
                             .foregroundStyle(.white)
                         
-                        Text(step.descricao)
+                        Text(step.steps[index].descricao)
                             .font(.custom("SF Pro", size: 28))
                             .frame(width: 600, height: 200)
                             .padding(.bottom, 300)
                     }
-
-                    // Ícone em formato de círculo
-                    ZStack {
-                        Circle()
-                            .frame(width: 50, height: 50)
-                            .colorMultiply(.corHat1) // Cor do círculo, ajuste conforme necessário
-                        
-                        Image(systemName: "arrowshape.right.circle") // Substitua "info.circle" pelo ícone desejado
-                            .resizable()
-                            .frame(width: 30, height: 30)
-                            .foregroundColor(.white)
-                    }
-                    .padding(.leading, 700) // Ajuste este valor para mover o círculo para a direita
-                                       .padding(.top, 20)
                 }
-                .padding(.leading, 350)
+                .tag(index) // Marcar a visualização com o índice correspondente
             }
         }
+        .frame(width: 600, height: 1000)
         .tabViewStyle(PageTabViewStyle())
         .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .always)) // Para exibir os pontos
     }
 }
 
 #Preview {
-    StepbyStepView()
+    StepbyStepView(currentStepIndex: .constant(0))
 }
 

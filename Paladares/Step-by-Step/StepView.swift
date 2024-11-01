@@ -16,21 +16,69 @@ struct StepView: View {
     
     // Estado para armazenar a cor do shadow
     @State private var shadowColor: Color = .gray
-
+    @State private var currentStepIndex: Int = 0 // Índice do passo atual
+    
     var body: some View {
         NavigationStack {
-            HStack {
-                StepChefsView(quantityChefs: 4)
+           // HStack(spacing: 20) {
+            HStack{
                 
-                HStack{
-                    StepbyStepView()
-                        .padding(.top, 150)
+                StepChefsView(quantityChefs: quantityChefs)
+                    .padding(.top, 70)
+                
+                ZStack{
+                    StepArrowView()
+                        .padding(.top, 80)
+
+                }
+                ZStack{
+                    StepbyStepView(currentStepIndex: $currentStepIndex) // Passando o índice atual
+                    if currentStepIndex > 0 { // Passo 2 tem índice 1
+                        Button(action: {
+                            // Ação para voltar ao passo anterior
+                            currentStepIndex -= 1
+                        }) {
+                            ZStack {
+                                Circle()
+                                    .frame(width: 50, height: 50)
+                                    .foregroundStyle(.corHat1)
+                                
+                                Image(systemName: "arrowshape.left.circle")
+                                    .resizable()
+                                    .frame(width: 30, height: 30)
+                                    .foregroundColor(.white)
+                            }
+                            
+                        }
+                        .padding(.top, 650)
+                        .padding(.leading, 22)
+                    }
+                }
+                VStack {
+                    Button(action: {
+                        // Ação para passar para o próximo passo
+                        if currentStepIndex < data.steps.count - 1 {
+                            currentStepIndex += 1
+                        }
+                    }) {
+                        ZStack {
+                            Circle()
+                                .frame(width: 50, height: 50)
+                                .foregroundStyle(.corHat1)
+                            
+                            Image(systemName: "arrowshape.right.circle")
+                                .resizable()
+                                .frame(width: 30, height: 30)
+                                .foregroundColor(.white)
+                        }
+                        
+                    }
+                    .padding(.top, 650)
+                  // Ajuste conforme necessário
                 }
             }
             .padding(.bottom, 40)
-            
         }
-        
         .navigationBarBackButtonHidden(true)
     }
 }
