@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct RecipeListTimeView: View {
+struct RecipeGridTimeView: View {
     var timer: String
     var body: some View {
         ZStack{
@@ -33,5 +33,5 @@ struct RecipeListTimeView: View {
 }
 
 #Preview {
-    RecipeListTimeView(timer: "3 horas")
+    RecipeGridTimeView(timer: "3 horas")
 }

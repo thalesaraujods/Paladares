@@ -23,22 +23,22 @@ struct CountryView: View {
     
     var body: some View {
         NavigationStack{
-        VStack(alignment: .center, spacing: 25) {
-            LazyVGrid(columns: columns, spacing: 29) {
-                ForEach(countries, id: \.id) { country in
-                    
-                    //ajeitar depois pra onde essa navegação vai
-                    //tem um bug, precisa consertar
-                    NavigationLink(destination: RecipeDetailView(recipe: recipes[0]),isActive: $isActive){
-                        Button(action: {
-                            viewModel.selectCountry(country)
-                            isActive = true
-                        }) {
-                            CountryItemView(country: country)
+            VStack(alignment: .center, spacing: 25) {
+                LazyVGrid(columns: columns, spacing: 29) {
+                    ForEach(countries, id: \.id) { country in
+                        
+                        //ajeitar depois pra onde essa navegação vai
+                        //tem um bug, precisa consertar
+                        NavigationLink(destination: RecipeDetailView(recipe: recipes[0]),isActive: $isActive){
+                            Button(action: {
+                                viewModel.selectCountry(country)
+                                isActive = true
+                            }) {
+                                CountryItemView(country: country)
+                            }
                         }
                     }
                 }
-            }
             }
             .padding(.horizontal, 50)
         }
