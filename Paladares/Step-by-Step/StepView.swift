@@ -20,39 +20,45 @@ struct StepView: View {
     
     var body: some View {
         NavigationStack {
-           // HStack(spacing: 20) {
-            HStack{
+            HStack(spacing: 90) {
+                
                 
                 StepChefsView(quantityChefs: quantityChefs)
                     .padding(.top, 70)
                 
-                ZStack{
-                    StepArrowView()
-                        .padding(.top, 80)
-
-                }
+                
                 ZStack{
                     StepbyStepView(currentStepIndex: $currentStepIndex) // Passando o índice atual
-                    if currentStepIndex > 0 { // Passo 2 tem índice 1
-                        Button(action: {
-                            // Ação para voltar ao passo anterior
-                            currentStepIndex -= 1
-                        }) {
-                            ZStack {
-                                Circle()
-                                    .frame(width: 50, height: 50)
-                                    .foregroundStyle(.corHat1)
+                    
+                    ZStack{
+                        StepArrowView()
+                            .padding(.top, 80)
+                            .padding(.leading, -300)
+                        
+                        if currentStepIndex > 0 { // Passo 2 tem índice 1
+                            Button(action: {
+                                // Ação para voltar ao passo anterior
+                                currentStepIndex -= 1
+                            }) {
+                                ZStack {
+                                    Circle()
+                                        .frame(width: 50, height: 50)
+                                        .foregroundStyle(.corHat1)
+                                    
+                                    Image(systemName: "arrowshape.left.circle")
+                                        .resizable()
+                                        .frame(width: 30, height: 30)
+                                        .foregroundColor(.white)
+                                }
                                 
-                                Image(systemName: "arrowshape.left.circle")
-                                    .resizable()
-                                    .frame(width: 30, height: 30)
-                                    .foregroundColor(.white)
                             }
-                            
+                            .buttonStyle(PlainButtonStyle()) 
+                            .padding(.top, 650)
+                            .padding(.leading, -300)
                         }
-                        .padding(.top, 650)
-                        .padding(.leading, 22)
+                        
                     }
+                    
                 }
                 VStack {
                     Button(action: {
@@ -73,8 +79,9 @@ struct StepView: View {
                         }
                         
                     }
+                    .buttonStyle(PlainButtonStyle())
                     .padding(.top, 650)
-                  // Ajuste conforme necessário
+                    // Ajuste conforme necessário
                 }
             }
             .padding(.bottom, 40)

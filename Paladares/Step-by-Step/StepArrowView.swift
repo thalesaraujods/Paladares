@@ -19,7 +19,8 @@ struct StepArrowView: View {
                 Rectangle()
                     .frame(width: 70, height: 650)
                     .cornerRadius(40)
-                    .foregroundStyle(.white)
+                    .foregroundStyle(.blue)
+                    .opacity(0)
                     //.shadow(color: shadowColor, radius: 10) // Usando a cor do shadow
             }
     }
