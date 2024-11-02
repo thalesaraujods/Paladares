@@ -24,7 +24,7 @@ struct StepView: View {
         // Inicializa as cores dos passos com uma cor padrão
         self._stepColors = State(initialValue: Array(repeating: .corHat1, count: 23)) // Supondo que existam 23 passos
     }
-
+    
     var body: some View {
         NavigationStack {
             HStack(spacing: 90) {
@@ -49,12 +49,12 @@ struct StepView: View {
                             }) {
                                 ZStack {
                                     Circle()
-                                        .frame(width: 50, height: 50)
+                                        .frame(width: 80, height: 80)
                                         .foregroundStyle(stepColors[currentStepIndex])
                                     
-                                    Image(systemName: "arrowshape.left.circle")
+                                    Image(systemName: "arrowshape.left.fill")
                                         .resizable()
-                                        .frame(width: 30, height: 30)
+                                        .frame(width: 45, height: 45)
                                         .foregroundColor(.white)
                                 }
                             }
@@ -62,34 +62,50 @@ struct StepView: View {
                             .padding(.top, 650)
                             .padding(.leading, -300)
                         }
-                    }
-                }
-                VStack {
-                    Button(action: {
-                        // Ação para passar para o próximo passo
-                        if currentStepIndex < 22 { // Limitar a 22 passos
-                            currentStepIndex += 1
-                            // Se a cor do passo ainda não foi definida, escolha uma nova
-                            if stepColors[currentStepIndex] == .corHat1 { // Verifica se a cor padrão foi usada
-                                stepColors[currentStepIndex] = colorsHats.randomElement()! // Seleciona uma cor aleatória
+                        
+                       
+                            if currentStepIndex < 21 { // Se não for o último passo
+                                Button(action: {
+                                    // Ação para passar para o próximo passo
+                                    currentStepIndex += 1
+                               
+                                    // Se a cor do passo ainda não foi definida, escolha uma nova
+                                    if stepColors[currentStepIndex] == .corHat1 { // Verifica se a cor padrão foi usada
+                                        stepColors[currentStepIndex] = colorsHats.randomElement()! // Seleciona uma cor aleatória
+                                    }
+                                    shadowColor = stepColors[currentStepIndex] // Atualiza a sombra
+                                }) {
+                                    ZStack {
+                                        Circle()
+                                            .frame(width: 80, height: 80)
+                                            .foregroundStyle(stepColors[currentStepIndex])
+                                        
+                                        Image(systemName: "arrowshape.right.fill")
+                                            .resizable()
+                                            .frame(width: 45, height: 45)
+                                            .foregroundColor(.white)
+                                    }
+                                    
+                                }
+                                .buttonStyle(PlainButtonStyle())
+                                .padding(.top, 650)
+                                .padding(.leading, 600)
+                                
+                            } else { // Se for o último passo
+                                Button(action: {
+                                    
+                                }) {
+                                    Text("Finalizar")
+                                        .fontWeight(.bold)
+                                        .padding()
+                                        .background(stepColors[currentStepIndex]) // Usar a cor do último passo
+                                        .foregroundColor(.white)
+                                        .cornerRadius(30)
+                                }
+                                .padding(.top, 650)
+                                .padding(.leading, 580)
                             }
-                            shadowColor = stepColors[currentStepIndex] // Atualiza a sombra
                         }
-                    }) {
-                        ZStack {
-                            Circle()
-                                .frame(width: 50, height: 50)
-                                .foregroundStyle(stepColors[currentStepIndex])
-                            
-                            Image(systemName: "arrowshape.right.circle")
-                                .resizable()
-                                .frame(width: 30, height: 30)
-                                .foregroundColor(.white)
-                        }
-                    }
-                    .buttonStyle(PlainButtonStyle())
-                    .padding(.top, 650)
-                    .disabled(currentStepIndex >= 21)
                 }
             }
             .padding(.bottom, 40)
