@@ -11,6 +11,7 @@ import SwiftUI
 struct FormsQuantityView: View {
     
     @StateObject private var preferencesViewModel: PreferencesViewModel = PreferencesViewModel.shared
+    
     var body: some View {
         
         VStack {
@@ -91,9 +92,7 @@ struct FormsQuantityView: View {
                 }
                 .pickerStyle(MenuPickerStyle())
                 .padding()
-                
                 .cornerRadius(8)
-                
                 .padding()
             }
         }
