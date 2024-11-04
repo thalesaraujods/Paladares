@@ -16,15 +16,24 @@ struct HomeView: View {
             Spacer()
             
             // Logo e Slogan
-            Rectangle()
-                .foregroundColor(.blue)
-                .frame(width: 229, height: 229)
-                .background(Color(red: 0.85, green: 0.85, blue: 0.85))
+            Image(.paladinho3)
+                .resizable()
+                .frame(width: 152, height: 152)
             
-            Text("Seja bem-vindo ao Paladares")
-                .font(.custom("SF Pro", size: 32))
-                .multilineTextAlignment(.center)
-                .frame(width: 450, height: 80, alignment: .center)
+            VStack (spacing: 15){
+                Text("Olá, bem-vindo!")
+                    .font(.system(size: 32))
+                    .fontWeight(.bold)
+                
+                Text("Paladares é um espaço onde você poderá cozinhar e \nexplorar novas culturas junto com seus amigos")
+                    .font(
+                        Font.custom("SF Pro Rounded", size: 20)
+                            .weight(.medium)
+                    )
+                    .kerning(0.8)
+                    .multilineTextAlignment(.center)
+                    .foregroundColor(Color(red: 0.53, green: 0.53, blue: 0.55))
+            }
             
             Spacer()
             
@@ -32,13 +41,13 @@ struct HomeView: View {
             Button(action: {
                 coordinator.push(.forms)
             }) {
-                Text("Iniciar")
-                    .font(.title2)
-                    .frame(width: 450, height: 80)
-                    .background(Color.blue)
-                    .foregroundColor(.white)
-                    .cornerRadius(20)
-                    .padding(.horizontal, 40)
+                Label("Começar", systemImage: "")
+                    .font(.system(size: 24))
+                    .fontWeight(.bold)
+                    .frame(width: 576, height: 70)
+                    .background(Color(red: 0.2, green: 0.6, blue: 0.93))
+                    .foregroundColor(Color.white)
+                    .cornerRadius(34)
             }
             .padding(.bottom, 50)
         }
