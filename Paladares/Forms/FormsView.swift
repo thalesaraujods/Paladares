@@ -31,17 +31,17 @@ struct FormsView: View {
                     .padding(.leading, 270)
                 
             }
-            .padding(.bottom, 430)
+            .padding(.bottom, 470)
             
         
                     FormsNamesView()
                         .padding(.leading, 250)
-                        .padding(.top, 220)
+                        .padding(.top, 160)
 
                     //Spacer()
                     FormsQuantityView()
                         .padding(.leading, 620)
-                        .padding(.top, 190)
+                        .padding(.top, 130)
                 
                 
                 Button(action: {
@@ -50,11 +50,11 @@ struct FormsView: View {
                     Text("Continuar")
                         .font(.custom("SF Pro", size: 25))
                         .frame(width: 200, height: 60)
-                        .background(preferencesViewModel.isFormComplete() ? Color.backBotao : Color.gray)
-                        .foregroundColor(preferencesViewModel.isFormComplete() ? Color.palavraBotao : Color.white)
-                        .cornerRadius(20)
-                        .padding(.top, 600)
-                        .padding(.leading, 280)
+                        .background(preferencesViewModel.isFormComplete() ? Color(red: 0.2, green: 0.6, blue: 0.93) : Color.gray)
+                        .foregroundColor(preferencesViewModel.isFormComplete() ? Color.white : Color.white)
+                        .cornerRadius(34)
+                        .padding(.top, 570)
+                        .padding(.leading, 270)
                 }
                 .disabled(!preferencesViewModel.isFormComplete()) // Desabilita o botão se o formulário não estiver completo
         }
