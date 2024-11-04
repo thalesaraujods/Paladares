@@ -18,13 +18,14 @@ struct FormsView: View {
                 .frame(width: 880, height: 600)
                 .foregroundStyle(.white)
                 .cornerRadius(30)
-            //ajustar esse sombreado
                 .shadow(color: .blue, radius: 7)
+
             VStack {
                 Text("Preparação da Cozinha")
                     .font(.system(size: 33))
                     .fontWeight(.bold)
                     .frame(width: 700, height: 200)
+
                 HStack {
                     FormsNamesView()
                         .padding(.leading, 620)
@@ -45,6 +46,7 @@ struct FormsView: View {
                         .cornerRadius(20)
                         .padding(.top, 30)
                 }
+                .disabled(!preferencesViewModel.isFormComplete()) // Desabilita o botão se o formulário não estiver completo
             }
             .padding(.bottom, 70)
         }
@@ -53,4 +55,4 @@ struct FormsView: View {
 
 #Preview {
     FormsView()
-} 
+}

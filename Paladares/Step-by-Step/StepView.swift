@@ -12,6 +12,7 @@ struct StepView: View {
     let hatsChefs: [Image]
     let colorsHats: [Color]
     @ObservedObject var data = ReadJsonStepData()
+    @ObservedObject var preferencesViewModel: PreferencesViewModel = .shared
     
     @State private var currentStepIndex: Int = 0 // Índice do passo atual
     @State private var currentColor: Color = .corHat1 // Cor atual
@@ -36,6 +37,7 @@ struct StepView: View {
     }
     
     var body: some View {
+        let quantityChefs = preferencesViewModel.quantitychefs
         //        NavigationStack {
         HStack(spacing: 90) {
             
