@@ -10,6 +10,7 @@ import SwiftUI
 
 struct FormsView: View {
     @StateObject private var preferencesViewModel: PreferencesViewModel = PreferencesViewModel.shared
+    @EnvironmentObject private var coordinator: Coordinator
     
     var body: some View {
         ZStack {
@@ -34,7 +35,7 @@ struct FormsView: View {
                 }
                 
                 Button(action: {
-                    //
+                    coordinator.push(.country)
                 }) {
                     Text("Continuar")
                         .font(.custom("SF Pro", size: 25))

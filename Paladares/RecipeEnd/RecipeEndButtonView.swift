@@ -8,18 +8,15 @@
 import SwiftUI
 
 struct RecipeEndButtonView: View {
+    
     var body: some View {
-        Button(action: {
-            //
-        }) {
-            Label("Retornar ao Menu", systemImage: "")
-                .font(.system(size: 24))
-                .fontWeight(.bold)
-                .frame(width: 274, height: 70)
-                .background(Color(red: 0.2, green: 0.6, blue: 0.93))
-                .foregroundColor(Color.white)
-                .cornerRadius(34)
-        }
+        Label("Retornar ao Menu", systemImage: "")
+            .font(.system(size: 24))
+            .fontWeight(.bold)
+            .frame(width: 274, height: 70)
+            .background(Color(red: 0.2, green: 0.6, blue: 0.93))
+            .foregroundColor(Color.white)
+            .cornerRadius(34)
     }
 }
 
