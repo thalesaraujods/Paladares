@@ -15,25 +15,34 @@ struct FormsView: View {
     var body: some View {
         ZStack {
             Rectangle()
-                .frame(width: 880, height: 600)
+                .frame(width: 880, height: 700)
                 .foregroundStyle(.white)
                 .cornerRadius(30)
-                .shadow(color: .blue, radius: 7)
+                .shadow(color: .gray, radius: 3)
+            
+            FormsImageView()
+                .padding(.leading, -440)
 
-            VStack {
-                Text("Preparação da Cozinha")
-                    .font(.system(size: 33))
-                    .fontWeight(.bold)
-                    .frame(width: 700, height: 200)
-
-                HStack {
+            VStack (spacing: -50){
+                FormsTitleView()
+                    .padding(.leading, 80)
+                
+                FormsPhraseView()
+                    .padding(.leading, 270)
+                
+            }
+            .padding(.bottom, 430)
+            
+        
                     FormsNamesView()
-                        .padding(.leading, 620)
-                    
-                    Spacer()
+                        .padding(.leading, 250)
+                        .padding(.top, 220)
+
+                    //Spacer()
                     FormsQuantityView()
-                        .padding(.leading, -480)
-                }
+                        .padding(.leading, 620)
+                        .padding(.top, 190)
+                
                 
                 Button(action: {
                     coordinator.push(.country)
@@ -44,11 +53,10 @@ struct FormsView: View {
                         .background(preferencesViewModel.isFormComplete() ? Color.backBotao : Color.gray)
                         .foregroundColor(preferencesViewModel.isFormComplete() ? Color.palavraBotao : Color.white)
                         .cornerRadius(20)
-                        .padding(.top, 30)
+                        .padding(.top, 600)
+                        .padding(.leading, 280)
                 }
                 .disabled(!preferencesViewModel.isFormComplete()) // Desabilita o botão se o formulário não estiver completo
-            }
-            .padding(.bottom, 70)
         }
     }
 }
