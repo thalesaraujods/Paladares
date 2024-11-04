@@ -11,13 +11,13 @@ struct FormsImageView: View {
     var body: some View {
         Rectangle()
         .foregroundColor(.clear)
-        .frame(width: 250, height: 600)
+        .frame(width: 250, height: 700)
         .cornerRadius(30)
         .background(
             Image(.imageForms)
         .resizable()
         .aspectRatio(contentMode: .fill)
-        .frame(width: 250, height: 600)
+        .frame(width: 250, height: 700)
         .clipped()
         .cornerRadius(30)
         )

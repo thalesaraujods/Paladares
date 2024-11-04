@@ -15,7 +15,7 @@ struct FormsView: View {
     var body: some View {
         ZStack {
             Rectangle()
-                .frame(width: 880, height: 600)
+                .frame(width: 880, height: 700)
                 .foregroundStyle(.white)
                 .cornerRadius(30)
                 .shadow(color: .gray, radius: 3)
@@ -30,34 +30,33 @@ struct FormsView: View {
                 FormsPhraseView()
                     .padding(.leading, 270)
                 
-                VStack{
-                    HStack{
-                        
-                    }
-                }
             }
-            .padding(.bottom, 410)
-//                HStack {
-//                    FormsNamesView()
-//                        .padding(.leading, 620)
-//                    
-//                    Spacer()
-//                    FormsQuantityView()
-//                        .padding(.leading, -480)
-//                }
+            .padding(.bottom, 430)
+            
+        
+                    FormsNamesView()
+                        .padding(.leading, 250)
+                        .padding(.top, 220)
+
+                    //Spacer()
+                    FormsQuantityView()
+                        .padding(.leading, 620)
+                        .padding(.top, 190)
                 
-//                Button(action: {
-//                    coordinator.push(.country)
-//                }) {
-//                    Text("Continuar")
-//                        .font(.custom("SF Pro", size: 25))
-//                        .frame(width: 200, height: 60)
-//                        .background(preferencesViewModel.isFormComplete() ? Color.backBotao : Color.gray)
-//                        .foregroundColor(preferencesViewModel.isFormComplete() ? Color.palavraBotao : Color.white)
-//                        .cornerRadius(20)
-//                        .padding(.top, 30)
-//                }
-//                .disabled(!preferencesViewModel.isFormComplete()) // Desabilita o botão se o formulário não estiver completo
+                
+                Button(action: {
+                    coordinator.push(.country)
+                }) {
+                    Text("Continuar")
+                        .font(.custom("SF Pro", size: 25))
+                        .frame(width: 200, height: 60)
+                        .background(preferencesViewModel.isFormComplete() ? Color.backBotao : Color.gray)
+                        .foregroundColor(preferencesViewModel.isFormComplete() ? Color.palavraBotao : Color.white)
+                        .cornerRadius(20)
+                        .padding(.top, 600)
+                        .padding(.leading, 280)
+                }
+                .disabled(!preferencesViewModel.isFormComplete()) // Desabilita o botão se o formulário não estiver completo
         }
     }
 }
