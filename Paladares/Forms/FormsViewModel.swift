@@ -11,13 +11,11 @@ import SwiftUI
 
 class PreferencesViewModel: ObservableObject {
     
+    static var shared: PreferencesViewModel = PreferencesViewModel()
     @Published var quantitychefs: Int = 2
     @Published var quantityconsumers: Int = 1
     @Published var selectionLevel: RecipeLevel?
     @Published var showsLevels: Bool = false
-    
-    // Singleton
-    static var shared: PreferencesViewModel = PreferencesViewModel()
     
     func incrementChefs() {
         if quantitychefs < 4 { quantitychefs += 1 }
@@ -36,7 +34,6 @@ class PreferencesViewModel: ObservableObject {
     }
     
     func isFormComplete() -> Bool {
-            return quantitychefs > 0 && quantityconsumers > 0 && selectionLevel != nil
-        }
-   
+        return quantitychefs > 0 && quantityconsumers > 0 && selectionLevel != nil
+    }
 }

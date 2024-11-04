@@ -9,11 +9,9 @@ import Foundation
 import SwiftUI
 
 struct FormsNamesView: View {
-
+    
     var body: some View {
-        
         VStack {
-
             HStack{
                 Image(.cozinheiroForms)
                     .resizable()
@@ -49,13 +47,12 @@ struct FormsNamesView: View {
                     .colorMultiply(.black)
                     .padding(.bottom, 40)
                     .padding(.horizontal, -330)
-            
+                
                 Text("Nível de Habilidade")
                     .font(.system(size: 33))
                     .padding(.bottom, 40)
                     .padding(.horizontal, -275)
             }
-            
         }
     }
 }

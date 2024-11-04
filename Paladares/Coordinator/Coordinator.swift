@@ -18,7 +18,8 @@ enum Page: String, Identifiable {
 class Coordinator: ObservableObject {
     
     @Published var path = NavigationPath()
-    @ObservedObject var countryViewModel = CountryViewModel()
+    @ObservedObject var countryViewModel = CountryViewModel.shared
+    @ObservedObject var preferencesViewModel = PreferencesViewModel.shared
     @ObservedObject var recipeViewModel = RecipeViewModel.shared
     
     func push(_ page: Page) {

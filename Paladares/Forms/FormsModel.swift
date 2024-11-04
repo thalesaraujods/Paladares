@@ -7,11 +7,6 @@
 
 import Foundation
 
-enum Anchor {
-    case top
-    case bottom
-}
-
 struct RecipeLevel: Identifiable, Hashable{
     let id = UUID()
     let name: String
