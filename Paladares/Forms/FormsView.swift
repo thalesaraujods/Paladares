@@ -18,37 +18,46 @@ struct FormsView: View {
                 .frame(width: 880, height: 600)
                 .foregroundStyle(.white)
                 .cornerRadius(30)
-                .shadow(color: .blue, radius: 7)
+                .shadow(color: .gray, radius: 3)
+            
+            FormsImageView()
+                .padding(.leading, -440)
 
-            VStack {
-                Text("Preparação da Cozinha")
-                    .font(.system(size: 33))
-                    .fontWeight(.bold)
-                    .frame(width: 700, height: 200)
-
-                HStack {
-                    FormsNamesView()
-                        .padding(.leading, 620)
-                    
-                    Spacer()
-                    FormsQuantityView()
-                        .padding(.leading, -480)
-                }
+            VStack (spacing: -50){
+                FormsTitleView()
+                    .padding(.leading, 80)
                 
-                Button(action: {
-                    coordinator.push(.country)
-                }) {
-                    Text("Continuar")
-                        .font(.custom("SF Pro", size: 25))
-                        .frame(width: 200, height: 60)
-                        .background(preferencesViewModel.isFormComplete() ? Color.backBotao : Color.gray)
-                        .foregroundColor(preferencesViewModel.isFormComplete() ? Color.palavraBotao : Color.white)
-                        .cornerRadius(20)
-                        .padding(.top, 30)
+                FormsPhraseView()
+                    .padding(.leading, 270)
+                
+                VStack{
+                    HStack{
+                        
+                    }
                 }
-                .disabled(!preferencesViewModel.isFormComplete()) // Desabilita o botão se o formulário não estiver completo
             }
-            .padding(.bottom, 70)
+            .padding(.bottom, 410)
+//                HStack {
+//                    FormsNamesView()
+//                        .padding(.leading, 620)
+//                    
+//                    Spacer()
+//                    FormsQuantityView()
+//                        .padding(.leading, -480)
+//                }
+                
+//                Button(action: {
+//                    coordinator.push(.country)
+//                }) {
+//                    Text("Continuar")
+//                        .font(.custom("SF Pro", size: 25))
+//                        .frame(width: 200, height: 60)
+//                        .background(preferencesViewModel.isFormComplete() ? Color.backBotao : Color.gray)
+//                        .foregroundColor(preferencesViewModel.isFormComplete() ? Color.palavraBotao : Color.white)
+//                        .cornerRadius(20)
+//                        .padding(.top, 30)
+//                }
+//                .disabled(!preferencesViewModel.isFormComplete()) // Desabilita o botão se o formulário não estiver completo
         }
     }
 }
