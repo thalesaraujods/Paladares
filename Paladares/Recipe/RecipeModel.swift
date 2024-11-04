@@ -31,6 +31,12 @@ var recipes: [Recipe] = [
            sugestoes: " . Substitua carne suína pela bovina, se preferir.\n . Adicione temperos de sua escolha, se preferir."
           ),
     Recipe(name: "Acarajé", imagem: "acaraje", time: "40 min", curiosidade: "", utensílios: "", ingredientes: "", sugestoes: ""),
-    Recipe(name: "Coxinha", imagem: "coxinha", time: "3 horas", curiosidade: "", utensílios: "", ingredientes: "", sugestoes: "")
+    Recipe(name: "Coxinha", imagem: "coxinha", time: "3 horas", curiosidade: "", utensílios: "", ingredientes: "", sugestoes: ""),
+    Recipe(name: "Feijão Tropeiro", imagem: "feijaotropeiro", time: "1 hora", curiosidade: "", utensílios: "", ingredientes: "", sugestoes: ""),
+    Recipe(name: "Bodó de Camarão", imagem: "bododecamarao", time: "1 hora", curiosidade: "", utensílios: "", ingredientes: "", sugestoes: ""),
+    Recipe(name: "Pato no Tucupi", imagem: "patotucupi", time: "50 min", curiosidade: "", utensílios: "", ingredientes: "", sugestoes: ""),
+    Recipe(name: "Tacacá", imagem: "tacaca", time: "1 hora", curiosidade: "", utensílios: "", ingredientes: "", sugestoes: ""),
+    Recipe(name: "Pão de Queijo", imagem: "paodequeijo", time: "40 min", curiosidade: "", utensílios: "", ingredientes: "", sugestoes: ""),
+    Recipe(name: "X-Caboquinho", imagem: "x-caboquinho", time: "10 min", curiosidade: "", utensílios: "", ingredientes: "", sugestoes: "")
 ]
     
