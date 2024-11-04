@@ -9,6 +9,7 @@ import Foundation
 import SwiftUI
 
 class CountryViewModel: ObservableObject {
+    static let shared = CountryViewModel()
     @Published var selectedCountry: Country?
     
     func selectCountry(_ country: Country) {

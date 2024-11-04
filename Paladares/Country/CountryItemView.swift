@@ -17,9 +17,21 @@ struct CountryItemView: View {
             FlagView(countryCode: country.flagName, style: .circle)
                 .frame(width: 125, height: 125)
                 .overlay(
-                    RoundedRectangle(cornerRadius: 125)
-                        .inset(by: 0.5)
-                        .stroke(.black, lineWidth: 1)
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 125)
+                            .inset(by: 0.5)
+                            .stroke(.black, lineWidth: 1)
+                        
+                        if country.blocked {
+                            Circle()
+                                .foregroundColor(.black)
+                                .cornerRadius(27)
+                                .opacity(0.6)
+                            Image(systemName: "lock.fill")
+                                .font(.system(size: 50))
+                                .foregroundStyle(.white)
+                        }
+                    }
                 )
             
             Text(country.name)
@@ -33,5 +45,5 @@ struct CountryItemView: View {
 }
 
 #Preview {
-    CountryItemView(country: Country(name: "Brasil",flagName: "br"))
+    CountryItemView(country: Country(name: "Brasil", flagName: "br", blocked: true))
 }

@@ -13,7 +13,6 @@ struct FormsQuantityView: View {
     @StateObject private var preferencesViewModel: PreferencesViewModel = PreferencesViewModel.shared
     
     var body: some View {
-        
         VStack {
             ZStack{
                 Rectangle()
@@ -45,7 +44,7 @@ struct FormsQuantityView: View {
                     })
                 }
             }
-        
+            
             ZStack{
                 Rectangle()
                     .frame(width: 170, height: 50)
@@ -78,7 +77,7 @@ struct FormsQuantityView: View {
             }
             
             ZStack{
-               
+                
                 Rectangle()
                     .frame(width: 170, height: 50)
                     .cornerRadius(15)
@@ -96,7 +95,6 @@ struct FormsQuantityView: View {
                 .padding()
             }
         }
-        //.padding(.leading, 520)
     }
 }
 

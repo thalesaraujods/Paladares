@@ -10,7 +10,7 @@ import FlagsKit
 
 struct CountryView: View {
     
-    @ObservedObject var viewModel = CountryViewModel()
+    @ObservedObject var viewModel = CountryViewModel.shared
     @EnvironmentObject private var coordinator: Coordinator
     
     let columns = [
@@ -30,12 +30,14 @@ struct CountryView: View {
                 }) {
                     CountryItemView(country: country)
                 }
+                .disabled(country.blocked)
             }
         }
         .padding(.horizontal, 50)
         .padding(.bottom, 150)
         .frame(width: 1158, alignment: .center)
         .navigationTitle("Escolha um País")
+        .navigationBarTitleDisplayMode(.large)
     }
 }
 #Preview {
