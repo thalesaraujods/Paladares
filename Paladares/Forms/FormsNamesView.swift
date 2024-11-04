@@ -13,40 +13,34 @@ struct FormsNamesView: View {
     var body: some View {
         
         VStack(spacing: 40) {
-
-                
-                Text("Cozinheiros")
-                    .font(.system(size: 24))
-                    .fontWeight(.bold)
-                    .padding(.bottom, 40)
-                    .padding(.horizontal, -280)
             
             
-           
-                
-                Text("Degustadores")
-                    .font(.system(size: 24))
-                    .fontWeight(.bold)
-                    .padding(.bottom, 40)
-                    .padding(.horizontal, -275)
+            Text("Cozinheiros")
+                .font(.system(size: 24))
+                .fontWeight(.bold)
+                .padding(.bottom, 40)
+                .padding(.horizontal, -280)
             
             
-           
             
-            HStack{
-                Image(systemName: "exclamationmark.triangle")
-                    .resizable()
-                    .frame(width: 40, height: 40)
-                    .colorMultiply(.black)
-                    .padding(.bottom, 40)
-                    .padding(.horizontal, -330)
-                
+            
+            Text("Degustadores")
+                .font(.system(size: 24))
+                .fontWeight(.bold)
+                .padding(.bottom, 40)
+                .padding(.horizontal, -275)
+            
+            
+            
+            
+            
                 Text("Nível de Habilidade")
                     .font(.system(size: 24))
                     .fontWeight(.bold)
                     .padding(.bottom, 40)
                     .padding(.horizontal, -275)
-            
+                
+                
             
         }
     }
