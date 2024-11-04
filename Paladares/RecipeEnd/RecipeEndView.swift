@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct RecipeEndView: View {
+    
+    @EnvironmentObject private var coordinator: Coordinator
+    
     var body: some View {
         ZStack{
             RecipeEndRectangleView()
@@ -16,8 +19,13 @@ struct RecipeEndView: View {
                 RecipeEndSentenceView()
             }
             .padding(.bottom, 80)
-            RecipeEndButtonView()
-                .padding(.top, 400)
+            Button(action: {
+                coordinator.popToRoot()
+            }) {
+                RecipeEndButtonView()
+                    .padding(.top, 400)
+            }
+            
         }
     }
 }

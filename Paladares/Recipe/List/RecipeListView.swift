@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct RecipeListView: View {
-    @ObservedObject var viewModel = RecipeViewModel()
+    @ObservedObject var viewModel = RecipeViewModel.shared
+    @EnvironmentObject private var coordinator: Coordinator
     
     let columns = [
         GridItem(.flexible(), spacing: 70),
@@ -19,11 +20,17 @@ struct RecipeListView: View {
     var body: some View {
         LazyVGrid(columns: columns) {
             ForEach(recipes, id: \.id) { recipe in
-                RecipeGridView(recipe: recipe)
+                Button (action: {
+                    viewModel.selectedRecipe = recipe
+                    coordinator.push(.recipeDetail)
+                }) {
+                    RecipeGridView(recipe: recipe)
+                }
             }
         }
         .padding()
         .frame(width: 1024)
+        .navigationTitle("Receitas")
     }
 }
 

@@ -9,6 +9,7 @@ import Foundation
 import SwiftUI
 
 class RecipeViewModel: ObservableObject {
+    static let shared = RecipeViewModel()
     @Published var selectedRecipe: Recipe?
     
     func selectedRecipe(_ recipe: Recipe) {

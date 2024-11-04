@@ -9,7 +9,9 @@ import SwiftUI
 import FlagsKit
 
 struct CountryView: View {
+    
     @ObservedObject var viewModel = CountryViewModel()
+    @EnvironmentObject private var coordinator: Coordinator
     
     let columns = [
         GridItem(.flexible()),
@@ -23,12 +25,17 @@ struct CountryView: View {
     var body: some View {
         LazyVGrid(columns: columns, spacing: 29) {
             ForEach(countries, id: \.id) { country in
-                CountryItemView(country: country)
+                Button (action: {
+                    coordinator.push(.recipeList)
+                }) {
+                    CountryItemView(country: country)
+                }
             }
         }
         .padding(.horizontal, 50)
         .padding(.bottom, 150)
         .frame(width: 1158, alignment: .center)
+        .navigationTitle("Escolha um País")
     }
 }
 #Preview {

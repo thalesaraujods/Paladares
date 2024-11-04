@@ -18,6 +18,8 @@ struct StepView: View {
     @State private var shadowColor: Color = .corHat1 // Cor da sombra
     @State private var stepColors: [Color] // Array para armazenar as cores de cada passo
     
+    @EnvironmentObject private var coordinator: Coordinator
+    
     init(quantityChefs: Int) {
         self.quantityChefs = quantityChefs
         
@@ -34,86 +36,87 @@ struct StepView: View {
     }
     
     var body: some View {
-        NavigationStack {
-            HStack(spacing: 90) {
-                
-                StepChefsView(quantityChefs: quantityChefs, shadowColor: $shadowColor)
-                    .padding(.top, 70)
+        //        NavigationStack {
+        HStack(spacing: 90) {
+            
+            StepChefsView(quantityChefs: quantityChefs, shadowColor: $shadowColor)
+                .padding(.top, 70)
+            
+            ZStack {
+                StepbyStepView(currentStepIndex: $currentStepIndex) // Passando o índice atual
                 
                 ZStack {
-                    StepbyStepView(currentStepIndex: $currentStepIndex) // Passando o índice atual
+                    StepArrowView()
+                        .padding(.top, 80)
+                        .padding(.leading, -300)
                     
-                    ZStack {
-                        StepArrowView()
-                            .padding(.top, 80)
-                            .padding(.leading, -300)
-                        
-                        if currentStepIndex > 0 { // Passo 2 tem índice 1
-                            Button(action: {
-                                currentStepIndex -= 1
-                                shadowColor = stepColors[currentStepIndex]
-                            }) {
-                                ZStack {
-                                    Circle()
-                                        .frame(width: 80, height: 80)
-                                        .foregroundStyle(stepColors[currentStepIndex])
-                                    
-                                    Image(systemName: "arrowshape.left.fill")
-                                        .resizable()
-                                        .frame(width: 45, height: 45)
-                                        .foregroundColor(.white)
-                                }
-                            }
-                            .buttonStyle(PlainButtonStyle())
-                            .padding(.top, 650)
-                            .padding(.leading, -300)
-                        }
-                        
-                        if currentStepIndex < 21 { // Se não for o último passo
-                            Button(action: {
-                                currentStepIndex += 1
+                    if currentStepIndex > 0 { // Passo 2 tem índice 1
+                        Button(action: {
+                            currentStepIndex -= 1
+                            shadowColor = stepColors[currentStepIndex]
+                        }) {
+                            ZStack {
+                                Circle()
+                                    .frame(width: 80, height: 80)
+                                    .foregroundStyle(stepColors[currentStepIndex])
                                 
-                                // Se a cor do passo ainda não foi definida, escolha uma nova
-                                if stepColors[currentStepIndex] == .corHat1 {
-                                    stepColors[currentStepIndex] = colorsHats.randomElement()! // Seleciona uma cor aleatória
-                                }
-                                shadowColor = stepColors[currentStepIndex] // Atualiza a sombra
-                            }) {
-                                ZStack {
-                                    Circle()
-                                        .frame(width: 80, height: 80)
-                                        .foregroundStyle(stepColors[currentStepIndex])
-                                    
-                                    Image(systemName: "arrowshape.right.fill")
-                                        .resizable()
-                                        .frame(width: 45, height: 45)
-                                        .foregroundColor(.white)
-                                }
-                            }
-                            .buttonStyle(PlainButtonStyle())
-                            .padding(.top, 650)
-                            .padding(.leading, 600)
-                            
-                        } else { // Se for o último passo
-                            Button(action: {
-                                // Ação para finalizar
-                            }) {
-                                Text("Finalizar")
-                                    .fontWeight(.bold)
-                                    .padding()
-                                    .background(stepColors[currentStepIndex])
+                                Image(systemName: "arrowshape.left.fill")
+                                    .resizable()
+                                    .frame(width: 45, height: 45)
                                     .foregroundColor(.white)
-                                    .cornerRadius(30)
                             }
-                            .padding(.top, 650)
-                            .padding(.leading, 580)
                         }
+                        .buttonStyle(PlainButtonStyle())
+                        .padding(.top, 650)
+                        .padding(.leading, -300)
+                    }
+                    
+                    if currentStepIndex < 21 { // Se não for o último passo
+                        Button(action: {
+                            currentStepIndex += 1
+                            
+                            // Se a cor do passo ainda não foi definida, escolha uma nova
+                            if stepColors[currentStepIndex] == .corHat1 {
+                                stepColors[currentStepIndex] = colorsHats.randomElement()! // Seleciona uma cor aleatória
+                            }
+                            shadowColor = stepColors[currentStepIndex] // Atualiza a sombra
+                        }) {
+                            ZStack {
+                                Circle()
+                                    .frame(width: 80, height: 80)
+                                    .foregroundStyle(stepColors[currentStepIndex])
+                                
+                                Image(systemName: "arrowshape.right.fill")
+                                    .resizable()
+                                    .frame(width: 45, height: 45)
+                                    .foregroundColor(.white)
+                            }
+                        }
+                        .buttonStyle(PlainButtonStyle())
+                        .padding(.top, 650)
+                        .padding(.leading, 600)
+                        
+                    } else { // Se for o último passo
+                        Button(action: {
+                            coordinator.push(.recipeEnd)
+                        }) {
+                            Text("Finalizar")
+                                .fontWeight(.bold)
+                                .padding()
+                                .background(stepColors[currentStepIndex])
+                                .foregroundColor(.white)
+                                .cornerRadius(30)
+                        }
+                        .padding(.top, 650)
+                        .padding(.leading, 580)
                     }
                 }
             }
-            .padding(.bottom, 40)
         }
+        .padding(.bottom, 40)
         .navigationBarBackButtonHidden(true)
+        //        }
+        //        .navigationBarBackButtonHidden(true)
     }
 }
 
