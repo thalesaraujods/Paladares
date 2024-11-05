@@ -25,8 +25,8 @@ struct RecipeEndView: View {
                 RecipeEndButtonView()
                     .padding(.top, 400)
             }
-            
         }
+        .navigationBarBackButtonHidden(true)
     }
 }
 
