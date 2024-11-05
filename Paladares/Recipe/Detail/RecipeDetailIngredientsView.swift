@@ -9,31 +9,28 @@ import Foundation
 import SwiftUI
 
 struct RecipeDetailIngredientsView: View {
-
+    
     @State var recipe: Recipe
-
+    
     var body: some View {
         VStack {
-
-            Text("Ingredientes")
-                .font(.system(size: 36))
-                .fontWeight(.bold)
-                .padding(.bottom, 40)
-                .padding(.horizontal, -400)
-            
-            ZStack{
-                Rectangle()
-                    .frame(width: 840, height: 750)
-                    .cornerRadius(35)
-                    .shadow(radius: 10)
-                    .foregroundStyle(.white)
+            VStack(alignment: .leading, spacing: 10) {
+                Text("Ingredientes")
+                    .font(.title)
+                    .bold()
                 
-                Text(recipe.ingredientes)
-                    .font(.custom("SF Pro", size: 31))
-                    .frame(width: 550, height: 700)
-                    .lineSpacing(20)
-                    //.padding(300)
+                ForEach(recipe.ingredientes) { ingrediente in
+                    HStack {
+                        Text(ingrediente.quantidade)
+                            .foregroundColor(.blue) // Quantidade em azul
+                            .font(.body)
+                        Text(ingrediente.nome)
+                            .foregroundColor(.black)
+                            .font(.body)
+                    }
+                }
             }
+            .padding(.horizontal)
         }
     }
 }

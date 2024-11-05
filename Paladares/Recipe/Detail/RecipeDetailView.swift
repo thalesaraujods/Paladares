@@ -15,14 +15,7 @@ struct RecipeDetailView: View {
     
     var body: some View {
         ScrollView(showsIndicators: false) {
-            VStack {
-                Text(recipe.name)
-                //.font(.title)
-                    .font(.system(size: 56))
-                    .fontWeight(.bold)
-                    .padding(.bottom, 20)
-                    .padding(.horizontal, -420)
-                
+            VStack {                
                 Image(recipe.imagem)
                     .resizable()
                     .frame(width: 850, height: 400)
@@ -66,8 +59,10 @@ struct RecipeDetailView: View {
                     .padding(.top, 80)
             }
             .padding(.top, 120)
+            //.navigationTitle(recipe.name)
         }
         .padding(.bottom, 10)
+        .navigationTitle(recipe.name)
     }
 }
 
