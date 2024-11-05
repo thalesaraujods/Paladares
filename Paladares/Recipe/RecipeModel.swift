@@ -19,6 +19,7 @@ struct Recipe: Identifiable, Hashable {
     //fazer o caso do "número" de quanto precisa pra cada ingrediente conforme o cálculo de consumidores
     let ingredientes: String
     let sugestoes: String
+    let blocked: Bool
 }
 
 var recipes: [Recipe] = [
@@ -28,15 +29,16 @@ var recipes: [Recipe] = [
            curiosidade: "Os escravos africanos que trabalhavam nas plantações de cana-de-açúcar e café muitas vezes tinham acesso apenas a restos de carne, como as partes menos nobres dos porcos e outras carnes menos valorizadas.",
            utensílios: " . Panela de Pressão \n . Panelas Grandes \n . Colheres com cabos longos",
            ingredientes: " costela suína \n de carne-seca \n orelha de porco \n pé de porco \n rabo de porco \n pedaço de lombo suíno defumado \n xícaras (chá) de feijão preto \n xícara (chá) de bacon picado \n gomo calabresa \n cebolas médias \n dentes de alho \n colheres (sopa) de cheiro \n",
-           sugestoes: " . Substitua carne suína pela bovina, se preferir.\n . Adicione temperos de sua escolha, se preferir."
+           sugestoes: " . Substitua carne suína pela bovina, se preferir.\n . Adicione temperos de sua escolha, se preferir.",
+           blocked: false
           ),
-    Recipe(name: "Acarajé", imagem: "acaraje", time: "40 min", curiosidade: "", utensílios: "", ingredientes: "", sugestoes: ""),
-    Recipe(name: "Coxinha", imagem: "coxinha", time: "3 horas", curiosidade: "", utensílios: "", ingredientes: "", sugestoes: ""),
-    Recipe(name: "Feijão Tropeiro", imagem: "feijaotropeiro", time: "1 hora", curiosidade: "", utensílios: "", ingredientes: "", sugestoes: ""),
-    Recipe(name: "Bodó de Camarão", imagem: "bododecamarao", time: "1 hora", curiosidade: "", utensílios: "", ingredientes: "", sugestoes: ""),
-    Recipe(name: "Pato no Tucupi", imagem: "patotucupi", time: "50 min", curiosidade: "", utensílios: "", ingredientes: "", sugestoes: ""),
-    Recipe(name: "Tacacá", imagem: "tacaca", time: "1 hora", curiosidade: "", utensílios: "", ingredientes: "", sugestoes: ""),
-    Recipe(name: "Pão de Queijo", imagem: "paodequeijo", time: "40 min", curiosidade: "", utensílios: "", ingredientes: "", sugestoes: ""),
-    Recipe(name: "X-Caboquinho", imagem: "x-caboquinho", time: "10 min", curiosidade: "", utensílios: "", ingredientes: "", sugestoes: "")
+    Recipe(name: "Acarajé", imagem: "acaraje", time: "40 min", curiosidade: "", utensílios: "", ingredientes: "", sugestoes: "", blocked: true),
+    Recipe(name: "Coxinha", imagem: "coxinha", time: "3 horas", curiosidade: "", utensílios: "", ingredientes: "", sugestoes: "", blocked: true),
+    Recipe(name: "Feijão Tropeiro", imagem: "feijaotropeiro", time: "1 hora", curiosidade: "", utensílios: "", ingredientes: "", sugestoes: "", blocked: true),
+    Recipe(name: "Bodó de Camarão", imagem: "bobodecamarao", time: "1 hora", curiosidade: "", utensílios: "", ingredientes: "", sugestoes: "", blocked: true),
+    Recipe(name: "Pato no Tucupi", imagem: "patotucupi", time: "50 min", curiosidade: "", utensílios: "", ingredientes: "", sugestoes: "", blocked: true),
+    Recipe(name: "Tacacá", imagem: "tacaca", time: "1 hora", curiosidade: "", utensílios: "", ingredientes: "", sugestoes: "", blocked: true),
+    Recipe(name: "Pão de Queijo", imagem: "paodequeijo", time: "40 min", curiosidade: "", utensílios: "", ingredientes: "", sugestoes: "", blocked: true),
+    Recipe(name: "X-Caboquinho", imagem: "caboquinho", time: "10 min", curiosidade: "", utensílios: "", ingredientes: "", sugestoes: "", blocked: true)
 ]
     

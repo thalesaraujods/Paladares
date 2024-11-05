@@ -23,9 +23,23 @@ struct RecipeGridView: View {
                 .padding(.top, 135)
                 .padding(.leading, 200)
         }
+        .overlay{
+            ZStack {
+                if recipe.blocked {
+                    Rectangle()
+                        .foregroundColor(.black)
+                        .frame(width: 317, height: 192)
+                        .cornerRadius(27)
+                        .opacity(0.6)
+                    Image(systemName: "lock.fill")
+                        .font(.system(size: 50))
+                        .foregroundStyle(.white)
+                }
+            }
+        }
     }
 }
 
 #Preview {
-    RecipeGridView(recipe: Recipe(name: "Acarajé", imagem: "acaraje", time: "40 min", curiosidade: "", utensílios: "", ingredientes: "", sugestoes: ""))
+    RecipeGridView(recipe: Recipe(name: "Acarajé", imagem: "acaraje", time: "40 min", curiosidade: "", utensílios: "", ingredientes: "", sugestoes: "", blocked: true))
 }

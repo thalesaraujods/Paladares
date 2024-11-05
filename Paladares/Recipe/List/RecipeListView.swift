@@ -18,7 +18,7 @@ struct RecipeListView: View {
     ]
     
     var body: some View {
-        LazyVGrid(columns: columns) {
+        LazyVGrid(columns: columns, spacing: 72) {
             ForEach(recipes, id: \.id) { recipe in
                 Button (action: {
                     viewModel.selectedRecipe = recipe
@@ -26,10 +26,11 @@ struct RecipeListView: View {
                 }) {
                     RecipeGridView(recipe: recipe)
                 }
+                .disabled(recipe.blocked)
             }
         }
         .padding()
-        .frame(width: 1024)
+        .frame(width: 1169)
         .navigationTitle("Receitas")
     }
 }
