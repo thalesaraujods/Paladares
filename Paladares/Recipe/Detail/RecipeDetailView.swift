@@ -36,7 +36,7 @@ struct RecipeDetailView: View {
                             .padding(.trailing, 440)
                     }
                     
-                    Label(recipe.time, systemImage: "clock.arrow.trianglehead.counterclockwise.rotate.90")
+                    Label(recipe.time, systemImage: "clock.fill")
                         .font(.custom("SF Pro", size: 25))
                         .frame(width: 180, height: 75)
                         .background(Color.white)

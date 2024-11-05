@@ -14,23 +14,34 @@ struct RecipeDetailIngredientsView: View {
     
     var body: some View {
         VStack {
-            VStack(alignment: .leading, spacing: 10) {
-                Text("Ingredientes")
-                    .font(.title)
-                    .bold()
+            Text("Ingredientes")
+                .font(.system(size: 36))
+                .fontWeight(.bold)
+                .padding(.bottom, 40)
+                .padding(.horizontal, -400)
+            ZStack {
+                Rectangle()
+                    .frame(width: 840, height: 750)
+                    .cornerRadius(35)
+                    .shadow(radius: 10)
+                    .foregroundStyle(.white)
                 
-                ForEach(recipe.ingredientes) { ingrediente in
-                    HStack {
-                        Text(ingrediente.quantidade)
-                            .foregroundColor(.blue) // Quantidade em azul
-                            .font(.body)
-                        Text(ingrediente.nome)
-                            .foregroundColor(.black)
-                            .font(.body)
+                VStack(alignment: .leading, spacing: 20) {
+                    
+                    
+                    ForEach(recipe.ingredientes) { ingrediente in
+                        HStack(alignment: .top) {
+                            Text(ingrediente.quantidade)
+                                .foregroundColor(.blue)
+                            Text(ingrediente.nome)
+                                .foregroundColor(.black)
+                        }
+                        .font(.custom("SF Pro", size: 31))
                     }
+                    .padding(.horizontal, 20)
                 }
+                .padding()
             }
-            .padding(.horizontal)
         }
     }
 }
