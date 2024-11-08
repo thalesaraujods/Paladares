@@ -16,7 +16,7 @@ struct RecipeDetailSugestionsView: View {
         VStack {
 
             Text("Sugestões")
-                .font(.system(size: 36))
+                .font(.system(.title))
                 .fontWeight(.bold)
                 .padding(.bottom, 40)
                 .padding(.horizontal, -400)
@@ -29,7 +29,7 @@ struct RecipeDetailSugestionsView: View {
                     .foregroundStyle(.white)
                 
                 Text(recipe.sugestoes)
-                    .font(.custom("SF Pro", size: 31))
+                    .font(.system(.body))
                     .frame(width: 750, height: 200)
                     .lineSpacing(20)
                     //.padding(300)

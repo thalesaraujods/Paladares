@@ -16,7 +16,7 @@ struct RecipeDetailUtensilsView: View {
         VStack {
 
             Text("Utensílios Essenciais:")
-                .font(.system(size: 36))
+                .font(.system(.title))
                 .fontWeight(.bold)
                 .padding(.bottom, 40)
                 .padding(.horizontal, -400)
@@ -30,7 +30,7 @@ struct RecipeDetailUtensilsView: View {
                 
                 Text(recipe.utensílios)
                 //ver como deixar no modelo da Tay ("lista" mesmo)
-                    .font(.custom("SF Pro", size: 31))
+                    .font(.system(.body))
                     .frame(width: 1000, height: 200)
                     .lineSpacing(20)
                     .padding(.leading, -300)

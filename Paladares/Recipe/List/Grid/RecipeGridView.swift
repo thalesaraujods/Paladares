@@ -14,7 +14,7 @@ struct RecipeGridView: View {
         ZStack {
             RecipeGridImageView(image: recipe.imagem)
             Text(recipe.name)
-                .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                .font(.title)
                 .fontWeight(.bold)
                 .foregroundColor(.white)
                 .frame(width: 286, height: 46, alignment: .leading)

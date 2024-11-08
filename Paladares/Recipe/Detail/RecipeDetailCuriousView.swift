@@ -16,7 +16,7 @@ struct RecipeDetailCuriousView: View {
         VStack {
 
             Text("Curiosidade")
-                .font(.system(size: 36))
+                .font(.system(.title))
                 .fontWeight(.bold)
                 .padding(.bottom, 40)
                 .padding(.horizontal, -400)
@@ -29,7 +29,7 @@ struct RecipeDetailCuriousView: View {
                     .foregroundStyle(.white)
                 
                 Text(recipe.curiosidade)
-                    .font(.custom("SF Pro", size: 31))
+                    .font(.system(.body))
                     .frame(width: 700, height: 200)
                     //.padding(300)
             }

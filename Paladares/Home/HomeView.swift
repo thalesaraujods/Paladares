@@ -22,14 +22,12 @@ struct HomeView: View {
             
             VStack (spacing: 15){
                 Text("Olá, bem-vindo!")
-                    .font(.system(size: 32))
+                    .font(.system(.largeTitle))
                     .fontWeight(.bold)
                 
                 Text("Paladares é um espaço onde você poderá cozinhar e \nexplorar novas culturas junto com seus amigos")
-                    .font(
-                        Font.custom("SF Pro Rounded", size: 20)
-                            .weight(.medium)
-                    )
+                    .font(.system(.body))
+                    .fontWeight(.medium)
                     .kerning(0.8)
                     .multilineTextAlignment(.center)
                     .foregroundColor(Color(red: 0.53, green: 0.53, blue: 0.55))
@@ -42,7 +40,7 @@ struct HomeView: View {
                 coordinator.push(.forms)
             }) {
                 Label("Começar", systemImage: "")
-                    .font(.system(size: 24))
+                    .font(.system(.body))
                     .fontWeight(.bold)
                     .frame(width: 576, height: 70)
                     .background(Color(red: 0.2, green: 0.6, blue: 0.93))

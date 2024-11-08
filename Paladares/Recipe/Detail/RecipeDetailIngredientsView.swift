@@ -15,7 +15,7 @@ struct RecipeDetailIngredientsView: View {
     var body: some View {
         VStack {
             Text("Ingredientes")
-                .font(.system(size: 36))
+                .font(.system(.title))
                 .fontWeight(.bold)
                 .padding(.bottom, 40)
                 .padding(.horizontal, -400)
@@ -36,7 +36,7 @@ struct RecipeDetailIngredientsView: View {
                             Text(ingrediente.nome)
                                 .foregroundColor(.black)
                         }
-                        .font(.custom("SF Pro", size: 31))
+                        .font(.system(.body))
                     }
                     .padding(.horizontal, 20)
                 }

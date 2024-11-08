@@ -12,7 +12,7 @@ struct RecipeEndCongratsView: View {
         VStack (spacing: 30){
             Image(.congrats)
             Text("Parabéns!")
-                .font(.system(size: 40))
+                .font(.system(.largeTitle))
                 .fontWeight(.bold)
                 .kerning(0.4)
         }

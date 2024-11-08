@@ -27,7 +27,7 @@ struct RecipeDetailView: View {
                         coordinator.push(.recipeStep)
                     }) {
                         Label("Começar", systemImage: "play.fill")
-                            .font(.custom("SF Pro", size: 25))
+                            .font(.system(.body))
                             .frame(width: 180, height: 75)
                             .background(Color.backBotao)
                             .foregroundColor(Color.palavraBotao)
@@ -37,7 +37,7 @@ struct RecipeDetailView: View {
                     }
                     
                     Label(recipe.time, systemImage: "clock.fill")
-                        .font(.custom("SF Pro", size: 25))
+                        .font(.system(.body))
                         .frame(width: 180, height: 75)
                         .background(Color.white)
                         .foregroundStyle(Color.corCinza)

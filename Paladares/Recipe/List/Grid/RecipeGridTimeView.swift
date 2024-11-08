@@ -22,9 +22,9 @@ struct RecipeGridTimeView: View {
                     .frame(width: 23, height: 23)
                     .foregroundColor(Color.corCinza)
                 Text(timer)
-                    .font(.custom("SF Pro", size: 13))
-                    .foregroundColor(Color.corCinza)
+                    .font(.system(.body))
                     .fontWeight(.semibold)
+                    .foregroundColor(Color.corCinza)
                     .padding(.trailing, 5)
                     .frame(width: 60, height: 13)
             }
