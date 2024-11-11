@@ -12,6 +12,7 @@ struct RecipeDetailView: View {
     
     let recipe: Recipe
     @EnvironmentObject private var coordinator: Coordinator
+    @Environment(\.sizeCategory) var sizeCategory
     
     var body: some View {
         ScrollView(showsIndicators: false) {
@@ -27,42 +28,62 @@ struct RecipeDetailView: View {
                         coordinator.push(.recipeStep)
                     }) {
                         Label("Começar", systemImage: "play.fill")
+                            .padding()
                             .font(.system(.body))
-                            .frame(width: 180, height: 75)
+                            .imageScale(.small)
                             .background(Color.backBotao)
                             .foregroundColor(Color.palavraBotao)
                             .cornerRadius(160)
-                            .padding(.top, 50)
-                            .padding(.trailing, 440)
+                           
                     }
+                    .padding(.trailing, 560)
+                    .minimumScaleFactor(sizeCategory.customMinScaleFactorDetailView)
                     
                     Label(recipe.time, systemImage: "clock.fill")
+                        .padding()
                         .font(.system(.body))
-                        .frame(width: 180, height: 75)
                         .background(Color.white)
                         .foregroundStyle(Color.corCinza)
                         .cornerRadius(160)
                         .shadow(radius: 5)
-                        .padding(.top, 50)
                 }
-                
-                RecipeDetailCuriousView(recipe: recipe)
-                    .padding(.top, 80)
+                .padding(.top, 50)
+                .minimumScaleFactor(sizeCategory.customMinScaleFactorDetailView)
+    
                 
                 RecipeDetailUtensilsView(recipe: recipe)
                     .padding(.top, 80)
+                    .minimumScaleFactor(sizeCategory.customMinScaleFactorDetailView)
                 
                 RecipeDetailIngredientsView(recipe: recipe)
                     .padding(.top, 80)
+                    .minimumScaleFactor(sizeCategory.customMinScaleFactorDetailView)
                 
                 RecipeDetailSugestionsView(recipe: recipe)
                     .padding(.top, 80)
+                    .minimumScaleFactor(sizeCategory.customMinScaleFactorDetailView)
             }
+            .frame(maxWidth: .infinity)
             .padding(.top, 120)
             //.navigationTitle(recipe.name)
         }
         .padding(.bottom, 10)
         .navigationTitle(recipe.name)
+        .frame(maxWidth: .infinity)
+    }
+}
+
+extension ContentSizeCategory {
+    
+    var customMinScaleFactorDetailView: CGFloat{
+        switch self{
+        case .extraSmall, .small, .medium:
+            return 1.0
+        case .large, .extraLarge, .extraExtraLarge:
+            return 0.8
+        default:
+            return 0.6
+        }
     }
 }
 

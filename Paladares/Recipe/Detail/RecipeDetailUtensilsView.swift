@@ -11,35 +11,53 @@ import SwiftUI
 struct RecipeDetailUtensilsView: View {
 
     @State var recipe: Recipe
+    @Environment(\.sizeCategory) var sizeCategory
 
     var body: some View {
         VStack {
+            VStack(alignment: .leading, spacing: 20) {
+                Text("Utensílios Essenciais:")
+                    .font(.system(.title))
+                    .fontWeight(.bold)
+                    .padding(.bottom, 40)
+                    .minimumScaleFactor(sizeCategory.customMinScaleFactorUtensilsView)
 
-            Text("Utensílios Essenciais:")
-                .font(.system(.title))
-                .fontWeight(.bold)
-                .padding(.bottom, 40)
-                .padding(.horizontal, -400)
-            
-            ZStack{
-                Rectangle()
-                    .frame(width: 840, height: 250)
-                    .cornerRadius(35)
-                    .shadow(radius: 10)
-                    .foregroundStyle(.white)
-                
                 Text(recipe.utensílios)
-                //ver como deixar no modelo da Tay ("lista" mesmo)
                     .font(.system(.body))
-                    .frame(width: 1000, height: 200)
                     .lineSpacing(20)
-                    .padding(.leading, -300)
-                    //.padding(300)
+                    .minimumScaleFactor(sizeCategory.customMinScaleFactorUtensilsView)
+                    .padding(.leading, -330)
+                    .padding(.horizontal, 410)
+                    .padding(.vertical, 40)
+                    .background {
+                        Rectangle()
+                            .cornerRadius(35)
+                            .shadow(radius: 10)
+                            .foregroundStyle(.white)
+                            .minimumScaleFactor(sizeCategory.customMinScaleFactorUtensilsView)
+                    }
+                
             }
         }
     }
 }
 
+extension ContentSizeCategory {
+    
+    var customMinScaleFactorUtensilsView: CGFloat{
+        switch self{
+        case .extraSmall, .small, .medium:
+            return 1.0
+        case .large, .extraLarge, .extraExtraLarge:
+            return 0.8
+        default:
+            return 0.6
+        }
+    }
+}
+
+
 #Preview {
     RecipeDetailUtensilsView(recipe: recipes[0])
 }
+
