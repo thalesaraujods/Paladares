@@ -37,7 +37,7 @@ struct HomeView: View {
             
             // Botão de Início
             Button(action: {
-                coordinator.push(.forms)
+                coordinator.push(.recipeList)
             }) {
                 Label("Começar", systemImage: "")
                     .font(.system(.body))

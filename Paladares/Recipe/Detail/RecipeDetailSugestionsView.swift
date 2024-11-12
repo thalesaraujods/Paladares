@@ -29,7 +29,7 @@ struct RecipeDetailSugestionsView: View {
                     .lineSpacing(20)
                     .minimumScaleFactor(sizeCategory.customMinScaleFactorSugestionsView)
                     .padding(.leading, -220)
-                    .padding(.horizontal, 290)
+                    .padding(.horizontal, 340)
                     .padding(.vertical, 40)
                 
                     .background{

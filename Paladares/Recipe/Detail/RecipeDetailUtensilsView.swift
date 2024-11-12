@@ -30,7 +30,7 @@ struct RecipeDetailUtensilsView: View {
                     //.frame(width: 400, height: 200)
                     .lineSpacing(20)
                     .minimumScaleFactor(sizeCategory.customMinScaleFactorUtensilsView)
-                    .padding(.leading, -370)
+                    .padding(.leading, -310)
                     .padding(.horizontal, 420)
                     .padding(.vertical, 40)
                     .background {
