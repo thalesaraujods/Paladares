@@ -14,23 +14,26 @@ struct ChefSelectionView: View {
     
     let colorsHats: [Color] = [.blue, .green, .red, .yellow] // Cores para cada chef
     
+    let chefsShadowsColors: [Color] = [.colorChef1, .colorChef2, .colorChef3, .colorChef4]
+    let chefsIcons: [Image] = [Image(.iconChef1), Image(.iconChef2), Image(.iconChef3), Image(.iconChef4)]
+    
     var body: some View {
         VStack (spacing: 25) {
             ForEach(preparationMethods.indices, id: \.self) { index in
                 let chef = preparationMethods[index]
-                let chefColor = colorsHats[index % colorsHats.count] // Garante que cada chef tenha uma cor
+                let chefColor = chefsShadowsColors[index % chefsShadowsColors.count] // Garante que cada chef tenha uma cor
+                let chefIcon = chefsIcons[index % chefsIcons.count] // Garante que cada chef tenha uma imagem correspondente
                 
                 Button(action: {
                     selectedChefId = chef.chefId // Atualiza o chef selecionado
                     shadowColor = chefColor // Atualiza a cor da sombra com a cor do chef
                 }) {
                     VStack (spacing: 15) {
-                        Circle()
+                        chefIcon
+                            .resizable()
+                            .scaledToFit()
                             .frame(width: 102, height: 102)
-                            .foregroundColor(chefColor) // Cor do círculo
-                            .shadow(color: selectedChefId == chef.chefId ? chefColor : .clear, radius: selectedChefId == chef.chefId ? 35 : 0)
-                            
-                        
+                            .shadow(color: selectedChefId == chef.chefId ? chefColor : .clear, radius: selectedChefId == chef.chefId ? 15 : 0)
                         Text("Chef \(chef.chefId)")
                             .foregroundColor(.black)
                             .font(.caption)

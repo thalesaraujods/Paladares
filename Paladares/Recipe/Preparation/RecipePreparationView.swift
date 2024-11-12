@@ -14,8 +14,11 @@ struct RecipePreparationView: View {
     @State private var currentStepIndex: [Int] = [0, 0, 0, 0] // Índices de passos por chef
     @State private var shadowColor: Color = .gray
     
+    let chefsShadowsColors: [Color] = [.colorChef1, .colorChef2, .colorChef3, .colorChef4]
+    let chefsIcons: [Image] = [Image(.iconChef1), Image(.iconChef2), Image(.iconChef3), Image(.iconChef4)]
+    
     var body: some View {
-        guard let recipe = viewModel.selectedRecipe else {
+        guard let recipe = /*viewModel.selectedRecipe*/ viewModel.dataLoader.recipes.first else {
             return AnyView(Text("Nenhuma receita selecionada."))
         }
         
