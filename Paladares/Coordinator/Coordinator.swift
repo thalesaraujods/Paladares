@@ -8,7 +8,7 @@
 import SwiftUI
 
 enum Page: String, Identifiable {
-    case home, recipeList, recipeDetail, recipePreparation, recipeEnd
+    case home, recipeList, recipeDetail, recipePreparation, congratulations
     
     var id: String {
         self.rawValue
@@ -43,8 +43,8 @@ class Coordinator: ObservableObject {
             RecipeDetailView(recipe: recipeViewModel.selectedRecipe!)
         case .recipePreparation:
             RecipePreparationView()
-        case .recipeEnd:
-            RecipeEndView()
+        case .congratulations:
+            CongratulationsView()
         }
         
     }

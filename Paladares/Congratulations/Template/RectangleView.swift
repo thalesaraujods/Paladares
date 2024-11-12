@@ -1,5 +1,5 @@
 //
-//  RecipeEndRectangleView.swift
+//  RectangleView.swift
 //  Paladares
 //
 //  Created by Amanda Rabelo on 02/11/24.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct RecipeEndRectangleView: View {
+struct RectangleView: View {
     var body: some View {
         Rectangle()
             .frame(width: 880, height: 600)
@@ -18,5 +18,5 @@ struct RecipeEndRectangleView: View {
 }
 
 #Preview {
-    RecipeEndRectangleView()
+    RectangleView()
 }

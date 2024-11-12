@@ -1,5 +1,5 @@
 //
-//  RecipeEndSentenceView.swift
+//  SentenceView.swift
 //  Paladares
 //
 //  Created by Amanda Rabelo on 02/11/24.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct RecipeEndSentenceView: View {
+struct SentenceView: View {
     var body: some View {
         Text("Você concluiu esta receita, continue explorando \n novas culturas!")
             .font(.system(.body))
@@ -19,5 +19,5 @@ struct RecipeEndSentenceView: View {
 }
 
 #Preview {
-    RecipeEndSentenceView()
+    SentenceView()
 }

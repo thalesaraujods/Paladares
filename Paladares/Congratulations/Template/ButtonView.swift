@@ -1,5 +1,5 @@
 //
-//  RecipeEndButtonView.swift
+//  ButtonView.swift
 //  Paladares
 //
 //  Created by Amanda Rabelo on 02/11/24.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct RecipeEndButtonView: View {
+struct ButtonView: View {
     
     @Environment(\.sizeCategory) var sizeCategory
     
@@ -24,7 +24,6 @@ struct RecipeEndButtonView: View {
 }
 
 extension ContentSizeCategory {
-    
     var customMinScaleFactorCongratsEndView: CGFloat{
         switch self{
         case .extraSmall, .small, .medium:
@@ -36,6 +35,7 @@ extension ContentSizeCategory {
         }
     }
 }
+
 #Preview {
-    RecipeEndButtonView()
+    ButtonView()
 }

@@ -1,5 +1,5 @@
 //
-//  RecipeEndCongratsView.swift
+//  CongratsView.swift
 //  Paladares
 //
 //  Created by Amanda Rabelo on 02/11/24.
@@ -7,11 +7,10 @@
 
 import SwiftUI
 
-struct RecipeEndCongratsView: View {
-    
+struct CongratsView: View {
+
     @Environment(\.sizeCategory) var sizeCategory
 
-    
     var body: some View {
         VStack (spacing: 30){
             Image(.congrats)
@@ -25,7 +24,6 @@ struct RecipeEndCongratsView: View {
 }
 
 extension ContentSizeCategory {
-    
     var customMinScaleFactorButtonEndView: CGFloat{
         switch self{
         case .extraSmall, .small, .medium:
@@ -39,5 +37,5 @@ extension ContentSizeCategory {
 }
 
 #Preview {
-    RecipeEndCongratsView()
+    CongratsView()
 }
