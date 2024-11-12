@@ -36,7 +36,10 @@ struct RecipeDetailView: View {
                             .cornerRadius(160)
                            
                     }
-                    .padding(.trailing, 560)
+                   
+                    Spacer()
+                    //consertar o alinhamento dos "botoes"
+                    
                     .minimumScaleFactor(sizeCategory.customMinScaleFactorDetailView)
                     
                     Label(recipe.time, systemImage: "clock.fill")

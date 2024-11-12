@@ -38,7 +38,7 @@ struct RecipeDetailIngredientsView: View {
                 }
             }
             .padding(.vertical, 50)
-            .padding(.horizontal, 70)
+            .padding(.horizontal, 170)
             .background {
                 Rectangle()
                     .cornerRadius(35)
