@@ -25,7 +25,7 @@ struct RecipeDetailSugestionsView: View {
                 
                 Text(recipe.sugestoes)
                     .font(.system(.body))
-                   
+                    //.frame(width: 470, height: 200)
                     .lineSpacing(20)
                     .minimumScaleFactor(sizeCategory.customMinScaleFactorSugestionsView)
                     .padding(.leading, -220)

@@ -15,6 +15,9 @@ struct RecipeDetailUtensilsView: View {
 
     var body: some View {
         VStack {
+            
+//            .frame(width: 850, height: 400)
+
             VStack(alignment: .leading, spacing: 20) {
                 Text("Utensílios Essenciais:")
                     .font(.system(.title))
@@ -24,10 +27,11 @@ struct RecipeDetailUtensilsView: View {
 
                 Text(recipe.utensílios)
                     .font(.system(.body))
+                    //.frame(width: 400, height: 200)
                     .lineSpacing(20)
                     .minimumScaleFactor(sizeCategory.customMinScaleFactorUtensilsView)
-                    .padding(.leading, -330)
-                    .padding(.horizontal, 410)
+                    .padding(.leading, -370)
+                    .padding(.horizontal, 420)
                     .padding(.vertical, 40)
                     .background {
                         Rectangle()

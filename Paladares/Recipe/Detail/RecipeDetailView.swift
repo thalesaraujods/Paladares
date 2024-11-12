@@ -63,7 +63,7 @@ struct RecipeDetailView: View {
                     .padding(.top, 80)
                     .minimumScaleFactor(sizeCategory.customMinScaleFactorDetailView)
             }
-            .frame(maxWidth: .infinity)
+            .frame(width: 940)
             .padding(.top, 120)
             //.navigationTitle(recipe.name)
         }
