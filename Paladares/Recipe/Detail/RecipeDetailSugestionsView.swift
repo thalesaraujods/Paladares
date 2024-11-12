@@ -30,9 +30,9 @@ struct RecipeDetailSugestionsView: View {
                             .minimumScaleFactor(sizeCategory.customMinScaleFactorSugestionsView)
                     }
                 }
+                .padding(.leading, -330)
                 .padding(.vertical, 40)
-                .padding(.horizontal, 240)
-                .padding(.leading, -150)
+                .padding(.horizontal, 390)
                 .background {
                     Rectangle()
                         .cornerRadius(35)
