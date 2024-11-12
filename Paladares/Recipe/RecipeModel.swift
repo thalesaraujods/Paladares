@@ -8,54 +8,71 @@
 import Foundation
 import SwiftUI
 
-struct Ingredient: Identifiable, Hashable {
-    let id = UUID()
-    let quantidade: String
-    let nome: String
+struct Recipe: Codable, Identifiable {
+    let id: String
+    let name: String
+    let image: String
+    let country: String
+    let time: String
+    let curiosity: String
+    let utensils: [String]
+    let ingredients: [Ingredient]
+    let suggestions: [String]
+    let preparationMethods: [ChefPreparation]
 }
 
-struct Recipe: Identifiable, Hashable {
-    let id = UUID()
+struct Ingredient: Codable {
     let name: String
-    let imagem: String
-    let time: String
-    let curiosidade: String
-    let utensílios: String
-    let ingredientes: [Ingredient] // Alterado para uma lista de ingredientes
-    let sugestoes: String
-    let blocked: Bool
+    let quantity: String
+    let unit: String
 }
-var recipes: [Recipe] = [
-    Recipe(
-        name: "Feijoada Brasileira",
-        imagem: "feijoada",
-        time: "2 horas",
-        curiosidade: "Os escravos africanos que trabalhavam nas plantações de cana-de-açúcar e café muitas vezes tinham acesso apenas a restos de carne, como as partes menos nobres dos porcos e outras carnes menos valorizadas.",
-        utensílios: "• Panela de Pressão \n• Panelas Grandes \n• Colheres com cabos longos",
-        ingredientes: [
-            Ingredient(quantidade: "200g", nome: "costela suína defumada cortada em pedaços"),
-            Ingredient(quantidade: "250g", nome: "carne-seca em pedaços"),
-            Ingredient(quantidade: "1/2", nome: "orelha de porco cortada em pedaços"),
-            Ingredient(quantidade: "1/2", nome: "pé de porco cortado em pedaços"),
-            Ingredient(quantidade: "1/2", nome: "rabo de porco cortado em pedaços"),
-            Ingredient(quantidade: "1", nome: "pedaço de lombo suíno defumado em cubos"),
-            Ingredient(quantidade: "2", nome: "xícaras (chá) de feijão preto"),
-            Ingredient(quantidade: "1/2", nome: "xícara (chá) de bacon picado"),
-            Ingredient(quantidade: "1", nome: "gomo calabresa em rodelas"),
-            Ingredient(quantidade: "2", nome: "cebolas médias picadas"),
-            Ingredient(quantidade: "4", nome: "dentes de alho picados"),
-            Ingredient(quantidade: "3", nome: "colheres (sopa) de cheiro-verde picado")
-        ],
-        sugestoes: "• Substitua carne suína pela bovina, se preferir.\n• Adicione temperos de sua escolha, se preferir.",
-        blocked: false
-    ),
-    Recipe(name: "Acarajé", imagem: "acaraje", time: "40 min", curiosidade: "", utensílios: "", ingredientes: [], sugestoes: "", blocked: true),
-    Recipe(name: "Coxinha", imagem: "coxinha", time: "3 horas", curiosidade: "", utensílios: "", ingredientes: [], sugestoes: "", blocked: true),
-    Recipe(name: "Feijão Tropeiro", imagem: "feijaotropeiro", time: "1 hora", curiosidade: "", utensílios: "", ingredientes: [], sugestoes: "", blocked: true),
-    Recipe(name: "Bodó de Camarão", imagem: "bobodecamarao", time: "1 hora", curiosidade: "", utensílios: "", ingredientes: [], sugestoes: "", blocked: true),
-    Recipe(name: "Pato no Tucupi", imagem: "patotucupi", time: "50 min", curiosidade: "", utensílios: "", ingredientes: [], sugestoes: "", blocked: true),
-    Recipe(name: "Tacacá", imagem: "tacaca", time: "1 hora", curiosidade: "", utensílios: "", ingredientes: [], sugestoes: "", blocked: true),
-    Recipe(name: "Pão de Queijo", imagem: "paodequeijo", time: "40 min", curiosidade: "", utensílios: "", ingredientes: [], sugestoes: "", blocked: true),
-    Recipe(name: "X-Caboquinho", imagem: "caboquinho", time: "10 min", curiosidade: "", utensílios: "", ingredientes: [], sugestoes: "", blocked: true)
-]
-    
+
+struct ChefPreparation: Codable {
+    let chefId: Int
+    let steps: [Step]
+}
+
+struct Step: Codable {
+    let stepNumber: String
+    let description: String
+}
+
+//Dado Mockado para Preview
+let mockRecipe = Recipe(
+    id: "550e8400-e29b-41d4-a716-446655440001",
+    name: "X-Caboquinho",
+    image: "xcaboquinho1.jpg",
+    country: "Brasil",
+    time: "30 minutos",
+    curiosity: "O X-Caboquinho é um prato típico de Manaus, conhecido como um dos lanches mais tradicionais da cultura amazônica. Ele combina o tucumã, um fruto amazônico, com queijo coalho e pão.",
+    utensils: ["Frigideira", "Faca de chef", "Espátula"],
+    ingredients: [
+        Ingredient(name: "pães franceses", quantity: "4", unit: "unidades"),
+        Ingredient(name: "queijo coalho", quantity: "12", unit: "fatias"),
+        Ingredient(name: "manteiga", quantity: "4", unit: "colheres de sopa"),
+        Ingredient(name: "tiras de tucumã", quantity: "4", unit: "xícaras"),
+        Ingredient(name: "bananas", quantity: "4", unit: "unidades")
+    ],
+    suggestions: ["Sirva com farinha de mandioca para acompanhar."],
+    preparationMethods: [
+        ChefPreparation(chefId: 1, steps: [
+            Step(stepNumber: "Passo 1", description: "Corte os pães ao meio, mas sem separar completamente as metades."),
+            Step(stepNumber: "Passo 2", description: "Passe manteiga nas duas metades internas de cada pão."),
+            Step(stepNumber: "Passo 3", description: "Aqueça levemente os pães em uma frigideira para dourar a manteiga.")
+        ]),
+        ChefPreparation(chefId: 2, steps: [
+            Step(stepNumber: "Passo 1", description: "Corte o tucumã em tiras finas e uniformes."),
+            Step(stepNumber: "Passo 2", description: "Coloque as tiras de tucumã em uma tigela e reserve.")
+        ]),
+        ChefPreparation(chefId: 3, steps: [
+            Step(stepNumber: "Passo 1", description: "Corte o queijo coalho em fatias e grelhe até dourar dos dois lados."),
+            Step(stepNumber: "Passo 2", description: "Coloque o queijo grelhado em um prato e reserve.")
+        ]),
+        ChefPreparation(chefId: 4, steps: [
+            Step(stepNumber: "Passo 1", description: "Descasque as bananas e corte-as em fatias finas."),
+            Step(stepNumber: "Passo 2", description: "Em uma frigideira, aqueça as fatias de banana até ficarem levemente douradas."),
+            Step(stepNumber: "Passo 3", description: "Monte os pães, adicionando os ingredientes preparados pelos outros chefs: tiras de tucumã, queijo grelhado e fatias de banana."),
+            Step(stepNumber: "Passo 4", description: "Leve os pães montados à frigideira quente para aquecer por 2 minutos de cada lado, garantindo que todos os ingredientes fiquem bem integrados.")
+        ])
+    ]
+)

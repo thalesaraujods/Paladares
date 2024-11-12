@@ -45,7 +45,7 @@ struct FormsView: View {
                 
                 
                 Button(action: {
-                    coordinator.push(.country)
+                    //coordinator.push(.country)
                 }) {
                     Text("Continuar")
                         .font(.custom("SF Pro", size: 25))

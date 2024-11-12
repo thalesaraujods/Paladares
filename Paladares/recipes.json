@@ -1,119 +1,86 @@
 [
     {
-        "id": "550e8400-e29b-41d4-a716-446655440000",
-        "name": "Feijoada",
-        "images": ["feijoada1.jpg", "feijoada2.jpg"],
+        "id": "550e8400-e29b-41d4-a716-446655440001",
+        "name": "X-Caboquinho",
+        "image": "caboquinho",
         "country": "Brasil",
-        "time": "2 horas",
-        "level": "Avançado",
-        "curiosidade": "Os escravos africanos que trabalhavam nas plantações de cana-de-açúcar e café muitas vezes tinham acesso apenas a restos de carne, como as partes menos nobres dos porcos e outras carnes menos valorizadas.",
-        "utensilios": ["Panela de Pressão", "Panelas Grandes", "Faca de chef", "Colheres com cabos longos"],
-        "ingredientes": [
-            { "quantidade": "200", "unidade": "g", "nome": "costela suína defumada cortada em pedaços" },
-            { "quantidade": "250", "unidade": "g", "nome": "carne-seca em pedaços" },
-            { "quantidade": "1/2", "unidade": "unidade", "nome": "orelha de porco cortada em pedaços" },
-            { "quantidade": "1/2", "unidade": "unidade", "nome": "pé de porco cortado em pedaços" },
-            { "quantidade": "1/2", "unidade": "unidade", "nome": "rabo de porco cortado em pedaços" },
-            { "quantidade": "1", "unidade": "pedaço", "nome": "lombo suíno defumado, em cubos" },
-            { "quantidade": "2", "unidade": "xícaras (chá)", "nome": "feijão preto" },
-            { "quantidade": "1/2", "unidade": "xícara (chá)", "nome": "bacon picado" },
-            { "quantidade": "1", "unidade": "gomo", "nome": "calabresa em rodelas" },
-            { "quantidade": "2", "unidade": "unidades", "nome": "cebolas médias picadas" },
-            { "quantidade": "4", "unidade": "dentes", "nome": "alho picado" },
-            { "quantidade": "3", "unidade": "colheres (sopa)", "nome": "cheiro-verde picado" }
+        "time": "30 minutos",
+        "curiosity": "O X-Caboquinho é um prato típico de Manaus, conhecido como um dos lanches mais tradicionais da cultura amazônica. Ele combina o tucumã, um fruto amazônico, com queijo coalho e pão.",
+        "utensils": ["Frigideira", "Faca de chef", "Espátula"],
+        "ingredients": [
+            { "quantity": "4", "unit": "unidades", "name": "pães franceses" },
+            { "quantity": "12", "unit": "fatias", "name": "queijo coalho" },
+            { "quantity": "4", "unit": "colheres de sopa", "name": "manteiga" },
+            { "quantity": "4", "unit": "xícaras", "name": "tiras de tucumã" },
+            { "quantity": "4", "unit": "unidades", "name": "bananas" }
         ],
-        "sugestoes": [
-            "Substitua carne suína pela bovina, se preferir.",
-            "Adicione temperos de sua escolha, se preferir."
+        "suggestions": [
+            "Sirva com farinha de mandioca para acompanhar."
         ],
-        "passos_preparo": [
+        "preparationMethods": [
             {
-                "passos": "Passo 1",
-                "descricao": "Comece retirando todo excesso de gordura das peças de carne."
+                "chefId": 1,
+                "steps": [
+                    {
+                        "stepNumber": "Passo 1",
+                        "description": "Corte os pães ao meio, mas sem separar completamente as metades."
+                    },
+                    {
+                        "stepNumber": "Passo 2",
+                        "description": "Passe manteiga nas duas metades internas de cada pão."
+                    },
+                    {
+                        "stepNumber": "Passo 3",
+                        "description": "Aqueça levemente os pães em uma frigideira para dourar a manteiga."
+                    }
+                ]
             },
             {
-                "passos": "Passo 2",
-                "descricao": "Corte a costela suína em pedaços médios, em seguida faça o mesmo com a carne seca."
+                "chefId": 2,
+                "steps": [
+                    {
+                        "stepNumber": "Passo 1",
+                        "description": "Corte o tucumã em tiras finas e uniformes."
+                    },
+                    {
+                        "stepNumber": "Passo 2",
+                        "description": "Coloque as tiras de tucumã em uma tigela e reserve."
+                    }
+                ]
             },
             {
-                "passos": "Passo 3",
-                "descricao": "Corte a orelha de porco em pedaços médios, em seguida faça o mesmo com o pé de porco."
+                "chefId": 3,
+                "steps": [
+                    {
+                        "stepNumber": "Passo 1",
+                        "description": "Corte o queijo coalho em fatias e grelhe até dourar dos dois lados."
+                    },
+                    {
+                        "stepNumber": "Passo 2",
+                        "description": "Coloque o queijo grelhado em um prato e reserve."
+                    }
+                ]
             },
             {
-                "passos": "Passo 4",
-                "descricao": "Corte o rabo de porco em pedaços médios, em seguida corte o lombo suíno em cubos."
-            },
-            {
-                "passos": "Passo 5",
-                "descricao": "Coloque cada tipo de carne em uma tigela grande, caso estejam salgadas, coloque água até cobrir e deixe de molho para dessalgar."
-            },
-            {
-                "passos": "Passo 6",
-                "descricao": "Pique a cebola e o alho e os separe em uma tigela pequena."
-            },
-            {
-                "passos": "Passo 7",
-                "descricao": "Corte a calabresa em rodelas grandes e as separe em uma tigela."
-            },
-            {
-                "passos": "Passo 8",
-                "descricao": "Pique o cheiro-verde e deixe ele em uma tigela."
-            },
-            {
-                "passos": "Passo 9",
-                "descricao": "Coloque a quantidade de feijão separada numa peneira e lave bem sob água corrente."
-            },
-            {
-                "passos": "Passo 10",
-                "descricao": "Transfira os grãos para uma tigela grande e cubra com 2,5 litros de água – se algum boiar, descarte."
-            },
-            {
-                "passos": "Passo 11",
-                "descricao": "Cubra com um prato e deixe de molho por 20 minutos – se o feijão ficar muito tempo de molho pode perder a cor e desmanchar durante o longo cozimento da feijoada."
-            },
-            {
-                "passos": "Passo 12",
-                "descricao": "Comece o pré-cozimento das carnes cortadas anteriormente."
-            },
-            {
-                "passos": "Passo 13",
-                "descricao": "Escorra a água das carnes e transfira para uma panela grande com capacidade suficiente para conter todos os ingredientes."
-            },
-            {
-                "passos": "Passo 14",
-                "descricao": "Cubra as carnes com água e leve ao fogo alto – cerca de 4 litros bastam, a quantidade pode variar de acordo com o tamanho da panela, o importante é que as carnes devem ficar completamente imersas."
-            },
-            {
-                "passos": "Passo 15",
-                "descricao": "Deixe cozinhar por 15 minutos em fogo alto, contados após a fervura – o pré-cozimento elimina o excesso de gordura e sal das carnes."
-            },
-            {
-                "passos": "Passo 16",
-                "descricao": "Passados os 15 minutos, com uma colher grande, transfira as carnes pré-cozidas para uma tigela grande e descarte a água do cozimento, com cuidado para não se queimar."
-            },
-            {
-                "passos": "Passo 17",
-                "descricao": "Volte a panela ao fogo alto. Quando aquecer, regue com o azeite, adicione a cebola e tempere com uma pitada de sal."
-            },
-            {
-                "passos": "Passo 18",
-                "descricao": "Refogue por cerca de 8 minutos até começar a dourar. Junte o alho, o cominho, as folhas de louro e mexa por 1 minuto para perfumar."
-            },
-            {
-                "passos": "Passo 19",
-                "descricao": "Acrescente o feijão demolhado ao refogado e misture bem."
-            },
-            {
-                "passos": "Passo 20",
-                "descricao": "Adicione 6 litros de água e mantenha a panela em fogo alto. Assim que começar a ferver, junte as carnes, abaixe o fogo e deixe cozinhar por 2 horas, mexendo de vez em quando."
-            },
-            {
-                "passos": "Passo 21",
-                "descricao": "Faltando 30 minutos para o fim do cozimento, com uma pinça, verifique se as carnes estão bem cozidas, se não, cozinhe por mais 1 hora."
-            },
-            {
-                "passos": "Passo 22",
-                "descricao": "Deixe cozinhar até completar o cozimento total, ou até que as carnes estejam bem macias e o caldo da feijoada comece a engrossar. Sirva com arroz, couve refogada, gomos de laranja e farinha de mandioca torrada."
+                "chefId": 4,
+                "steps": [
+                    {
+                        "stepNumber": "Passo 1",
+                        "description": "Descasque as bananas e corte-as em fatias finas."
+                    },
+                    {
+                        "stepNumber": "Passo 2",
+                        "description": "Em uma frigideira, aqueça as fatias de banana até ficarem levemente douradas."
+                    },
+                    {
+                        "stepNumber": "Passo 3",
+                        "description": "Monte os pães, adicionando os ingredientes preparados pelos outros chefs: tiras de tucumã, queijo grelhado e fatias de banana."
+                    },
+                    {
+                        "stepNumber": "Passo 4",
+                        "description": "Leve os pães montados à frigideira quente para aquecer por 2 minutos de cada lado, garantindo que todos os ingredientes fiquem bem integrados."
+                    }
+                ]
             }
         ]
     }

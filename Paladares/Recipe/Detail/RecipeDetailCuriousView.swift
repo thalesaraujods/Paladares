@@ -23,7 +23,7 @@ struct RecipeDetailCuriousView: View {
                 .padding(.horizontal, -400)
                 .minimumScaleFactor(sizeCategory.customMinScaleFactorDetailView)
             
-                Text(recipe.curiosidade)
+            Text(recipe.curiosity)
                     .font(.system(.body))
                     .frame(width: 700, height: 200)
                     .minimumScaleFactor(sizeCategory.customMinScaleFactorDetailView)
@@ -54,6 +54,6 @@ extension ContentSizeCategory {
 }
 
 #Preview {
-    RecipeDetailCuriousView(recipe: recipes[0])
+    RecipeDetailCuriousView(recipe: mockRecipe)
 }
 

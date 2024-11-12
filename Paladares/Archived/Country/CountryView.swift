@@ -26,7 +26,7 @@ struct CountryView: View {
         LazyVGrid(columns: columns, spacing: 29) {
             ForEach(countries, id: \.id) { country in
                 Button (action: {
-                    coordinator.push(.recipeList)
+                    //coordinator.push(.recipeList)
                 }) {
                     CountryItemView(country: country)
                 }

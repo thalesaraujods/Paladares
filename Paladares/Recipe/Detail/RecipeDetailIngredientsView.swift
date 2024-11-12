@@ -14,7 +14,6 @@ struct RecipeDetailIngredientsView: View {
     @Environment(\.sizeCategory) var sizeCategory
     
     var body: some View {
-        
         VStack(alignment: .leading, spacing: 20) {
             
             Text("Ingredientes")
@@ -22,14 +21,13 @@ struct RecipeDetailIngredientsView: View {
                 .fontWeight(.bold)
                 .padding(.bottom, 40)
                 .minimumScaleFactor(sizeCategory.customMinScaleFactorIngredientsView)
-            
             VStack{
-                ForEach(recipe.ingredientes) { ingrediente in
+                ForEach(recipe.ingredients, id: \.name) { ingredient in
                     HStack {
-                        Text(ingrediente.quantidade)
+                        Text("\(ingredient.quantity) \(ingredient.unit)")
                             .foregroundColor(.blue)
                             .minimumScaleFactor(sizeCategory.customMinScaleFactorIngredientsView)
-                        Text(ingrediente.nome)
+                        Text(ingredient.name)
                             .foregroundColor(.black)
                             .minimumScaleFactor(sizeCategory.customMinScaleFactorIngredientsView)
                     }
@@ -51,7 +49,6 @@ struct RecipeDetailIngredientsView: View {
 }
 
 extension ContentSizeCategory {
-    
     var customMinScaleFactorIngredientsView: CGFloat{
         switch self{
         case .extraSmall, .small, .medium:
@@ -65,6 +62,6 @@ extension ContentSizeCategory {
 }
 
 #Preview {
-    RecipeDetailIngredientsView(recipe: recipes[0])
+    RecipeDetailIngredientsView(recipe: mockRecipe)
 }
 

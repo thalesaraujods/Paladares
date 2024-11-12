@@ -8,7 +8,7 @@
 import SwiftUI
 
 enum Page: String, Identifiable {
-    case home, forms, country, recipeList, recipeDetail, recipeStep, recipeEnd
+    case home, recipeList, recipeDetail, recipePreparation, recipeEnd
     
     var id: String {
         self.rawValue
@@ -18,8 +18,6 @@ enum Page: String, Identifiable {
 class Coordinator: ObservableObject {
     
     @Published var path = NavigationPath()
-    @ObservedObject var countryViewModel = CountryViewModel.shared
-    @ObservedObject var preferencesViewModel = PreferencesViewModel.shared
     @ObservedObject var recipeViewModel = RecipeViewModel.shared
     
     func push(_ page: Page) {
@@ -39,21 +37,15 @@ class Coordinator: ObservableObject {
         switch page {
         case .home:
             HomeView()
-        case .forms:
-            FormsView()
-        case .country:
-            CountryView()
         case .recipeList:
             RecipeListView()
         case .recipeDetail:
             RecipeDetailView(recipe: recipeViewModel.selectedRecipe!)
-        case .recipeStep:
-            StepView(quantityChefs: 4)
+        case .recipePreparation:
+            RecipePreparationView()
         case .recipeEnd:
             RecipeEndView()
         }
         
     }
-    
-    
 }

@@ -17,7 +17,7 @@ struct RecipeDetailView: View {
     var body: some View {
         ScrollView(showsIndicators: false) {
             VStack {                
-                Image(recipe.imagem)
+                Image(recipe.image)
                     .resizable()
                     .frame(width: 850, height: 400)
                     .cornerRadius(40)
@@ -25,7 +25,7 @@ struct RecipeDetailView: View {
                 
                 HStack {
                     Button(action: {
-                        coordinator.push(.recipeStep)
+                        coordinator.push(.recipePreparation)
                     }) {
                         Label("Começar", systemImage: "play.fill")
                             .padding()
@@ -34,13 +34,13 @@ struct RecipeDetailView: View {
                             .background(Color.backBotao)
                             .foregroundColor(Color.palavraBotao)
                             .cornerRadius(160)
-                           
+                        
                     }
-                   
+                    
                     Spacer()
                     //consertar o alinhamento dos "botoes"
                     
-                    .minimumScaleFactor(sizeCategory.customMinScaleFactorDetailView)
+                        .minimumScaleFactor(sizeCategory.customMinScaleFactorDetailView)
                     
                     Label(recipe.time, systemImage: "clock.fill")
                         .padding()
@@ -52,7 +52,7 @@ struct RecipeDetailView: View {
                 }
                 .padding(.top, 50)
                 .minimumScaleFactor(sizeCategory.customMinScaleFactorDetailView)
-    
+                
                 
                 RecipeDetailUtensilsView(recipe: recipe)
                     .padding(.top, 80)
@@ -78,7 +78,6 @@ struct RecipeDetailView: View {
 }
 
 extension ContentSizeCategory {
-    
     var customMinScaleFactorDetailView: CGFloat{
         switch self{
         case .extraSmall, .small, .medium:
@@ -92,5 +91,5 @@ extension ContentSizeCategory {
 }
 
 #Preview {
-    RecipeDetailView(recipe: recipes[0])
+    RecipeDetailView(recipe: mockRecipe)
 }
