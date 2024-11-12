@@ -13,33 +13,36 @@ struct RecipeEndView: View {
     @Environment(\.sizeCategory) var sizeCategory
     
     var body: some View {
-            
-        VStack (spacing: 20){
-            RecipeEndCongratsView()
-                .minimumScaleFactor(sizeCategory.customMinScaleFactorDetailView)
-            RecipeEndSentenceView()
-                .minimumScaleFactor(sizeCategory.customMinScaleFactorDetailView)
-            
-            
-            Button(action: {
-                coordinator.popToRoot()
-            }) {
-                RecipeEndButtonView()
-                    .padding(.top, 30)
+        
+        VStack{
+            VStack (spacing: 20){
+                RecipeEndCongratsView()
                     .minimumScaleFactor(sizeCategory.customMinScaleFactorDetailView)
+                RecipeEndSentenceView()
+                    .minimumScaleFactor(sizeCategory.customMinScaleFactorDetailView)
+                
+                
+                Button(action: {
+                    coordinator.popToRoot()
+                }) {
+                    RecipeEndButtonView()
+                        .padding(.top, 30)
+                        .minimumScaleFactor(sizeCategory.customMinScaleFactorDetailView)
+                }
+                
             }
-           
+            .padding(.vertical, 50)
+            .padding(.horizontal, 70)
+            .background{
+                Rectangle()
+                    .cornerRadius(35)
+                    .shadow(radius: 10)
+                    .foregroundStyle(.white)
+                    .minimumScaleFactor(sizeCategory.customMinScaleFactorIngredientsView)
+            }
+            .navigationBarBackButtonHidden(true)
         }
-        .padding(.vertical, 50)
-        .padding(.horizontal, 70)
-        .background{
-            Rectangle()
-                .cornerRadius(35)
-                .shadow(radius: 10)
-                .foregroundStyle(.white)
-                .minimumScaleFactor(sizeCategory.customMinScaleFactorIngredientsView)
-        }
-        .navigationBarBackButtonHidden(true)
+        .frame(width: 700)
     }
 }
 

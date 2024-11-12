@@ -70,9 +70,10 @@ struct RecipeDetailView: View {
             .padding(.top, 120)
             //.navigationTitle(recipe.name)
         }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .ignoresSafeArea()
         .padding(.bottom, 10)
         .navigationTitle(recipe.name)
-        .frame(maxWidth: .infinity)
     }
 }
 
