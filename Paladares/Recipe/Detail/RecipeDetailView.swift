@@ -16,7 +16,16 @@ struct RecipeDetailView: View {
     
     var body: some View {
         ScrollView(showsIndicators: false) {
-            VStack {                
+            VStack {
+                Text(recipe.name)
+                    .font(.system(.largeTitle))
+                    .padding()
+                    .padding(.vertical, 30)
+                    .padding(.leading, -430)
+                    .fontWeight(.bold)
+                    .kerning(0.4)
+                    .minimumScaleFactor(sizeCategory.customMinScaleFactorListView)
+                
                 Image(recipe.image)
                     .resizable()
                     .frame(width: 850, height: 400)
@@ -53,12 +62,11 @@ struct RecipeDetailView: View {
                 .padding(.top, 50)
                 .minimumScaleFactor(sizeCategory.customMinScaleFactorDetailView)
                 
-                
-                RecipeDetailUtensilsView(recipe: recipe)
+                RecipeDetailIngredientsView(recipe: recipe)
                     .padding(.top, 80)
                     .minimumScaleFactor(sizeCategory.customMinScaleFactorDetailView)
                 
-                RecipeDetailIngredientsView(recipe: recipe)
+                RecipeDetailUtensilsView(recipe: recipe)
                     .padding(.top, 80)
                     .minimumScaleFactor(sizeCategory.customMinScaleFactorDetailView)
                 
@@ -70,8 +78,8 @@ struct RecipeDetailView: View {
             .padding(.top, 120)
             //.navigationTitle(recipe.name)
         }
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .ignoresSafeArea()
+        //.frame(maxWidth: .infinity, maxHeight: .infinity)
+        //.ignoresSafeArea()
         .padding(.bottom, 10)
         .navigationTitle(recipe.name)
     }
@@ -91,5 +99,5 @@ extension ContentSizeCategory {
 }
 
 #Preview {
-    RecipeDetailView(recipe: mockRecipe)
+    RecipeDetailView(recipe: mockRecipeLamen)
 }

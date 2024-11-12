@@ -32,8 +32,9 @@ struct RecipeDetailUtensilsView: View {
                             .minimumScaleFactor(sizeCategory.customMinScaleFactorUtensilsView)
                     }
                 }
+                .padding(.leading, -330)
                 .padding(.vertical, 40)
-                .padding(.horizontal, 40)
+                .padding(.horizontal, 420)
                 .background {
                     Rectangle()
                         .cornerRadius(35)

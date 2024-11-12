@@ -83,5 +83,90 @@
                 ]
             }
         ]
+    },
+    {
+        "id": "550e8400-e29b-41d4-a716-446655440002",
+        "name": "Lamén Japonês",
+        "image": "detailViewLamen",
+        "country": "Japão",
+        "time": "30 minutos",
+        "curiosity": "O X-Caboquinho é um prato típico de Manaus, conhecido como um dos lanches mais tradicionais da cultura amazônica. Ele combina o tucumã, um fruto amazônico, com queijo coalho e pão.",
+        "utensils": ["Frigideira", "Faca de chef", "Espátula"],
+        "ingredients": [
+            { "quantity": "4", "unit": "unidades", "name": "pães franceses" },
+            { "quantity": "12", "unit": "fatias", "name": "queijo coalho" },
+            { "quantity": "4", "unit": "colheres de sopa", "name": "manteiga" },
+            { "quantity": "4", "unit": "xícaras", "name": "tiras de tucumã" },
+            { "quantity": "4", "unit": "unidades", "name": "bananas" }
+        ],
+        "suggestions": [
+            "Sirva com farinha de mandioca para acompanhar."
+        ],
+        "preparationMethods": [
+            {
+                "chefId": 1,
+                "steps": [
+                    {
+                        "stepNumber": "Passo 1",
+                        "description": "Corte os pães ao meio, mas sem separar completamente as metades."
+                    },
+                    {
+                        "stepNumber": "Passo 2",
+                        "description": "Passe manteiga nas duas metades internas de cada pão."
+                    },
+                    {
+                        "stepNumber": "Passo 3",
+                        "description": "Aqueça levemente os pães em uma frigideira para dourar a manteiga."
+                    }
+                ]
+            },
+            {
+                "chefId": 2,
+                "steps": [
+                    {
+                        "stepNumber": "Passo 1",
+                        "description": "Corte o tucumã em tiras finas e uniformes."
+                    },
+                    {
+                        "stepNumber": "Passo 2",
+                        "description": "Coloque as tiras de tucumã em uma tigela e reserve."
+                    }
+                ]
+            },
+            {
+                "chefId": 3,
+                "steps": [
+                    {
+                        "stepNumber": "Passo 1",
+                        "description": "Corte o queijo coalho em fatias e grelhe até dourar dos dois lados."
+                    },
+                    {
+                        "stepNumber": "Passo 2",
+                        "description": "Coloque o queijo grelhado em um prato e reserve."
+                    }
+                ]
+            },
+            {
+                "chefId": 4,
+                "steps": [
+                    {
+                        "stepNumber": "Passo 1",
+                        "description": "Descasque as bananas e corte-as em fatias finas."
+                    },
+                    {
+                        "stepNumber": "Passo 2",
+                        "description": "Em uma frigideira, aqueça as fatias de banana até ficarem levemente douradas."
+                    },
+                    {
+                        "stepNumber": "Passo 3",
+                        "description": "Monte os pães, adicionando os ingredientes preparados pelos outros chefs: tiras de tucumã, queijo grelhado e fatias de banana."
+                    },
+                    {
+                        "stepNumber": "Passo 4",
+                        "description": "Leve os pães montados à frigideira quente para aquecer por 2 minutos de cada lado, garantindo que todos os ingredientes fiquem bem integrados."
+                    }
+                ]
+            }
+        ]
     }
 ]

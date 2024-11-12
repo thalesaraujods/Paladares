@@ -21,7 +21,7 @@ struct RecipeDetailIngredientsView: View {
                 .fontWeight(.bold)
                 .padding(.bottom, 40)
                 .minimumScaleFactor(sizeCategory.customMinScaleFactorIngredientsView)
-            VStack{
+            VStack (alignment: .leading){
                 ForEach(recipe.ingredients, id: \.name) { ingredient in
                     HStack {
                         Text("\(ingredient.quantity) \(ingredient.unit)")
@@ -35,8 +35,12 @@ struct RecipeDetailIngredientsView: View {
                     .font(.system(.body))
                 }
             }
-            .padding(.vertical, 50)
-            .padding(.horizontal, 220)
+            .padding(.vertical, 40)
+            .padding(.horizontal, 270)
+            
+//            .padding(.leading, -330)
+//            .padding(.vertical, 40)
+//            .padding(.horizontal, 400)
             .background {
                 Rectangle()
                     .cornerRadius(35)
