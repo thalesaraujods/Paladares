@@ -44,6 +44,28 @@ struct RecipeListView: View {
         .padding()
         .frame(width: 890)
         .navigationTitle("Sabores do Mundo")
+        
+        Text("Brasileira:")
+            .font(.system(.largeTitle))
+            .padding(.leading, -560)
+            .fontWeight(.bold)
+            .kerning(0.4)
+            .minimumScaleFactor(sizeCategory.customMinScaleFactorListView)
+        
+        LazyVGrid(columns: columns) {
+            ForEach(viewModel.dataLoader.recipes, id: \.id) { recipe in
+                Button (action: {
+                    viewModel.selectedRecipe = recipe
+                    coordinator.push(.recipeDetail)
+                }) {
+                    RecipeGridView(recipe: recipe)
+                        .padding()
+                   
+                }
+                Spacer()
+            }
+        }
+        .frame(width: 890)
     }
 }
 
