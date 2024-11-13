@@ -20,6 +20,7 @@ struct RecipeDetailSugestionsView: View {
                     .font(.system(.title))
                     .fontWeight(.bold)
                     .padding(.bottom, 40)
+                    .foregroundColor(Color(red: 0.22, green: 0.56, blue: 0.24))
                     .minimumScaleFactor(sizeCategory.customMinScaleFactorSugestionsView)
                 
                 VStack(alignment: .leading, spacing: 10) {
@@ -30,12 +31,13 @@ struct RecipeDetailSugestionsView: View {
                             .minimumScaleFactor(sizeCategory.customMinScaleFactorSugestionsView)
                     }
                 }
+                .padding(.leading, -330)
                 .padding(.vertical, 40)
-                .padding(.horizontal, 40)
+                .padding(.horizontal, 380)
                 .background {
                     Rectangle()
                         .cornerRadius(35)
-                        .shadow(radius: 10)
+                        .shadow(radius: 5)
                         .foregroundStyle(.white)
                         .minimumScaleFactor(sizeCategory.customMinScaleFactorSugestionsView)
                 }

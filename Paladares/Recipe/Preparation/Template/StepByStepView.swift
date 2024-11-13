@@ -46,6 +46,7 @@ struct StepByStepView: View {
         name: "X-Caboquinho",
         image:"xcaboquinho1.jpg",
         country: "Brasil",
+        people: "4 pessoas",
         time: "30 minutos",
         curiosity: "O X-Caboquinho é um prato típico de Manaus, conhecido como um dos lanches mais tradicionais da cultura amazônica. Ele combina o tucumã, um fruto amazônico, com queijo coalho e pão.",
         utensils: ["Frigideira", "Faca de chef", "Espátula"],

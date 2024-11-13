@@ -19,28 +19,31 @@ struct RecipeDetailIngredientsView: View {
             Text("Ingredientes")
                 .font(.system(.title))
                 .fontWeight(.bold)
+                .foregroundColor(Color(red: 0.22, green: 0.56, blue: 0.24))
                 .padding(.bottom, 40)
                 .minimumScaleFactor(sizeCategory.customMinScaleFactorIngredientsView)
-            VStack{
+            
+            VStack (alignment: .leading){
                 ForEach(recipe.ingredients, id: \.name) { ingredient in
                     HStack {
-                        Text("\(ingredient.quantity) \(ingredient.unit)")
-                            .foregroundColor(.blue)
+                        Text("• \(ingredient.quantity) \(ingredient.unit)")
+                            .foregroundColor(Color(red: 0.22, green: 0.56, blue: 0.24))
+                            .fontWeight(.semibold)
                             .minimumScaleFactor(sizeCategory.customMinScaleFactorIngredientsView)
                         Text(ingredient.name)
-                            .foregroundColor(.black)
                             .minimumScaleFactor(sizeCategory.customMinScaleFactorIngredientsView)
                     }
-                    
                     .font(.system(.body))
+                    .padding(.vertical, 5)
                 }
             }
-            .padding(.vertical, 50)
-            .padding(.horizontal, 220)
+            .padding(.leading, -330)
+            .padding(.vertical, 40)
+            .padding(.horizontal, 410)
             .background {
                 Rectangle()
                     .cornerRadius(35)
-                    .shadow(radius: 10)
+                    .shadow(radius: 5)
                     .foregroundStyle(.white)
                     .minimumScaleFactor(sizeCategory.customMinScaleFactorIngredientsView)
             }
