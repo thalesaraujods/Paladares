@@ -23,7 +23,7 @@ struct StepByStepView: View {
                             .multilineTextAlignment(.center)
                             .padding()
                     }
-                    .tag(index) // Conecta com o índice
+                    .tag(index)
                 }
             } else {
                 Text("Nenhum passo disponível para o Chef \(selectedChefId)")
@@ -32,7 +32,7 @@ struct StepByStepView: View {
             }
         }
         .tabViewStyle(PageTabViewStyle())
-        .frame(width: 824)
+        .frame(maxWidth: 824, maxHeight: 500)
     }
 }
 

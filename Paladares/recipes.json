@@ -67,7 +67,7 @@
             },
             {
                 "chefId": 4,
-                "stage": "Preparação das Bananas e Montagem"
+                "stage": "Preparação das Bananas e Montagem",
                 "steps": [
                     {
                         "stepNumber": "Passo 1",
