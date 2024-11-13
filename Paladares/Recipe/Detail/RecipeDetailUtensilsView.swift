@@ -28,7 +28,10 @@ struct RecipeDetailUtensilsView: View {
                 VStack(alignment: .leading, spacing: 10) {
                     ForEach(recipe.utensils, id: \.self) { utensil in
                         Text("•  \(utensil)")
-                            .font(.system(.body))
+                            .font(
+                                Font.custom("SF Pro", size: 19, relativeTo: .body)
+                            
+                            )
                             .lineSpacing(10)
                             .minimumScaleFactor(sizeCategory.customMinScaleFactorUtensilsView)
                     }

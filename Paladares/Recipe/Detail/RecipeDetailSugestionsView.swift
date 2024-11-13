@@ -26,14 +26,17 @@ struct RecipeDetailSugestionsView: View {
                 VStack(alignment: .leading, spacing: 10) {
                     ForEach(recipe.suggestions, id: \.self) { suggestion in
                         Text("• \(suggestion)")
-                            .font(.system(.body))
+                            .font(
+                                Font.custom("SF Pro", size: 19, relativeTo: .body)
+                            
+                            )
                             .lineSpacing(10)
                             .minimumScaleFactor(sizeCategory.customMinScaleFactorSugestionsView)
                     }
                 }
                 .padding(.leading, -330)
                 .padding(.vertical, 40)
-                .padding(.horizontal, 380)
+                .padding(.horizontal, 370)
                 .background {
                     Rectangle()
                         .cornerRadius(35)

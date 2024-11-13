@@ -1,0 +1,345 @@
+{
+  "sourceLanguage" : "pt-BR",
+  "strings" : {
+    "-" : {
+
+    },
+    "%lld" : {
+
+    },
+    "•  %@" : {
+
+    },
+    "• %@" : {
+
+    },
+    "• %@ %@" : {
+      "localizations" : {
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "• %1$@ %2$@"
+          }
+        }
+      }
+    },
+    "+" : {
+
+    },
+    "4 pessoas" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "4 people"
+          }
+        }
+      }
+    },
+    "Ajuste as preferências para personalizar sua experiência e comece a aventura na cozinha!" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Adjust the preferences to personalize your experience and start your adventure in the kitchen!"
+          }
+        }
+      }
+    },
+    "Bem-vindo ao Paladares!" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Welcome to Paladares!"
+          }
+        }
+      }
+    },
+    "Brasileira:" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Brazilian:"
+          }
+        }
+      }
+    },
+    "Chef %lld" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chef"
+          }
+        }
+      }
+    },
+    "Chef %lld: %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chef"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Chef %1$lld: %2$@"
+          }
+        }
+      }
+    },
+    "Começar" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Start"
+          }
+        }
+      }
+    },
+    "Continuar" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Continue"
+          }
+        }
+      }
+    },
+    "Cozinheiros" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chefs"
+          }
+        }
+      }
+    },
+    "Curiosidade" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Curiosity"
+          }
+        }
+      }
+    },
+    "Degustadores" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tasters"
+          }
+        }
+      }
+    },
+    "Escolha um País" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Choose a Country"
+          }
+        }
+      }
+    },
+    "Finalizar" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Finish"
+          }
+        }
+      }
+    },
+    "Ingredientes" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ingredients"
+          }
+        }
+      }
+    },
+    "Iniciante" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Beginner"
+          }
+        }
+      }
+    },
+    "Iniciar Preparo" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Start Preparation"
+          }
+        }
+      }
+    },
+    "Japonesa:" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Japanese:"
+          }
+        }
+      }
+    },
+    "Nenhum passo disponível para o Chef %lld" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No steps available for the Chef"
+          }
+        }
+      }
+    },
+    "Nenhuma receita selecionada." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No recipe selected."
+          }
+        }
+      }
+    },
+    "Nível de Habilidade" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Skill Level"
+          }
+        }
+      }
+    },
+    "Olá, bem-vindo!" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hello, welcome!"
+          }
+        }
+      }
+    },
+    "Paladares é um espaço onde você poderá cozinhar e \nexplorar novas culturas junto com seus amigos" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Paladares is a space where you can cook and explore new cultures with your friends."
+          }
+        }
+      }
+    },
+    "Parabéns!" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Congratulations!"
+          }
+        }
+      }
+    },
+    "Passo %lld/%lld" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Step"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Passo %1$lld/%2$lld"
+          }
+        }
+      }
+    },
+    "Retornar ao Menu" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Return to Menu"
+          }
+        }
+      }
+    },
+    "Sabores do Mundo" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Flavors of the World"
+          }
+        }
+      }
+    },
+    "Sugestões" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Suggestions"
+          }
+        }
+      }
+    },
+    "Utensílios Essenciais" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Essential Utensils"
+          }
+        }
+      }
+    },
+    "Você concluiu esta receita, continue explorando \n novas culturas!" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "You have completed this recipe, keep exploring new cultures!"
+          }
+        }
+      }
+    },
+    "X-Caboquinho" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "X-Caboquinho"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

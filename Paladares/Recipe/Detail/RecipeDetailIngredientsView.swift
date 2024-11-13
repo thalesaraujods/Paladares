@@ -32,14 +32,16 @@ struct RecipeDetailIngredientsView: View {
                             .minimumScaleFactor(sizeCategory.customMinScaleFactorIngredientsView)
                         Text(ingredient.name)
                             .minimumScaleFactor(sizeCategory.customMinScaleFactorIngredientsView)
-                    }
-                    .font(.system(.body))
+                    }.font(
+                        Font.custom("SF Pro", size: 19, relativeTo: .body)
+                    
+                    )
                     .padding(.vertical, 5)
                 }
             }
             .padding(.leading, -330)
             .padding(.vertical, 40)
-            .padding(.horizontal, 410)
+            .padding(.horizontal, 400)
             .background {
                 Rectangle()
                     .cornerRadius(35)

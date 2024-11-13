@@ -21,9 +21,13 @@ struct RecipeListView: View {
     var body: some View {
         
         Text("Japonesa:")
-            .font(.system(.largeTitle))
+            //.font(.custom("SF Pro", size: 28, relativeTo: .largeTitle))
+            //.fontWeight(.bold)
+            .font(
+                Font.custom("SF Pro", size: 28, relativeTo: .largeTitle)
+            .weight(.bold)
+            )
             .padding(.leading, -560)
-            .fontWeight(.bold)
             .kerning(0.4)
             .minimumScaleFactor(sizeCategory.customMinScaleFactorListView)
         
@@ -46,9 +50,13 @@ struct RecipeListView: View {
         .navigationTitle("Sabores do Mundo")
         
         Text("Brasileira:")
-            .font(.system(.largeTitle))
+            //.font(.system(.largeTitle))
+            .font(
+                Font.custom("SF Pro", size: 28, relativeTo: .largeTitle)
+            .weight(.bold)
+            )
             .padding(.leading, -560)
-            .fontWeight(.bold)
+            //.fontWeight(.bold)
             .kerning(0.4)
             .minimumScaleFactor(sizeCategory.customMinScaleFactorListView)
         

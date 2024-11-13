@@ -25,7 +25,7 @@ struct RecipeDetailView: View {
                         .font(.system(.largeTitle))
                         .padding()
                         .padding(.vertical, 30)
-                        .padding(.leading, -420)
+                        .padding(.leading, -450)
                         .fontWeight(.bold)
                         .kerning(0.4)
                         .minimumScaleFactor(sizeCategory.customMinScaleFactorListView)
@@ -34,7 +34,7 @@ struct RecipeDetailView: View {
                 ZStack{
                     Image(recipe.image)
                         .resizable()
-                        .frame(width: 850, height: 400)
+                        .frame(width: 890, height: 400)
                         .cornerRadius(40)
 
                     Label(recipe.people, systemImage: "person.2.fill")
@@ -69,8 +69,11 @@ struct RecipeDetailView: View {
                 }
 
                 Text(recipe.curiosity)
-                    .font(.system(.body))
-                    .fontWeight(.semibold)
+                    .frame(width: 890)
+                    .font(
+                        Font.custom("SF Pro", size: 19, relativeTo: .body)
+                            .weight(.semibold)
+                    )
                     .foregroundColor(Color(red: 0.59, green: 0.59, blue: 0.59))
                     .padding(.top, 40)
                     .minimumScaleFactor(sizeCategory.customMinScaleFactorDetailView)
@@ -103,7 +106,7 @@ struct RecipeDetailView: View {
                    , alignment: .topTrailing
                )
             }
-            .frame(width: 890)
+            .frame(width: 900)
             .padding(.bottom, 10)
             .navigationTitle(recipe.name)
         }

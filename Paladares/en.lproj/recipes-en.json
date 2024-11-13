@@ -1,0 +1,193 @@
+[
+    {
+        "id": "550e8400-e29b-41d4-a716-446655440001",
+        "name": "X-Caboquinho",
+        "image": "caboquinho",
+        "country": "Brasil",
+        "people": "4 pessoas",
+        "time": "30 minutos",
+        "curiosity": "O X-Caboquinho é um prato típico de Manaus, conhecido como um dos lanches mais tradicionais da cultura amazônica. Ele combina o tucumã, um fruto amazônico, com queijo coalho e pão.",
+        "utensils": ["Frigideira", "Faca de chef", "Espátula"],
+        "ingredients": [
+            { "quantity": "4", "unit": "unidades", "name": "pães franceses" },
+            { "quantity": "12", "unit": "fatias", "name": "queijo coalho" },
+            { "quantity": "4", "unit": "colheres de sopa", "name": "manteiga" },
+            { "quantity": "4", "unit": "xícaras", "name": "tiras de tucumã" },
+            { "quantity": "4", "unit": "unidades", "name": "bananas" }
+        ],
+        "suggestions": [
+            "Sirva com farinha de mandioca para acompanhar."
+        ],
+        "preparationMethods": [
+            {
+                "chefId": 1,
+                "stage": "Preparação dos Pães",
+                "steps": [
+                    {
+                        "stepNumber": "Passo 1",
+                        "description": "Corte os pães ao meio, mas sem separar completamente as metades."
+                    },
+                    {
+                        "stepNumber": "Passo 2",
+                        "description": "Passe manteiga nas duas metades internas de cada pão."
+                    },
+                    {
+                        "stepNumber": "Passo 3",
+                        "description": "Aqueça levemente os pães em uma frigideira para dourar a manteiga."
+                    }
+                ]
+            },
+            {
+                "chefId": 2,
+                "stage": "Preparação dos Tucumã",
+                "steps": [
+                    {
+                        "stepNumber": "Passo 1",
+                        "description": "Corte o tucumã em tiras finas e uniformes."
+                    },
+                    {
+                        "stepNumber": "Passo 2",
+                        "description": "Coloque as tiras de tucumã em uma tigela e reserve."
+                    }
+                ]
+            },
+            {
+                "chefId": 3,
+                "stage": "Preparação do Queijo Coalho",
+                "steps": [
+                    {
+                        "stepNumber": "Passo 1",
+                        "description": "Corte o queijo coalho em fatias e grelhe até dourar dos dois lados."
+                    },
+                    {
+                        "stepNumber": "Passo 2",
+                        "description": "Coloque o queijo grelhado em um prato e reserve."
+                    }
+                ]
+            },
+            {
+                "chefId": 4,
+                "stage": "Preparação das Bananas e Montagem",
+                "steps": [
+                    {
+                        "stepNumber": "Passo 1",
+                        "description": "Descasque as bananas e corte-as em fatias finas."
+                    },
+                    {
+                        "stepNumber": "Passo 2",
+                        "description": "Em uma frigideira, aqueça as fatias de banana até ficarem levemente douradas."
+                    },
+                    {
+                        "stepNumber": "Passo 3",
+                        "description": "Monte os pães, adicionando os ingredientes preparados pelos outros chefs: tiras de tucumã, queijo grelhado e fatias de banana."
+                    },
+                    {
+                        "stepNumber": "Passo 4",
+                        "description": "Leve os pães montados à frigideira quente para aquecer por 2 minutos de cada lado, garantindo que todos os ingredientes fiquem bem integrados."
+                    }
+                ]
+            }
+        ]
+    },
+    
+    {
+        "id": "550e8400-e29b-41d4-a716-446655440002",
+        "name": "Japanese Ramen",
+        "image": "backDetailLamen",
+        "country": "Japan",
+        "people": "4 people",
+        "time": "1 hour",
+        "curiosity": "Curiosity: Although popular in Japan, ramen originated in China and was adapted by the Japanese, who created their own regional variations and unique techniques for the dish.",
+        "utensils": ["Noodle Strainer", "Large Pot", "Sharp Knife", "Sieve", "Chopsticks"],
+        "ingredients": [
+            { "quantity": "1", "unit": "pack", "name": "ramen noodles" },
+            { "quantity": "8", "unit": "pieces", "name": "pork loin" },
+            { "quantity": "2", "unit": "", "name": "eggs" },
+            { "quantity": "4", "unit": "slices", "name": "fish cake (kamaboko)" },
+            { "quantity": "4", "unit": "pieces", "name": "nori seaweed" },
+            { "quantity": "", "unit": "", "name": "Pickled bamboo shoots (optional)" },
+            { "quantity": "2", "unit": "liters", "name": "water" },
+            { "quantity": "1/2", "unit": "cup", "name": "pork broth" },
+            { "quantity": "4", "unit": "tablespoons", "name": "soy sauce" },
+            { "quantity": "3", "unit": "tablets", "name": "chicken broth cubes" },
+            { "quantity": "", "unit": "", "name": "Salt and black pepper" },
+            { "quantity": "", "unit": "", "name": "Green onions" }
+        ],
+        "suggestions": [
+            "You can substitute pork with shredded chicken, shiitake mushrooms, or tofu, if preferred.",
+            "If you don't have nori, you can use seaweed flakes (wakame) or even dried shredded seaweed."
+        ],
+        "preparationMethods": [
+            {
+                "chefId": 1,
+                "stage": "Preparation of Bananas and Assembly",
+                "steps": [
+                    {
+                        "stepNumber": "Step 1",
+                        "description": "Cut the breads in half, but without fully separating the halves."
+                    },
+                    {
+                        "stepNumber": "Step 2",
+                        "description": "Spread butter on the inner halves of each bread."
+                    },
+                    {
+                        "stepNumber": "Step 3",
+                        "description": "Lightly heat the breads in a pan to brown the butter."
+                    }
+                ]
+            },
+            {
+                "chefId": 2,
+                "stage": "Preparation of Bananas and Assembly",
+                "steps": [
+                    {
+                        "stepNumber": "Step 1",
+                        "description": "Cut the tucumã into thin, uniform strips."
+                    },
+                    {
+                        "stepNumber": "Step 2",
+                        "description": "Place the tucumã strips in a bowl and set aside."
+                    }
+                ]
+            },
+            {
+                "chefId": 3,
+                "stage": "Preparation of Bananas and Assembly",
+                "steps": [
+                    {
+                        "stepNumber": "Step 1",
+                        "description": "Cut the queijo coalho into slices and grill until golden on both sides."
+                    },
+                    {
+                        "stepNumber": "Step 2",
+                        "description": "Place the grilled cheese on a plate and set aside."
+                    }
+                ]
+            },
+            {
+                "chefId": 4,
+                "stage": "Preparation of Bananas and Assembly",
+                "steps": [
+                    {
+                        "stepNumber": "Step 1",
+                        "description": "Peel the bananas and cut them into thin slices."
+                    },
+                    {
+                        "stepNumber": "Step 2",
+                        "description": "In a pan, heat the banana slices until they are lightly golden."
+                    },
+                    {
+                        "stepNumber": "Step 3",
+                        "description": "Assemble the breads, adding the ingredients prepared by the other chefs: tucumã strips, grilled cheese, and banana slices."
+                    },
+                    {
+                        "stepNumber": "Step 4",
+                        "description": "Place the assembled breads in a hot pan and heat for 2 minutes on each side, ensuring that all ingredients are well integrated."
+                    }
+                ]
+            }
+        ]
+    }
+
+]
+
