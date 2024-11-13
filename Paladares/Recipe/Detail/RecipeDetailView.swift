@@ -25,27 +25,12 @@ struct RecipeDetailView: View {
                         .font(.system(.largeTitle))
                         .padding()
                         .padding(.vertical, 30)
+                        .padding(.leading, -420)
                         .fontWeight(.bold)
                         .kerning(0.4)
                         .minimumScaleFactor(sizeCategory.customMinScaleFactorListView)
-                    
-                    Button(action: {
-                        coordinator.push(.recipePreparation)
-                    }) {
-                        Text("Iniciar Preparo")
-                            .font(.system(.title2))
-                            .fontWeight(.semibold)
-                            .foregroundStyle(Color.white)
-                            .padding()
-                            .background{
-                                Rectangle()
-                                    .foregroundColor(.clear)
-                                    .background(Color(red: 0.3, green: 0.69, blue: 0.31))
-                                    .cornerRadius(44)
-                            }
-                            .minimumScaleFactor(sizeCategory.customMinScaleFactorDetailView)
-                    }
                 }
+                
                 ZStack{
                     Image(recipe.image)
                         .resizable()
@@ -104,11 +89,23 @@ struct RecipeDetailView: View {
                         .minimumScaleFactor(sizeCategory.customMinScaleFactorDetailView)
                 }
             .frame(maxWidth: .infinity)
+            .overlay(
+                   HStack {
+                       Spacer()
+                       Button(action: {
+                           coordinator.push(.recipePreparation)
+                       }) {
+                           RecipeDetailButtonView()
+                       }
+                       .padding(.trailing, 16) // Ajuste conforme necessário
+                   }
+                   .padding(.top, 30) // Ajuste conforme necessário
+                   , alignment: .topTrailing
+               )
             }
             .frame(width: 890)
             .padding(.bottom, 10)
             .navigationTitle(recipe.name)
-
         }
     }
 }
