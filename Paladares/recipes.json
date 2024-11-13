@@ -21,6 +21,7 @@
         "preparationMethods": [
             {
                 "chefId": 1,
+                "stage": "Preparação dos Pães",
                 "steps": [
                     {
                         "stepNumber": "Passo 1",
@@ -38,6 +39,7 @@
             },
             {
                 "chefId": 2,
+                "stage": "Preparação dos Tucumã",
                 "steps": [
                     {
                         "stepNumber": "Passo 1",
@@ -51,6 +53,7 @@
             },
             {
                 "chefId": 3,
+                "stage": "Preparação do Queijo Coalho",
                 "steps": [
                     {
                         "stepNumber": "Passo 1",
@@ -64,6 +67,7 @@
             },
             {
                 "chefId": 4,
+                "stage": "Preparação das Bananas e Montagem"
                 "steps": [
                     {
                         "stepNumber": "Passo 1",
@@ -116,6 +120,7 @@
         "preparationMethods": [
             {
                 "chefId": 1,
+                "stage": "Preparação das Bananas e Montagem",
                 "steps": [
                     {
                         "stepNumber": "Passo 1",
@@ -133,6 +138,7 @@
             },
             {
                 "chefId": 2,
+                "stage": "Preparação das Bananas e Montagem",
                 "steps": [
                     {
                         "stepNumber": "Passo 1",
@@ -146,6 +152,7 @@
             },
             {
                 "chefId": 3,
+                "stage": "Preparação das Bananas e Montagem",
                 "steps": [
                     {
                         "stepNumber": "Passo 1",
@@ -159,6 +166,7 @@
             },
             {
                 "chefId": 4,
+                "stage": "Preparação das Bananas e Montagem",
                 "steps": [
                     {
                         "stepNumber": "Passo 1",

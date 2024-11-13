@@ -34,6 +34,7 @@ struct RecipePreparationView: View {
                 
                 // Conteúdo principal: passos do chef selecionado
                 VStack {
+                    Text("Chef \(selectedChefId):")
                     StepByStepView(
                         recipe: recipe,
                         selectedChefId: $selectedChefId,

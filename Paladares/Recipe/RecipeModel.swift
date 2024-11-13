@@ -30,6 +30,7 @@ struct Ingredient: Codable {
 
 struct ChefPreparation: Codable {
     let chefId: Int
+    let stage: String
     let steps: [Step]
 }
 
@@ -57,20 +58,20 @@ let mockRecipe = Recipe(
     ],
     suggestions: ["Sirva com farinha de mandioca para acompanhar."],
     preparationMethods: [
-        ChefPreparation(chefId: 1, steps: [
+        ChefPreparation(chefId: 1, stage: "Preparação dos Pães", steps: [
             Step(stepNumber: "Passo 1", description: "Corte os pães ao meio, mas sem separar completamente as metades."),
             Step(stepNumber: "Passo 2", description: "Passe manteiga nas duas metades internas de cada pão."),
             Step(stepNumber: "Passo 3", description: "Aqueça levemente os pães em uma frigideira para dourar a manteiga.")
         ]),
-        ChefPreparation(chefId: 2, steps: [
+        ChefPreparation(chefId: 2, stage: "Preparação dos Tucumã", steps: [
             Step(stepNumber: "Passo 1", description: "Corte o tucumã em tiras finas e uniformes."),
             Step(stepNumber: "Passo 2", description: "Coloque as tiras de tucumã em uma tigela e reserve.")
         ]),
-        ChefPreparation(chefId: 3, steps: [
+        ChefPreparation(chefId: 3, stage: "Preparação do Queijo Coalho", steps: [
             Step(stepNumber: "Passo 1", description: "Corte o queijo coalho em fatias e grelhe até dourar dos dois lados."),
             Step(stepNumber: "Passo 2", description: "Coloque o queijo grelhado em um prato e reserve.")
         ]),
-        ChefPreparation(chefId: 4, steps: [
+        ChefPreparation(chefId: 4, stage: "Preparação das Bananas e Montagem", steps: [
             Step(stepNumber: "Passo 1", description: "Descasque as bananas e corte-as em fatias finas."),
             Step(stepNumber: "Passo 2", description: "Em uma frigideira, aqueça as fatias de banana até ficarem levemente douradas."),
             Step(stepNumber: "Passo 3", description: "Monte os pães, adicionando os ingredientes preparados pelos outros chefs: tiras de tucumã, queijo grelhado e fatias de banana."),
@@ -105,20 +106,20 @@ let mockRecipeLamen = Recipe(
     ],
     suggestions: ["Você pode substituir o porco, por frango desfiado, cogumelos shiitake ou tofu, se preferir;", "Se não tiver nori, pode usar flocos de alga marinha (wakame) ou até algas secas desfiadas."],
     preparationMethods: [
-        ChefPreparation(chefId: 1, steps: [
+        ChefPreparation(chefId: 1, stage: "Preparação dos Pães", steps: [
             Step(stepNumber: "Passo 1", description: "Corte os pães ao meio, mas sem separar completamente as metades."),
             Step(stepNumber: "Passo 2", description: "Passe manteiga nas duas metades internas de cada pão."),
             Step(stepNumber: "Passo 3", description: "Aqueça levemente os pães em uma frigideira para dourar a manteiga.")
         ]),
-        ChefPreparation(chefId: 2, steps: [
+        ChefPreparation(chefId: 2, stage: "Preparação dos Pães", steps: [
             Step(stepNumber: "Passo 1", description: "Corte o tucumã em tiras finas e uniformes."),
             Step(stepNumber: "Passo 2", description: "Coloque as tiras de tucumã em uma tigela e reserve.")
         ]),
-        ChefPreparation(chefId: 3, steps: [
+        ChefPreparation(chefId: 3, stage: "Preparação dos Pães", steps: [
             Step(stepNumber: "Passo 1", description: "Corte o queijo coalho em fatias e grelhe até dourar dos dois lados."),
             Step(stepNumber: "Passo 2", description: "Coloque o queijo grelhado em um prato e reserve.")
         ]),
-        ChefPreparation(chefId: 4, steps: [
+        ChefPreparation(chefId: 4, stage: "Preparação dos Pães", steps: [
             Step(stepNumber: "Passo 1", description: "Descasque as bananas e corte-as em fatias finas."),
             Step(stepNumber: "Passo 2", description: "Em uma frigideira, aqueça as fatias de banana até ficarem levemente douradas."),
             Step(stepNumber: "Passo 3", description: "Monte os pães, adicionando os ingredientes preparados pelos outros chefs: tiras de tucumã, queijo grelhado e fatias de banana."),
