@@ -35,7 +35,6 @@ struct StepByStepView: View {
             }
         }
         .tabViewStyle(PageTabViewStyle())
-        .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .always)) // Para exibir os pontos
         .frame(width: 650.0, height: 500.0)
     }
 }

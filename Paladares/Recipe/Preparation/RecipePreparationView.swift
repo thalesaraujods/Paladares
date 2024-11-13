@@ -34,43 +34,25 @@ struct RecipePreparationView: View {
                 
                 // Conteúdo principal: passos do chef selecionado
                 VStack {
-                    StepByStepView(recipe: recipe, selectedChefId: $selectedChefId, currentStepIndex: $currentStepIndex)
+                    StepByStepView(
+                        recipe: recipe,
+                        selectedChefId: $selectedChefId,
+                        currentStepIndex: $currentStepIndex
+                    )
                     
                     // Botões de navegação entre passos
-                    HStack {
-                        Button(action: {
-                            if currentStepIndex[selectedChefId - 1] > 0 {
-                                currentStepIndex[selectedChefId - 1] -= 1
-                            }
-                        }) {
-                            Image(systemName: "arrow.left")
-                                .frame(width: 50, height: 50)
-                                .background(Color.purple)
-                                .foregroundColor(.white)
-                                .clipShape(Circle())
-                        }
-                        .disabled(currentStepIndex[selectedChefId - 1] == 0) // Desabilita se for o primeiro passo
-                        
-                        //Spacer()
-                        
-                        Button(action: {
-                            if let totalSteps = recipe.preparationMethods.first(where: { $0.chefId == selectedChefId })?.steps.count,
-                               currentStepIndex[selectedChefId - 1] < totalSteps - 1 {
-                                currentStepIndex[selectedChefId - 1] += 1
-                            }
-                        }) {
-                            Image(systemName: "arrow.right")
-                                .frame(width: 50, height: 50)
-                                .background(Color.purple)
-                                .foregroundColor(.white)
-                                .clipShape(Circle())
-                        }
-                        .disabled(recipe.preparationMethods.first(where: { $0.chefId == selectedChefId })?.steps.count == currentStepIndex[selectedChefId - 1] + 1)
+                    if let totalSteps = recipe.preparationMethods.first(where: { $0.chefId == selectedChefId })?.steps.count {
+                        NavigationButtonsView(
+                            currentStepIndex: $currentStepIndex[selectedChefId - 1],
+                            totalSteps: totalSteps,
+                            foregroundColor: chefsShadowsColors[selectedChefId - 1] // Cor do chef selecionado
+                        )
                     }
-                    .padding(.horizontal, 50)
                 }
                 .padding()
             }
+                .frame(width: 1277, height: 788)
+                .padding()
         )
     }
 }
