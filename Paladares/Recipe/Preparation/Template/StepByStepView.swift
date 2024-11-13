@@ -19,10 +19,10 @@ struct StepByStepView: View {
                 ForEach(chefSteps.indices, id: \.self) { index in
                     VStack {
                         Text(chefSteps[index].description)
-                            .font(.body)
-                            .multilineTextAlignment(.center)
-                            .padding()
+                            .font(.custom("SF Pro", size: 32, relativeTo: .body))
+                            .multilineTextAlignment(.leading) // Ajusta o alinhamento do texto
                     }
+                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading) // Alinha no topo à esquerda
                     .tag(index)
                 }
             } else {

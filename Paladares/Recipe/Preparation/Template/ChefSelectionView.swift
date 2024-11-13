@@ -32,11 +32,11 @@ struct ChefSelectionView: View {
                         chefIcon
                             .resizable()
                             .scaledToFit()
-                            .frame(width: 102, height: 102)
+                            .frame(width: 113, height: 113)
                             .shadow(color: selectedChefId == chef.chefId ? chefColor : .clear, radius: selectedChefId == chef.chefId ? 15 : 0)
                         Text("Chef \(chef.chefId)")
                             .foregroundColor(.black)
-                            .font(.caption)
+                            .font(.custom("SF Pro", size: 24, relativeTo: .body))
                     }
                     .scaleEffect(selectedChefId == chef.chefId ? 1.05 : 1.0) // Aplica o efeito de escala
                     .animation(.spring(), value: selectedChefId) // Animação suave para a transição de tamanho
