@@ -19,10 +19,10 @@ struct RecipeGridImageView: View {
                 .cornerRadius(27)
                 .clipped()
                 .rotationEffect(Angle(degrees: 10))
-                .padding(.leading, 280)
+                .padding(.leading, 220)
                 .background{
                     Rectangle()
-                        .frame(width: 552, height: 166)
+                        .frame(width: 452, height: 166)
                         .cornerRadius(27)
                         .foregroundStyle(Color(red: 0.85, green: 0.31, blue: 0.2))
                 }

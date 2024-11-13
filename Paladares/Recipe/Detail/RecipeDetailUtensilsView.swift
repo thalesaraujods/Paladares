@@ -17,16 +17,17 @@ struct RecipeDetailUtensilsView: View {
         VStack {
             VStack(alignment: .leading, spacing: 20) {
                 // Título da seção
-                Text("Utensílios Essenciais:")
+                Text("Utensílios Essenciais")
                     .font(.system(.title))
                     .fontWeight(.bold)
+                    .foregroundColor(Color(red: 0.22, green: 0.56, blue: 0.24))
                     .padding(.bottom, 40)
                     .minimumScaleFactor(sizeCategory.customMinScaleFactorUtensilsView)
                 
                 // Lista de utensílios
                 VStack(alignment: .leading, spacing: 10) {
                     ForEach(recipe.utensils, id: \.self) { utensil in
-                        Text("• \(utensil)")
+                        Text("•  \(utensil)")
                             .font(.system(.body))
                             .lineSpacing(10)
                             .minimumScaleFactor(sizeCategory.customMinScaleFactorUtensilsView)
@@ -38,7 +39,7 @@ struct RecipeDetailUtensilsView: View {
                 .background {
                     Rectangle()
                         .cornerRadius(35)
-                        .shadow(radius: 10)
+                        .shadow(radius: 5)
                         .foregroundStyle(.white)
                         .minimumScaleFactor(sizeCategory.customMinScaleFactorUtensilsView)
                 }

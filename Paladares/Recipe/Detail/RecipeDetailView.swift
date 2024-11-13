@@ -9,78 +9,107 @@ import Foundation
 import SwiftUI
 
 struct RecipeDetailView: View {
-    
+
     let recipe: Recipe
     @EnvironmentObject private var coordinator: Coordinator
     @Environment(\.sizeCategory) var sizeCategory
-    
+
     var body: some View {
-        ScrollView(showsIndicators: false) {
+
+        ZStack{
             VStack {
-                Text(recipe.name)
-                    .font(.system(.largeTitle))
-                    .padding()
-                    .padding(.vertical, 30)
-                    .padding(.leading, -430)
-                    .fontWeight(.bold)
-                    .kerning(0.4)
-                    .minimumScaleFactor(sizeCategory.customMinScaleFactorListView)
-                
-                Image(recipe.image)
-                    .resizable()
-                    .frame(width: 850, height: 400)
-                    .cornerRadius(40)
-                // ver se terão mais imagens da comida que será preparada
-                
-                HStack {
-                    Button(action: {
-                        coordinator.push(.recipePreparation)
-                    }) {
-                        Label("Começar", systemImage: "play.fill")
-                            .padding()
-                            .font(.system(.body))
-                            .imageScale(.small)
-                            .background(Color.backBotao)
-                            .foregroundColor(Color.palavraBotao)
-                            .cornerRadius(160)
-                        
-                    }
-                    
-                    Spacer()
-                    //consertar o alinhamento dos "botoes"
-                    
+            ScrollView(showsIndicators: false) {
+
+                    Text(recipe.name)
+                        .font(.system(.largeTitle))
+                        .padding()
+                        .padding(.vertical, 30)
+                        .padding(.leading, -430)
+                        .fontWeight(.bold)
+                        .kerning(0.4)
+                        .minimumScaleFactor(sizeCategory.customMinScaleFactorListView)
+
+                ZStack{
+                    Image(recipe.image)
+                        .resizable()
+                        .frame(width: 850, height: 400)
+                        .cornerRadius(40)
+
+                    Label(recipe.people, systemImage: "person.2.fill")
+                        .font(.system(.title2))
+                        .fontWeight(.semibold)
+                        .foregroundColor(Color(red: 0.3, green: 0.69, blue: 0.31))
+                        .padding()
+                        .background{
+                            Rectangle()
+                                .foregroundColor(.clear)
+                                .background(Color.white)
+                                .cornerRadius(44)
+                        }
+                        .padding(.top, 280)
+                        .padding(.leading, -400)
                         .minimumScaleFactor(sizeCategory.customMinScaleFactorDetailView)
                     
                     Label(recipe.time, systemImage: "clock.fill")
+                        .font(.system(.title2))
+                        .fontWeight(.semibold)
+                        .foregroundColor(Color(red: 0.3, green: 0.69, blue: 0.31))
                         .padding()
-                        .font(.system(.body))
-                        .background(Color.white)
-                        .foregroundStyle(Color.corCinza)
-                        .cornerRadius(160)
-                        .shadow(radius: 5)
+                        .background{
+                            Rectangle()
+                                .foregroundColor(.clear)
+                                .background(Color.white)
+                                .cornerRadius(44)
+                        }
+                        .padding(.top, 280)
+                        .padding(.leading, -200)
+                        .minimumScaleFactor(sizeCategory.customMinScaleFactorDetailView)
                 }
-                .padding(.top, 50)
-                .minimumScaleFactor(sizeCategory.customMinScaleFactorDetailView)
-                
-                RecipeDetailIngredientsView(recipe: recipe)
-                    .padding(.top, 80)
+
+                Text(recipe.curiosity)
+                    .font(.system(.body))
+                    .fontWeight(.semibold)
+                    .foregroundColor(Color(red: 0.59, green: 0.59, blue: 0.59))
+                    .padding(.top, 40)
                     .minimumScaleFactor(sizeCategory.customMinScaleFactorDetailView)
                 
-                RecipeDetailUtensilsView(recipe: recipe)
-                    .padding(.top, 80)
-                    .minimumScaleFactor(sizeCategory.customMinScaleFactorDetailView)
-                
-                RecipeDetailSugestionsView(recipe: recipe)
-                    .padding(.top, 80)
-                    .minimumScaleFactor(sizeCategory.customMinScaleFactorDetailView)
+                //ver porque o ingredients ta cortando
+                    RecipeDetailIngredientsView(recipe: recipe)
+                        .padding(.top, 50)
+                        .minimumScaleFactor(sizeCategory.customMinScaleFactorDetailView)
+
+                    RecipeDetailUtensilsView(recipe: recipe)
+                        .padding(.top, 80)
+                        .minimumScaleFactor(sizeCategory.customMinScaleFactorDetailView)
+
+                    RecipeDetailSugestionsView(recipe: recipe)
+                        .padding(.top, 80)
+                        .minimumScaleFactor(sizeCategory.customMinScaleFactorDetailView)
+                }
+            .frame(maxWidth: .infinity)
             }
-            .frame(width: 940)
-            //.padding(.top, 120)
-            //.navigationTitle(recipe.name)
+            .frame(width: 890)
+            .padding(.bottom, 10)
+            .navigationTitle(recipe.name)
+
+            Button(action: {
+                coordinator.push(.recipePreparation)
+            }) {
+                Text("Iniciar Preparo")
+                    .font(.system(.title2))
+                    .fontWeight(.semibold)
+                    .foregroundStyle(Color.white)
+                    .padding()
+                    .background{
+                        Rectangle()
+                            .foregroundColor(.clear)
+                            .background(Color(red: 0.3, green: 0.69, blue: 0.31))
+                            .cornerRadius(44)
+                    }
+                    .minimumScaleFactor(sizeCategory.customMinScaleFactorDetailView)
+            }.padding(.bottom, 850)
+             .padding(.leading, 660)
         }
-       
-        .padding(.bottom, 10)
-        .navigationTitle(recipe.name)
     }
 }
 

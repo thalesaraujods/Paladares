@@ -27,19 +27,22 @@ struct RecipeListView: View {
             .kerning(0.4)
             .minimumScaleFactor(sizeCategory.customMinScaleFactorListView)
         
-        LazyVGrid(columns: columns, spacing: 72) {
+
+        LazyVGrid(columns: columns) {
             ForEach(viewModel.dataLoader.recipes, id: \.id) { recipe in
                 Button (action: {
                     viewModel.selectedRecipe = recipe
                     coordinator.push(.recipeDetail)
                 }) {
                     RecipeGridView(recipe: recipe)
-                        .padding(.leading, 200)
+                        .padding()
+                   
                 }
+                Spacer()
             }
         }
         .padding()
-        .frame(width: 1169)
+        .frame(width: 890)
         .navigationTitle("Sabores do Mundo")
     }
 }
