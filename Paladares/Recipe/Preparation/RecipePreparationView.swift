@@ -15,6 +15,8 @@ struct RecipePreparationView: View {
     @State private var currentStepIndex: [Int] = [0, 0, 0, 0] // Índices de passos por chef
     @State private var shadowColor: Color = .colorChef1
     
+    @Environment(\.sizeCategory) var sizeCategory
+    
     let chefsShadowsColors: [Color] = [.colorChef1, .colorChef2, .colorChef3, .colorChef4]
     let chefsIcons: [Image] = [Image(.iconChef1), Image(.iconChef2), Image(.iconChef3), Image(.iconChef4)]
     
@@ -37,24 +39,28 @@ struct RecipePreparationView: View {
                 ChefSelectionView(
                     selectedChefId: $selectedChefId,
                     shadowColor: $shadowColor,
-                    preparationMethods: recipe.preparationMethods
+                    preparationMethods: recipe.preparationMethods 
                 )
                 .frame(width: 260)
+                .minimumScaleFactor(sizeCategory.customMinScaleFactorStepView)
                 
                 // Conteúdo principal
                 VStack(alignment: .leading, spacing: 20) {
                     if let selectedChef = recipe.preparationMethods.first(where: { $0.chefId == selectedChefId }) {
                         // Exibição do progresso
                         Text("Passo \(currentStepIndex[selectedChefId - 1] + 1)/\(selectedChef.steps.count)")
-                            .font(.headline)
-                            .foregroundColor(.gray)
+                            .font(.custom("SF Pro", size: 24, relativeTo: .headline))
+                            .fontWeight(.medium)
+                            .foregroundColor(Color.shadeGray)
+                            .minimumScaleFactor(sizeCategory.customMinScaleFactorStepView)
                         
                         // Nome do chef e etapa
                         Text("Chef \(selectedChef.chefId): \(selectedChef.stage)")
-                            .font(.title)
-                            .fontWeight(.bold)
-                            .foregroundColor(.black)
+                            .font(.custom("SF Pro", size: 48, relativeTo: .largeTitle))
+                            .fontWeight(.semibold)
+                            .foregroundColor(Color.shadeGray)
                             .frame(width: 824, alignment: .leading)
+                            .minimumScaleFactor(sizeCategory.customMinScaleFactorStepView)
                         
                         Spacer()
                         
@@ -64,6 +70,7 @@ struct RecipePreparationView: View {
                             selectedChefId: $selectedChefId,
                             currentStepIndex: $currentStepIndex
                         )
+                        .minimumScaleFactor(sizeCategory.customMinScaleFactorStepView)
                         
                         Spacer()
                         
@@ -77,14 +84,28 @@ struct RecipePreparationView: View {
                                 coordinator.push(.congratulations)
                             }
                         )
+                        .minimumScaleFactor(sizeCategory.customMinScaleFactorStepView)
                     }
                 }
                 .padding()
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
             }
-                .frame(width: 1277, height: 788)
+                .frame(width: 1170, height: 788)
                 .padding()
         )
+    }
+}
+
+extension ContentSizeCategory {
+    var customMinScaleFactorStepView: CGFloat{
+        switch self{
+        case .extraSmall, .small, .medium:
+            return 1.0
+        case .large, .extraLarge, .extraExtraLarge:
+            return 0.8
+        default:
+            return 0.6
+        }
     }
 }
 

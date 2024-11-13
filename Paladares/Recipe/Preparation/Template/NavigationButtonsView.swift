@@ -23,7 +23,10 @@ struct NavigationButtonsView: View {
                 }
             }) {
                 Image(systemName: "arrow.left")
-                    .frame(width: 84, height: 84)
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 35, height: 35)
+                    .padding(27)
                     .background(foregroundColor)
                     .foregroundColor(.white)
                     .clipShape(Circle())
@@ -54,7 +57,10 @@ struct NavigationButtonsView: View {
                     }
                 }) {
                     Image(systemName: "arrow.right")
-                        .frame(width: 84, height: 84)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 35, height: 35)
+                        .padding(27)
                         .background(foregroundColor)
                         .foregroundColor(.white)
                         .clipShape(Circle())
@@ -66,7 +72,6 @@ struct NavigationButtonsView: View {
             
             
         }
-        .padding(.horizontal, 50)
         .frame(width: 824)
     }
 }
