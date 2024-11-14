@@ -35,7 +35,7 @@ struct RecipeListView: View {
                     .minimumScaleFactor(sizeCategory.customMinScaleFactorListView)
 
                 LazyVGrid(columns: columns) {
-                    ForEach(viewModel.dataLoader.recipes.filter { $0.country == "Brasil" }, id: \.id) { recipe in
+                    ForEach(viewModel.dataLoader.recipes.filter { $0.country == "Brazil" }, id: \.id) { recipe in
                         Button(action: {
                             viewModel.selectedRecipe = recipe
                             coordinator.push(.recipeDetail)
@@ -56,7 +56,7 @@ struct RecipeListView: View {
                     .minimumScaleFactor(sizeCategory.customMinScaleFactorListView)
                 
                 LazyVGrid(columns: columns) {
-                    ForEach(viewModel.dataLoader.recipes.filter { $0.country == "Japão" }, id: \.id) { recipe in
+                    ForEach(viewModel.dataLoader.recipes.filter { $0.country == "Japan" }, id: \.id) { recipe in
                         Button(action: {
                             viewModel.selectedRecipe = recipe
                             coordinator.push(.recipeDetail)
@@ -78,7 +78,7 @@ struct RecipeListView: View {
                     .minimumScaleFactor(sizeCategory.customMinScaleFactorListView)
 
                 LazyVGrid(columns: columns) {
-                    ForEach(viewModel.dataLoader.recipes.filter { $0.country == "Itália" }, id: \.id) { recipe in
+                    ForEach(viewModel.dataLoader.recipes.filter { $0.country == "Italy" }, id: \.id) { recipe in
                         Button(action: {
                             viewModel.selectedRecipe = recipe
                             coordinator.push(.recipeDetail)
