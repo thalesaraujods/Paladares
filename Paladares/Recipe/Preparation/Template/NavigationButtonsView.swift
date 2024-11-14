@@ -73,6 +73,7 @@ struct NavigationButtonsView: View {
             
         }
         .frame(width: 824)
+        .padding()
     }
 }
 
