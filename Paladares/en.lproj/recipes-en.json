@@ -299,98 +299,93 @@
     
     {
         "id": "550e8400-e29b-41d4-a716-446655440004",
-        "name": "Onigiri",
+        "name": "Tuna Mayo Onigiri",
         "image": "backDetailOnigiri",
         "imageList": "",
         "country": "Japan",
-        "people": "4 pessoas",
-        "time": "1 hora",
-        "curiosity": "Curiosidade: Embora popular no Japão, o lámen é originário da China e foi adaptado pelos japoneses, que criaram suas próprias variações regionais e técnicas únicas para o prato.",
-        "utensils": ["Coador de Macarrão", "Panela Grande", "Faca Afiada", "Peneira", "Hashi"],
+        "people": "6 people",
+        "time": "50 minutes",
+        "curiosity": "Curiosity: Onigiri was one of the samurais' foods because, due to its practicality and lightness, it was wrapped in bamboo leaves and carried by samurais on their journeys.",
+        "utensils": ["Pot with Lid", "Strainer", "Container for handling rice", "Bowl"],
         "ingredients": [
-            { "quantity": "1", "unit": "pacote", "name": "de macarrão para lámen" },
-            { "quantity": "8", "unit": "pedaços", "name": "de lombo de porco" },
-            { "quantity": "2", "unit": "", "name": "ovos" },
-            { "quantity": "4", "unit": "rodelas", "name": "de massa de peixe (kamaboko)" },
-            { "quantity": "4", "unit": "pedaços", "name": "de alga nori" },
-            { "quantity": "Broto de bambu em conserva (opcional)", "unit": "", "name": "" },
-            { "quantity": "2", "unit": "litros", "name": "de água" },
-            { "quantity": "1/2", "unit": "xícara (chá)", "name": "de caldo de carne de porco" },
-            { "quantity": "4", "unit": "colheres (sopa)", "name": "de shoyo" },
-            { "quantity": "3", "unit": "tablets", "name": "de caldo de galinha" },
-            { "quantity": "Sal e pimenta do reino", "unit": "", "name": "" },
-            { "quantity": "Cebolinha", "unit": "", "name": "" }
+            { "quantity": "300", "unit": "grams", "name": "of Japanese rice" },
+            { "quantity": "1", "unit": "sheet", "name": "of Nori" },
+            { "quantity": "1", "unit": "pinch", "name": "of salt" },
+            { "quantity": "150", "unit": "grams", "name": "of canned tuna" },
+            { "quantity": "2", "unit": "tablespoons", "name": "of mayonnaise" },
+            { "quantity": "1", "unit": "teaspoon", "name": "of mustard" },
+            { "quantity": "", "unit": "", "name": "Nori (seaweed) cut into strips to taste" }
         ],
         "suggestions": [
-            "Você pode substituir o porco, por frango desfiado, cogumelos shiitake ou tofu, se preferir;",
-            "Se não tiver nori, pode usar flocos de alga marinha (wakame) ou até algas secas desfiadas."
+            "You can replace the tuna with shredded chicken or salmon, whichever you prefer;",
+            "If you don't have nori, you can use wakame seaweed flakes or even shredded dried seaweed."
         ],
         "preparationMethods": [
             {
                 "chefId": 1,
-                "stage": "Preparação das Bananas e Montagem",
+                "stage": "Preparing the Rice",
                 "steps": [
                     {
-                        "stepNumber": "Passo 1",
-                        "description": "Corte os pães ao meio, mas sem separar completamente as metades."
+                        "stepNumber": "Step 1",
+                        "description": "Start by washing the rice with clean water. Place the rice in a bowl and add water. Mix the rice quickly with your hand until the water becomes cloudy."
                     },
                     {
-                        "stepNumber": "Passo 2",
-                        "description": "Passe manteiga nas duas metades internas de cada pão."
+                        "stepNumber": "Step 2",
+                        "description": "Place the rice in a pot with double its volume of cold water. Cover and bring to a boil."
                     },
                     {
-                        "stepNumber": "Passo 3",
-                        "description": "Aqueça levemente os pães em uma frigideira para dourar a manteiga."
+                        "stepNumber": "Step 3",
+                        "description": "Once the water boils, stir the rice off the heat, reduce to low, and cook for 15 minutes, covered."
+                    },
+                    {
+                        "stepNumber": "Step 4",
+                        "description": "Remove from heat and let it rest for 10 minutes so the rice can steam and expand."
                     }
                 ]
             },
             {
                 "chefId": 2,
-                "stage": "Preparação das Bananas e Montagem",
+                "stage": "Cutting Nori Sheet and Mixing Ingredients",
                 "steps": [
                     {
-                        "stepNumber": "Passo 1",
-                        "description": "Corte o tucumã em tiras finas e uniformes."
+                        "stepNumber": "Step 1",
+                        "description": "Cut the nori sheet into 6 wide strips."
                     },
                     {
-                        "stepNumber": "Passo 2",
-                        "description": "Coloque as tiras de tucumã em uma tigela e reserve."
+                        "stepNumber": "Step 2",
+                        "description": "Mix the tuna, mayonnaise, and mustard in a bowl."
                     }
                 ]
             },
             {
                 "chefId": 3,
-                "stage": "Preparação das Bananas e Montagem",
+                "stage": "Shaping the Rice",
                 "steps": [
                     {
-                        "stepNumber": "Passo 1",
-                        "description": "Corte o queijo coalho em fatias e grelhe até dourar dos dois lados."
+                        "stepNumber": "Step 1",
+                        "description": "Wet your hands and then generously cover your palms with salt to prevent the rice from sticking to your hands."
                     },
                     {
-                        "stepNumber": "Passo 2",
-                        "description": "Coloque o queijo grelhado em um prato e reserve."
+                        "stepNumber": "Step 2",
+                        "description": "Take a little rice in your hand and create a depression in the center. Place some filling in the middle."
+                    },
+                    {
+                        "stepNumber": "Step 3",
+                        "description": "Add rice to your hand to seal the rice ball. Press with your other hand until it forms a triangular shape."
                     }
                 ]
             },
             {
                 "chefId": 4,
-                "stage": "Preparação das Bananas e Montagem",
+                "stage": "Wrapping in Nori Sheet",
                 "steps": [
                     {
-                        "stepNumber": "Passo 1",
-                        "description": "Descasque as bananas e corte-as em fatias finas."
+                        "stepNumber": "Step 1",
+                        "description": "Wrap your onigiri in the nori sheet."
                     },
                     {
-                        "stepNumber": "Passo 2",
-                        "description": "Em uma frigideira, aqueça as fatias de banana até ficarem levemente douradas."
-                    },
-                    {
-                        "stepNumber": "Passo 3",
-                        "description": "Monte os pães, adicionando os ingredientes preparados pelos outros chefs: tiras de tucumã, queijo grelhado e fatias de banana."
-                    },
-                    {
-                        "stepNumber": "Passo 4",
-                        "description": "Leve os pães montados à frigideira quente para aquecer por 2 minutos de cada lado, garantindo que todos os ingredientes fiquem bem integrados."
+                        "stepNumber": "Step 2",
+                        "description": "Place them on a plate in an organized manner."
                     }
                 ]
             }
