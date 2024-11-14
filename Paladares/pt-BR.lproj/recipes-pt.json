@@ -488,5 +488,107 @@
                 ]
             }
         ]
+    },
+    
+    {
+        "id": "550e8400-e29b-41d4-a716-446655440006",
+        "name": "Dumpling Japonês",
+        "image": "backDetailDumpling",
+        "imageList": "",
+        "country": "Japan",
+        "people": "4 pessoas",
+        "time": "1 hora",
+        "curiosity": "Curiosidade: Conhecido também como guioza, ele foi levado para o Japão pelos soldados durante a Segunda Guerra Mundial. No pós-guerra, a iguaria ganhou notoriedade, porque ajudou os moradores a sobreviverem, tanto consumindo para não passar fome, quanto vendendo guiozas",
+        "utensils": ["Bowl grande", "Panela média", "Panela grande", "Espetos de bambu", "Peneira", "Faca ou Tesoura"],
+        "ingredients": [
+            { "quantity": "200", "unit": "gramas", "name": "de farinha de arroz glutinoso (ou mochi-ko)" },
+            { "quantity": "150", "unit": "ml", "name": "de água morna" },
+            { "quantity": "1/2", "unit": "colher", "name": "de chá de sal" },
+            { "quantity": "1", "unit": "colher", "name": "de sopa de açúcar (opcional, para um toque doce no dango)" },
+            { "quantity": "1/2", "unit": "colher", "name": "de chá de corante alimentício vermelho" },
+            { "quantity": "1/2", "unit": "colher", "name": "de chá de matcha em pó (pó de chá verde)" },
+            { "quantity": "3", "unit": "colheres", "name": "de sopa de molho de soja" },
+            { "quantity": "3", "unit": "colheres", "name": "de sopa de açúcar" },
+            { "quantity": "1", "unit": "colher", "name": "de sopa de mirin (opcional)" }
+        ],
+        "suggestions": [
+            "Se você não encontrar a farinha de arroz glutinoso (mochi-ko), pode usar amido de arroz ou farinha de tapioca;",
+            "Em vez de corante alimentício, você pode usar suco de beterraba ou suco de morango natural para obter o tom rosa;",
+            " Se você não encontrar matcha, pode usar pó de chá verde comum, ou suco de espinagre, ou morangos verdes;"
+        ],
+        "preparationMethods": [
+            {
+                "chefId": 1,
+                "stage": "Preparação da massa de Dango",
+                "steps": [
+                    {
+                        "stepNumber": "Passo 1",
+                        "description": "Em uma tigela grande, misture a farinha de arroz glutinoso (mochi-ko) com o sal e o açúcar (se estiver usando)."
+                    },
+                    {
+                        "stepNumber": "Passo 2",
+                        "description": "Adicione aos poucos a água morna enquanto mistura, até que a massa fique consistente, mas ainda um pouco pegajosa. Se necessário, acrescente um pouco mais de água ou farinha de arroz para ajustar a consistência."
+                    },
+                    {
+                        "stepNumber": "Passo 3",
+                        "description": "Divida a massa em três porções: uma porção para os bolinhos brancos, uma para os bolinhos verdes e uma para os bolinhos rosas."
+                    },
+                    {
+                        "stepNumber": "Passo 4",
+                        "description": "Retirar do calor e deixar repousar durante 10 minutos para que o arroz possa inchar no seu vapor."
+                    },
+                ]
+            },
+            {
+                "chefId": 2,
+                "stage": "Moldagem e Coloração os Dangos",
+                "steps": [
+                    {
+                        "stepNumber": "Passo 1",
+                        "description": "Adicione o corante vermelho (ou suco de beterraba) a uma das porções e misture bem até que a massa fique com a cor desejada."
+                    },
+                    {
+                        "stepNumber": "Passo 2",
+                        "description": "Na segunda porção, adicione o matcha em pó e misture até que fique uniforme. Deixe a terceira porção branca, sem adicionar corante."
+                    },
+                    {
+                    "stepNumber": "Passo 3",
+                    "description": "Modele as três porções de massa em pequenas bolas de aproximadamente 2 cm de diâmetro (fazendo 12 bolinhos no total)."
+                    }
+                ]
+            },
+            {
+                "chefId": 3,
+                "stage": "Cozimento dos Dangos",
+                "steps": [
+                    {
+                        "stepNumber": "Passo 1",
+                        "description": "Em uma panela grande, ferva água."
+                    },
+                    {
+                        "stepNumber": "Passo 2",
+                        "description": "Quando a água estiver fervendo, coloque as bolinhas de dango na água com cuidado. Cozinhe por cerca de 5 a 8 minutos, ou até que elas subam à superfície."
+                    },
+                    {
+                    "stepNumber": "Passo 3",
+                    "description": "Retire os bolinhos com uma escumadeira e coloque-os em um recipiente com água fria para esfriar um pouco."
+                    }
+                ]
+            },
+            {
+                "chefId": 4,
+                "stage": "Montagem dos Dangos",
+                "steps": [
+                    {
+                        "stepNumber": "Passo 1",
+                        "description": "Após os dangos esfriarem um pouco, coloque-os em espetos de bambu, alternando as cores (ex: 1 branco, 1 verde, 1 rosa)."
+                    },
+                    {
+                        "stepNumber": "Passo 2",
+                        "description": "Se desejar, prepare o molho de molho misturando o molho de soja, o açúcar e o mirin em uma panela, aqueça até o açúcar dissolver completamente. Sirva o molho ao lado para que cada pessoa mergulhe os dangos conforme preferir"
+                    }
+                ]
+            }
+        ]
     }
 ]
