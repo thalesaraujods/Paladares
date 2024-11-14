@@ -20,6 +20,7 @@ struct RecipeDetailSugestionsView: View {
                     .font(.system(.title))
                     .fontWeight(.bold)
                     .padding(.bottom, 40)
+                    .padding(.leading, 50)
                     .foregroundColor(Color(red: 0.22, green: 0.56, blue: 0.24))
                     .minimumScaleFactor(sizeCategory.customMinScaleFactorSugestionsView)
                 
@@ -33,12 +34,14 @@ struct RecipeDetailSugestionsView: View {
                             .lineSpacing(10)
                             .minimumScaleFactor(sizeCategory.customMinScaleFactorSugestionsView)
                     }
+                    
                 }
-                .padding(.leading, -330)
+                .padding(.leading, -230)
                 .padding(.vertical, 40)
                 .padding(.horizontal, 370)
                 .background {
                     Rectangle()
+                        .frame(width: 900)
                         .cornerRadius(35)
                         .shadow(radius: 5)
                         .foregroundStyle(.white)

@@ -1,93 +1,97 @@
 [
     {
-        "id": "550e8400-e29b-41d4-a716-446655440001",
-        "name": "X-Caboquinho",
-        "image": "caboquinho",
-        "country": "Brasil",
-        "people": "4 pessoas",
-        "time": "30 minutos",
-        "curiosity": "O X-Caboquinho é um prato típico de Manaus, conhecido como um dos lanches mais tradicionais da cultura amazônica. Ele combina o tucumã, um fruto amazônico, com queijo coalho e pão.",
-        "utensils": ["Frigideira", "Faca de chef", "Espátula"],
-        "ingredients": [
-            { "quantity": "4", "unit": "unidades", "name": "pães franceses" },
-            { "quantity": "12", "unit": "fatias", "name": "queijo coalho" },
-            { "quantity": "4", "unit": "colheres de sopa", "name": "manteiga" },
-            { "quantity": "4", "unit": "xícaras", "name": "tiras de tucumã" },
-            { "quantity": "4", "unit": "unidades", "name": "bananas" }
-        ],
-        "suggestions": [
-            "Sirva com farinha de mandioca para acompanhar."
-        ],
-        "preparationMethods": [
+      "id": "550e8400-e29b-41d4-a716-446655440001",
+      "name": "X-Caboquinho",
+      "image": "caboquinho",
+      "country": "Brazil",
+      "people": "4 people",
+      "time": "30 minutes",
+      "curiosity": "The X-Caboquinho is a traditional dish from Manaus, known as one of the most iconic snacks in Amazonian culture. It combines tucumã, an Amazonian fruit, with grilled cheese and bread.",
+      "utensils": [
+        "Frying pan",
+        "Chef's knife",
+        "Spatula"
+      ],
+      "ingredients": [
+        { "quantity": "4", "unit": "French rolls", "name": "French rolls" },
+        { "quantity": "12", "unit": "slices", "name": "coalho cheese" },
+        { "quantity": "4", "unit": "tablespoons", "name": "butter" },
+        { "quantity": "4", "unit": "cups", "name": "tucumã strips" },
+        { "quantity": "4", "unit": "bananas", "name": "bananas" }
+      ],
+      "suggestions": [
+        "Serve with cassava flour on the side."
+      ],
+      "preparationMethods": [
+        {
+          "chefId": 1,
+          "stage": "Preparation of the Bread",
+          "steps": [
             {
-                "chefId": 1,
-                "stage": "Preparação dos Pães",
-                "steps": [
-                    {
-                        "stepNumber": "Passo 1",
-                        "description": "Corte os pães ao meio, mas sem separar completamente as metades."
-                    },
-                    {
-                        "stepNumber": "Passo 2",
-                        "description": "Passe manteiga nas duas metades internas de cada pão."
-                    },
-                    {
-                        "stepNumber": "Passo 3",
-                        "description": "Aqueça levemente os pães em uma frigideira para dourar a manteiga."
-                    }
-                ]
+              "stepNumber": "Step 1",
+              "description": "Cut the French rolls in half, but do not separate the halves completely."
             },
             {
-                "chefId": 2,
-                "stage": "Preparação dos Tucumã",
-                "steps": [
-                    {
-                        "stepNumber": "Passo 1",
-                        "description": "Corte o tucumã em tiras finas e uniformes."
-                    },
-                    {
-                        "stepNumber": "Passo 2",
-                        "description": "Coloque as tiras de tucumã em uma tigela e reserve."
-                    }
-                ]
+              "stepNumber": "Step 2",
+              "description": "Spread butter on the inner halves of each roll."
             },
             {
-                "chefId": 3,
-                "stage": "Preparação do Queijo Coalho",
-                "steps": [
-                    {
-                        "stepNumber": "Passo 1",
-                        "description": "Corte o queijo coalho em fatias e grelhe até dourar dos dois lados."
-                    },
-                    {
-                        "stepNumber": "Passo 2",
-                        "description": "Coloque o queijo grelhado em um prato e reserve."
-                    }
-                ]
-            },
-            {
-                "chefId": 4,
-                "stage": "Preparação das Bananas e Montagem",
-                "steps": [
-                    {
-                        "stepNumber": "Passo 1",
-                        "description": "Descasque as bananas e corte-as em fatias finas."
-                    },
-                    {
-                        "stepNumber": "Passo 2",
-                        "description": "Em uma frigideira, aqueça as fatias de banana até ficarem levemente douradas."
-                    },
-                    {
-                        "stepNumber": "Passo 3",
-                        "description": "Monte os pães, adicionando os ingredientes preparados pelos outros chefs: tiras de tucumã, queijo grelhado e fatias de banana."
-                    },
-                    {
-                        "stepNumber": "Passo 4",
-                        "description": "Leve os pães montados à frigideira quente para aquecer por 2 minutos de cada lado, garantindo que todos os ingredientes fiquem bem integrados."
-                    }
-                ]
+              "stepNumber": "Step 3",
+              "description": "Lightly heat the rolls in a frying pan to brown the butter."
             }
-        ]
+          ]
+        },
+        {
+          "chefId": 2,
+          "stage": "Preparation of the Tucumã",
+          "steps": [
+            {
+              "stepNumber": "Step 1",
+              "description": "Cut the tucumã into thin, even strips."
+            },
+            {
+              "stepNumber": "Step 2",
+              "description": "Place the tucumã strips in a bowl and set aside."
+            }
+          ]
+        },
+        {
+          "chefId": 3,
+          "stage": "Preparation of the Coalho Cheese",
+          "steps": [
+            {
+              "stepNumber": "Step 1",
+              "description": "Cut the coalho cheese into slices and grill until golden on both sides."
+            },
+            {
+              "stepNumber": "Step 2",
+              "description": "Place the grilled cheese on a plate and set aside."
+            }
+          ]
+        },
+        {
+          "chefId": 4,
+          "stage": "Preparation of the Bananas and Assembly",
+          "steps": [
+            {
+              "stepNumber": "Step 1",
+              "description": "Peel the bananas and cut them into thin slices."
+            },
+            {
+              "stepNumber": "Step 2",
+              "description": "In a frying pan, heat the banana slices until they are lightly golden."
+            },
+            {
+              "stepNumber": "Step 3",
+              "description": "Assemble the sandwiches by adding the ingredients prepared by the other chefs: tucumã strips, grilled cheese, and banana slices."
+            },
+            {
+              "stepNumber": "Step 4",
+              "description": "Place the assembled sandwiches back in the hot frying pan and cook for 2 minutes on each side, making sure all the ingredients are well integrated."
+            }
+          ]
+        }
+      ]
     },
     
     {

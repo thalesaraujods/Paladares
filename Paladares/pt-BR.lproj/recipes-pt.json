@@ -105,13 +105,13 @@
             { "quantity": "2", "unit": "", "name": "ovos" },
             { "quantity": "4", "unit": "rodelas", "name": "de massa de peixe (kamaboko)" },
             { "quantity": "4", "unit": "pedaços", "name": "de alga nori" },
-            { "quantity": "", "unit": "", "name": "Broto de bambu em conserva (opcional)" },
+            { "quantity": "Broto de bambu em conserva (opcional)", "unit": "", "name": "" },
             { "quantity": "2", "unit": "litros", "name": "de água" },
             { "quantity": "1/2", "unit": "xícara (chá)", "name": "de caldo de carne de porco" },
             { "quantity": "4", "unit": "colheres (sopa)", "name": "de shoyo" },
             { "quantity": "3", "unit": "tablets", "name": "de caldo de galinha" },
-            { "quantity": "", "unit": "", "name": "Sal e pimenta do reino" },
-            { "quantity": "", "unit": "", "name": "Cebolinha" }
+            { "quantity": "Sal e pimenta do reino", "unit": "", "name": "" },
+            { "quantity": "Cebolinha", "unit": "", "name": "" }
         ],
         "suggestions": [
             "Você pode substituir o porco, por frango desfiado, cogumelos shiitake ou tofu, se preferir;",

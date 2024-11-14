@@ -8,6 +8,13 @@
 import Foundation
 import SwiftUI
 
+
+//TODO: Ajeitar o espaçamento das palavras
+//TODO: Definir um frame concreto para os ingredientes e etc
+//TODO: Ver os ingredientes grifados que não tem uma quantidade específica
+//TODO: Ajustar o tamanho conforme a receita feita (no simulador tá ficando direitinho)
+
+
 struct RecipeDetailView: View {
 
     let recipe: Recipe
@@ -106,7 +113,7 @@ struct RecipeDetailView: View {
                    , alignment: .topTrailing
                )
             }
-            .frame(width: 900)
+            .frame(width: 1000)
             .padding(.bottom, 10)
             .navigationTitle(recipe.name)
         }

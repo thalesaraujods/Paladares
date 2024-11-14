@@ -22,6 +22,7 @@ struct RecipeDetailUtensilsView: View {
                     .fontWeight(.bold)
                     .foregroundColor(Color(red: 0.22, green: 0.56, blue: 0.24))
                     .padding(.bottom, 40)
+                    .padding(.leading, -10)
                     .minimumScaleFactor(sizeCategory.customMinScaleFactorUtensilsView)
                 
                 // Lista de utensílios
@@ -41,6 +42,7 @@ struct RecipeDetailUtensilsView: View {
                 .padding(.horizontal, 420)
                 .background {
                     Rectangle()
+                        .frame(width: 900)
                         .cornerRadius(35)
                         .shadow(radius: 5)
                         .foregroundStyle(.white)

@@ -21,6 +21,7 @@ struct RecipeDetailIngredientsView: View {
                 .fontWeight(.bold)
                 .foregroundColor(Color(red: 0.22, green: 0.56, blue: 0.24))
                 .padding(.bottom, 40)
+                .padding(.leading, -30)
                 .minimumScaleFactor(sizeCategory.customMinScaleFactorIngredientsView)
             
             VStack (alignment: .leading){
@@ -44,6 +45,7 @@ struct RecipeDetailIngredientsView: View {
             .padding(.horizontal, 400)
             .background {
                 Rectangle()
+                    .frame(width: 900)
                     .cornerRadius(35)
                     .shadow(radius: 5)
                     .foregroundStyle(.white)

@@ -9,6 +9,7 @@ import SwiftUI
 
 struct RecipePreparationView: View {
     
+    //TODO: Ver sobre a numeração referente ao localized
     @EnvironmentObject private var coordinator: Coordinator
     @ObservedObject var viewModel = RecipeViewModel.shared
     @State private var selectedChefId: Int = 1 // Chef inicialmente selecionado
