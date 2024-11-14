@@ -203,6 +203,9 @@
         }
       }
     },
+    "Não" : {
+
+    },
     "Nenhum passo disponível para o Chef %lld" : {
       "localizations" : {
         "en" : {
@@ -299,6 +302,9 @@
         }
       }
     },
+    "Sim" : {
+
+    },
     "Sugestões" : {
       "localizations" : {
         "en" : {
@@ -328,6 +334,9 @@
           }
         }
       }
+    },
+    "Você deseja mesmo sair da receita?" : {
+
     },
     "X-Caboquinho" : {
       "extractionState" : "manual",
