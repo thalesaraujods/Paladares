@@ -8,11 +8,13 @@
 import SwiftUI
 
 struct RecipeGridImageView: View {
-    var image: String
+    
+   // var image: String
+    let recipe: Recipe
     
     var body: some View {
         ZStack {
-            Image(.lamenFood)
+            Image(recipe.imageList)
                 .resizable()
                 .scaledToFill() // Preenche o frame completamente
                 .frame(width: 201, height: 201)
@@ -31,5 +33,5 @@ struct RecipeGridImageView: View {
 }
 
 #Preview {
-    RecipeGridImageView(image: "feijoada")
+    RecipeGridImageView(recipe: mockRecipeLamen)
 }

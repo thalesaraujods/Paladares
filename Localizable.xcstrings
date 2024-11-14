@@ -2,19 +2,53 @@
   "sourceLanguage" : "pt-BR",
   "strings" : {
     "-" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "-"
+          }
+        }
+      }
     },
     "%lld" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld"
+          }
+        }
+      }
     },
     "•  %@" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "•  %@"
+          }
+        }
+      }
     },
     "• %@" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "• %@"
+          }
+        }
+      }
     },
     "• %@ %@" : {
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "• %1$@ %2$@"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "new",
@@ -24,7 +58,14 @@
       }
     },
     "+" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "+"
+          }
+        }
+      }
     },
     "4 pessoas" : {
       "extractionState" : "manual",
@@ -72,7 +113,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Chef"
+            "value" : "Chef %lld"
           }
         }
       }
@@ -82,7 +123,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Chef"
+            "value" : "Chef %1$lld: %2$@"
           }
         },
         "pt-BR" : {
@@ -193,6 +234,16 @@
         }
       }
     },
+    "Italiana:" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Italian:"
+          }
+        }
+      }
+    },
     "Japonesa:" : {
       "localizations" : {
         "en" : {
@@ -211,7 +262,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "No steps available for the Chef"
+            "value" : "No steps available for the Chef%lld"
           }
         }
       }
@@ -271,7 +322,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Step"
+            "value" : "Step %1$lld/%2$lld"
           }
         },
         "pt-BR" : {

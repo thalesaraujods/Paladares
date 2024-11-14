@@ -8,6 +8,11 @@
 import Foundation
 import SwiftUI
 
+
+//TODO: Ver os ingredientes grifados que não tem uma quantidade específica
+//TODO: Ajustar o tamanho conforme a receita feita (na preview tá ficando direitinho, o que altera é quando passa pro localized)
+
+
 struct RecipeDetailView: View {
 
     let recipe: Recipe
@@ -25,7 +30,7 @@ struct RecipeDetailView: View {
                         .font(.system(.largeTitle))
                         .padding()
                         .padding(.vertical, 30)
-                        .padding(.leading, -450)
+                        .padding(.leading, -440)
                         .fontWeight(.bold)
                         .kerning(0.4)
                         .minimumScaleFactor(sizeCategory.customMinScaleFactorListView)
@@ -36,38 +41,39 @@ struct RecipeDetailView: View {
                         .resizable()
                         .frame(width: 890, height: 400)
                         .cornerRadius(40)
-
-                    Label(recipe.people, systemImage: "person.2.fill")
-                        .font(.system(.title2))
-                        .fontWeight(.semibold)
-                        .foregroundColor(Color(red: 0.3, green: 0.69, blue: 0.31))
-                        .padding()
-                        .background{
-                            Rectangle()
-                                .foregroundColor(.clear)
-                                .background(Color.white)
-                                .cornerRadius(44)
-                        }
-                        .padding(.top, 280)
-                        .padding(.leading, -400)
-                        .minimumScaleFactor(sizeCategory.customMinScaleFactorDetailView)
                     
-                    Label(recipe.time, systemImage: "clock.fill")
-                        .font(.system(.title2))
-                        .fontWeight(.semibold)
-                        .foregroundColor(Color(red: 0.3, green: 0.69, blue: 0.31))
-                        .padding()
-                        .background{
-                            Rectangle()
-                                .foregroundColor(.clear)
-                                .background(Color.white)
-                                .cornerRadius(44)
-                        }
-                        .padding(.top, 280)
-                        .padding(.leading, -200)
-                        .minimumScaleFactor(sizeCategory.customMinScaleFactorDetailView)
+                    HStack (spacing: 20){
+                        Label(recipe.people, systemImage: "person.2.fill")
+                            .font(.system(.title2))
+                            .fontWeight(.semibold)
+                            .foregroundColor(Color(red: 0.3, green: 0.69, blue: 0.31))
+                            .padding()
+                            .background{
+                                Rectangle()
+                                    .foregroundColor(.clear)
+                                    .background(Color.white)
+                                    .cornerRadius(44)
+                            }
+                            .padding(.top, 280)
+                            .padding(.leading, -400)
+                            .minimumScaleFactor(sizeCategory.customMinScaleFactorDetailView)
+                        
+                        Label(recipe.time, systemImage: "clock.fill")
+                            .font(.system(.title2))
+                            .fontWeight(.semibold)
+                            .foregroundColor(Color(red: 0.3, green: 0.69, blue: 0.31))
+                            .padding()
+                            .background{
+                                Rectangle()
+                                    .foregroundColor(.clear)
+                                    .background(Color.white)
+                                    .cornerRadius(44)
+                            }
+                            .padding(.top, 280)
+                            .padding(.leading, -200)
+                            .minimumScaleFactor(sizeCategory.customMinScaleFactorDetailView)
+                    }
                 }
-
                 Text(recipe.curiosity)
                     .frame(width: 890)
                     .font(
@@ -100,13 +106,13 @@ struct RecipeDetailView: View {
                        }) {
                            RecipeDetailButtonView()
                        }
-                       .padding(.trailing, 16) // Ajuste conforme necessário
+                       .padding(.trailing, 46) // Ajuste conforme necessário
                    }
                    .padding(.top, 30) // Ajuste conforme necessário
                    , alignment: .topTrailing
                )
             }
-            .frame(width: 900)
+            .frame(width: 1000)
             .padding(.bottom, 10)
             .navigationTitle(recipe.name)
         }
