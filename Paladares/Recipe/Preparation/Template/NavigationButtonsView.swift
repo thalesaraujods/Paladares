@@ -43,11 +43,11 @@ struct NavigationButtonsView: View {
                     onFinish()
                 }) {
                     Text("Finalizar")
-                        .font(.headline)
-                        .frame(width: 150, height: 50)
+                        .font(.custom("SF Pro", size: 24, relativeTo: .headline))
+                        .frame(width: 192, height: 84)
                         .background(foregroundColor)
                         .foregroundColor(.white)
-                        .cornerRadius(25)
+                        .cornerRadius(40)
                 }
             } else {
                 // Botão Avançar
@@ -68,9 +68,6 @@ struct NavigationButtonsView: View {
                 .disabled(currentStepIndex == totalSteps - 1) // Desabilita no último passo
                 .opacity(currentStepIndex == totalSteps - 1 ? 0 : 1) // Reduz a opacidade no último passo
             }
-            
-            
-            
         }
         .frame(width: 824)
         .padding()

@@ -38,7 +38,8 @@ struct RecipePreparationView: View {
                             stepIndex == totalSteps[index] - 1
                         }
                     }
-                    
+//                    UIScreen.main.bounds.width
+//                    UIScreen.main.bounds.height
                     // Menu lateral de seleção de chefs
                     ChefSelectionView(
                         selectedChefId: $selectedChefId,
@@ -99,7 +100,6 @@ struct RecipePreparationView: View {
                 
             }
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
-            //.frame(width: 1170, height: 850)
                 .padding()
                 .navigationBarBackButtonHidden(true)
         )
