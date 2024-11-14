@@ -9,10 +9,8 @@ import Foundation
 import SwiftUI
 
 
-//TODO: Ajeitar o espaçamento das palavras
-//TODO: Definir um frame concreto para os ingredientes e etc
 //TODO: Ver os ingredientes grifados que não tem uma quantidade específica
-//TODO: Ajustar o tamanho conforme a receita feita (no simulador tá ficando direitinho)
+//TODO: Ajustar o tamanho conforme a receita feita (na preview tá ficando direitinho, o que altera é quando passa pro localized)
 
 
 struct RecipeDetailView: View {

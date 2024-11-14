@@ -62,12 +62,12 @@ struct RecipeListView: View {
                             coordinator.push(.recipeDetail)
                         }) {
                             RecipeGridView(recipe: recipe)
-                                .padding()
+                                .padding(.leading, 340)
                         }
                         Spacer()
                     }
                 }
-                .padding(.leading, 280)
+               // .padding(.leading, 290)
 
                 // Exibe receitas da Itália
                 Text("Italiana:")
