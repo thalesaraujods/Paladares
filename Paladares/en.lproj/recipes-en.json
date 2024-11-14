@@ -390,6 +390,101 @@
                 ]
             }
         ]
+    },
+    
+    {
+        "id": "550e8400-e29b-41d4-a716-446655440005",
+        "name": "Dango de Três Cores",
+        "image": "backDetailDango",
+        "imageList": "",
+        "country": "Japan",
+        "people": "6 pessoas",
+        "time": "50 minutos",
+        "curiosity": "Curiosidade: O Onigiri era um dos alimentos do samurais pois, devido a sua praticidade e leveza, o Onigiri era enrolado em folhas de bambu e levado pelos samurais em suas viagens",
+        "utensils": ["Panela com Tampa", "Escorredor", "Recipiente para manipular o arroz", "Taça"],
+        "ingredients": [
+            { "quantity": "300", "unit": "gramas", "name": "de arroz japonês" },
+            { "quantity": "1", "unit": "folha", "name": "de Nori" },
+            { "quantity": "1", "unit": "pitada", "name": "de sal" },
+            { "quantity": "150", "unit": "gramas", "name": "de conservas de atum" },
+            { "quantity": "2", "unit": "colheres", "name": "de maionese" },
+            { "quantity": "1", "unit": "colher", "name": "de chá de mostarda" },
+            { "quantity": "", "unit": "", "name": "Nori (algas) cortadas em tiras a gosto" }
+        ],
+        "suggestions": [
+            "Você pode substituir o atum por frango desfiado, ou salmão, o que preferir;",
+            "Se não tiver nori, pode usar flocos de alga marinha (wakame) ou até algas secas desfiadas."
+        ],
+        "preparationMethods": [
+            {
+                "chefId": 1,
+                "stage": "Preparação do Arroz",
+                "steps": [
+                    {
+                        "stepNumber": "Passo 1",
+                        "description": "Comece por lavar o arroz com água limpa. Colocar o arroz num recipiente e adicionar água. Com a mão, misturar o arroz rapidamente até que a água fique turva."
+                    },
+                    {
+                        "stepNumber": "Passo 2",
+                        "description": "Colocar o arroz numa panela com o dobro do seu volume de água fria. Cobrir e deixar ferver."
+                    },
+                    {
+                        "stepNumber": "Passo 3",
+                        "description": "Assim que a água ferver, mexer o arroz fora do lume, reduzir ao mínimo e cozinhar durante 15 minutos, coberto."
+                    },
+                    {
+                        "stepNumber": "Passo 4",
+                        "description": "Retirar do calor e deixar repousar durante 10 minutos para que o arroz possa inchar no seu vapor."
+                    },
+                ]
+            },
+            {
+                "chefId": 2,
+                "stage": "Corte da folha de Nori e Mistura de Ingredientes",
+                "steps": [
+                    {
+                        "stepNumber": "Passo 1",
+                        "description": "Cortar a folha nori em 6 tiras largas."
+                    },
+                    {
+                        "stepNumber": "Passo 2",
+                        "description": "Misturar o atum, maionese e mostarda numa tigela."
+                    }
+                ]
+            },
+            {
+                "chefId": 3,
+                "stage": "Moldagem do Arroz",
+                "steps": [
+                    {
+                        "stepNumber": "Passo 1",
+                        "description": "Molhar as mãos e depois cobrir generosamente as palmas das mãos com sal para evitar que o arroz se agarre às mãos."
+                    },
+                    {
+                        "stepNumber": "Passo 2",
+                        "description": "Pegue um pouco de arroz na mão e faça uma depressão no meio. Coloque um pouco de recheio no meio."
+                    },
+                    {
+                    "stepNumber": "Passo 3",
+                    "description": "Adicione arroz na sua mão para fechar a bola de arroz. Pressione com a sua segunda mão até ter uma forma triangular."
+                    }
+                ]
+            },
+            {
+                "chefId": 4,
+                "stage": "Embrulho na Folha Nori",
+                "steps": [
+                    {
+                        "stepNumber": "Passo 1",
+                        "description": "Embrulhe o seu onigiri na folha nori."
+                    },
+                    {
+                        "stepNumber": "Passo 2",
+                        "description": "Coloque-os em um prato de forma organizada"
+                    }
+                ]
+            }
+        ]
     }
 
 ]
