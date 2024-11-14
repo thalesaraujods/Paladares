@@ -184,98 +184,112 @@
     
     {
         "id": "550e8400-e29b-41d4-a716-446655440003",
-        "name": "Pizza",
+        "name": "Pizza Italiana",
         "image": "backDetailPizza",
         "imageList": "",
         "country": "Italy",
         "people": "4 pessoas",
-        "time": "1 hora",
-        "curiosity": "Curiosidade: Embora popular no Japão, o lámen é originário da China e foi adaptado pelos japoneses, que criaram suas próprias variações regionais e técnicas únicas para o prato.",
-        "utensils": ["Coador de Macarrão", "Panela Grande", "Faca Afiada", "Peneira", "Hashi"],
+        "time": "1 hora e 30 min",
+        "curiosity": "Curiosidade: A pizza foi criada para representar as cores da bandeira italiana: o tomate representa o vermelho, a mussarela o branco e o manjericão o verde.",
+        "utensils": ["Bowl grande", "Colher de pau", "Rolo de massa", "Assadeira redonda ou retangular", "Faca e tábua de corte", "Espátula ou colher", "Pincel de cozinha", "Forno"],
         "ingredients": [
-            { "quantity": "1", "unit": "pacote", "name": "de macarrão para lámen" },
-            { "quantity": "8", "unit": "pedaços", "name": "de lombo de porco" },
-            { "quantity": "2", "unit": "", "name": "ovos" },
-            { "quantity": "4", "unit": "rodelas", "name": "de massa de peixe (kamaboko)" },
-            { "quantity": "4", "unit": "pedaços", "name": "de alga nori" },
-            { "quantity": "Broto de bambu em conserva (opcional)", "unit": "", "name": "" },
-            { "quantity": "2", "unit": "litros", "name": "de água" },
-            { "quantity": "1/2", "unit": "xícara (chá)", "name": "de caldo de carne de porco" },
-            { "quantity": "4", "unit": "colheres (sopa)", "name": "de shoyo" },
-            { "quantity": "3", "unit": "tablets", "name": "de caldo de galinha" },
-            { "quantity": "Sal e pimenta do reino", "unit": "", "name": "" },
-            { "quantity": "Cebolinha", "unit": "", "name": "" }
+            { "quantity": "500", "unit": "gramas", "name": "de farinha de trigo" },
+            { "quantity": "10", "unit": "gramas", "name": "de fermento biológico seco" },
+            { "quantity": "1", "unit": "colher", "name": "de sopa de açúcar" },
+            { "quantity": "1", "unit": "colher", "name": "de chá de sal" },
+            { "quantity": "3", "unit": "colheres", "name": "de sopa de azeite de oliva" },
+            { "quantity": "300", "unit": "mililítros", "name": "de água morna" },
+            { "quantity": "250", "unit": "gramas", "name": "de queijo mozzarella de búfala (de preferência fresco)" },
+            { "quantity": "150", "unit": "gramas", "name": "de molho de tomate caseiro" },
+            { "quantity": "10", "unit": "folhas", "name": "de manjericão fresco" },
+            { "quantity": "2", "unit": "colheres", "name": "de sopa de azeite de oliva extra virgem" },
+            { "quantity": "Sal e pimenta-do-reino a gosto", "unit": "", "name": "" }
         ],
         "suggestions": [
-            "Você pode substituir o porco, por frango desfiado, cogumelos shiitake ou tofu, se preferir;",
-            "Se não tiver nori, pode usar flocos de alga marinha (wakame) ou até algas secas desfiadas."
+            "Caso não encontre o queijo mozzarella de búfala, você pode usar queijo mussarela de vaca, mas o sabor e a textura serão diferentes;",
+            "Se não tiver tomates frescos, você pode usar molho de tomate pronto, mas procure um de boa qualidade, com poucos conservantes;",
+            "Se não manjericão, pode substituir por orégano fresco ou tomilho, mas o manjericão é tradicional para essa receita;",
+            "Para uma versão mais saudável, ao invés da farinha de trigo, você pode usar farinha integral ou farinha sem glúten."
         ],
         "preparationMethods": [
             {
                 "chefId": 1,
-                "stage": "Preparação das Bananas e Montagem",
+                "stage": "Preparação da Massa",
                 "steps": [
                     {
                         "stepNumber": "Passo 1",
-                        "description": "Corte os pães ao meio, mas sem separar completamente as metades."
+                        "description": "Em um bowl grande, coloque a farinha de trigo, o fermento biológico seco, o açúcar e o sal."
                     },
                     {
                         "stepNumber": "Passo 2",
-                        "description": "Passe manteiga nas duas metades internas de cada pão."
+                        "description": "Adicione a água morna aos poucos e misture com uma colher de pau até formar uma massa."
                     },
                     {
                         "stepNumber": "Passo 3",
-                        "description": "Aqueça levemente os pães em uma frigideira para dourar a manteiga."
+                        "description": "Quando a massa começar a se formar, adicione o azeite de oliva e continue mexendo até incorporar."
+                    },
+                    {
+                        "stepNumber": "Passo 4",
+                        "description": " Sove a massa por cerca de 10 minutos até que ela fique lisa e macia. Cubra a massa com um pano limpo e deixe descansar por 1 hora, em um lugar morno, até que ela dobre de volume."
                     }
                 ]
             },
             {
                 "chefId": 2,
-                "stage": "Preparação das Bananas e Montagem",
+                "stage": "Preparação do Forno",
                 "steps": [
                     {
                         "stepNumber": "Passo 1",
-                        "description": "Corte o tucumã em tiras finas e uniformes."
+                        "description": "Preaqueça o forno a 250°C (se possível, use uma pedra para pizza no forno para obter uma base mais crocante)"
                     },
                     {
                         "stepNumber": "Passo 2",
-                        "description": "Coloque as tiras de tucumã em uma tigela e reserve."
+                        "description": "Coloque a massa em uma superfície enfarinhada e, com o auxílio de um rolo de massa, abra-a até formar um círculo ou retângulo (dependendo do formato da sua assadeira)."
+                    },
+                    {
+                        "stepNumber": "Passo 3",
+                        "description": "Transfira a massa aberta para a assadeira levemente untada com azeite."
                     }
                 ]
             },
+            
             {
                 "chefId": 3,
-                "stage": "Preparação das Bananas e Montagem",
+                "stage": "Montagem da Pizza",
                 "steps": [
                     {
                         "stepNumber": "Passo 1",
-                        "description": "Corte o queijo coalho em fatias e grelhe até dourar dos dois lados."
+                        "description": "Espalhe o molho de tomate sobre a massa, deixando as bordas livres."
                     },
                     {
                         "stepNumber": "Passo 2",
-                        "description": "Coloque o queijo grelhado em um prato e reserve."
+                        "description": "Distribua a mozzarella de búfala cortada em fatias sobre o molho."
+                    },
+                    {
+                        "stepNumber": "Passo 3",
+                        "description": "Salpique um pouco de sal e pimenta-do-reino a gosto."
+                    },
+                    {
+                        "stepNumber": "Passo 4",
+                        "description": " Leve a pizza ao forno e asse por cerca de 10-15 minutos, ou até que a massa esteja dourada e crocante e o queijo esteja derretido e borbulhando."
                     }
                 ]
             },
             {
                 "chefId": 4,
-                "stage": "Preparação das Bananas e Montagem",
+                "stage": "Finalização da Pizza",
                 "steps": [
                     {
                         "stepNumber": "Passo 1",
-                        "description": "Descasque as bananas e corte-as em fatias finas."
+                        "description": "Retire a pizza do forno e adicione as folhas de manjericão fresco por cima."
                     },
                     {
                         "stepNumber": "Passo 2",
-                        "description": "Em uma frigideira, aqueça as fatias de banana até ficarem levemente douradas."
+                        "description": "Regue com um fio de azeite de oliva extra virgem para dar um toque final de sabor."
                     },
                     {
                         "stepNumber": "Passo 3",
-                        "description": "Monte os pães, adicionando os ingredientes preparados pelos outros chefs: tiras de tucumã, queijo grelhado e fatias de banana."
-                    },
-                    {
-                        "stepNumber": "Passo 4",
-                        "description": "Leve os pães montados à frigideira quente para aquecer por 2 minutos de cada lado, garantindo que todos os ingredientes fiquem bem integrados."
+                        "description": "Corte a pizza em 4 fatias e sirva imediatamente."
                     }
                 ]
             }

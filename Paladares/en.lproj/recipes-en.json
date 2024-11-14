@@ -186,98 +186,111 @@
     
     {
         "id": "550e8400-e29b-41d4-a716-446655440003",
-        "name": "Pizza",
+        "name": "Italian Pizza",
         "image": "backDetailPizza",
         "imageList": "",
         "country": "Italy",
-        "people": "4 pessoas",
-        "time": "1 hora",
-        "curiosity": "Curiosidade: Embora popular no Japão, o lámen é originário da China e foi adaptado pelos japoneses, que criaram suas próprias variações regionais e técnicas únicas para o prato.",
-        "utensils": ["Coador de Macarrão", "Panela Grande", "Faca Afiada", "Peneira", "Hashi"],
+        "people": "4 people",
+        "time": "1 hour and 30 min",
+        "curiosity": "Curiosity: Pizza was created to represent the colors of the Italian flag: the tomato represents red, mozzarella represents white, and basil represents green.",
+        "utensils": ["Large bowl", "Wooden spoon", "Rolling pin", "Round or rectangular baking sheet", "Knife and cutting board", "Spatula or spoon", "Kitchen brush", "Oven"],
         "ingredients": [
-            { "quantity": "1", "unit": "pacote", "name": "de macarrão para lámen" },
-            { "quantity": "8", "unit": "pedaços", "name": "de lombo de porco" },
-            { "quantity": "2", "unit": "", "name": "ovos" },
-            { "quantity": "4", "unit": "rodelas", "name": "de massa de peixe (kamaboko)" },
-            { "quantity": "4", "unit": "pedaços", "name": "de alga nori" },
-            { "quantity": "Broto de bambu em conserva (opcional)", "unit": "", "name": "" },
-            { "quantity": "2", "unit": "litros", "name": "de água" },
-            { "quantity": "1/2", "unit": "xícara (chá)", "name": "de caldo de carne de porco" },
-            { "quantity": "4", "unit": "colheres (sopa)", "name": "de shoyo" },
-            { "quantity": "3", "unit": "tablets", "name": "de caldo de galinha" },
-            { "quantity": "Sal e pimenta do reino", "unit": "", "name": "" },
-            { "quantity": "Cebolinha", "unit": "", "name": "" }
+            { "quantity": "500", "unit": "grams", "name": "of wheat flour" },
+            { "quantity": "10", "unit": "grams", "name": "of dry yeast" },
+            { "quantity": "1", "unit": "tablespoon", "name": "of sugar" },
+            { "quantity": "1", "unit": "teaspoon", "name": "of salt" },
+            { "quantity": "3", "unit": "tablespoons", "name": "of olive oil" },
+            { "quantity": "300", "unit": "milliliters", "name": "of warm water" },
+            { "quantity": "250", "unit": "grams", "name": "of buffalo mozzarella (preferably fresh)" },
+            { "quantity": "150", "unit": "grams", "name": "of homemade tomato sauce" },
+            { "quantity": "10", "unit": "leaves", "name": "of fresh basil" },
+            { "quantity": "2", "unit": "tablespoons", "name": "of extra virgin olive oil" },
+            { "quantity": "Salt and black pepper to taste", "unit": "", "name": "" }
         ],
         "suggestions": [
-            "Você pode substituir o porco, por frango desfiado, cogumelos shiitake ou tofu, se preferir;",
-            "Se não tiver nori, pode usar flocos de alga marinha (wakame) ou até algas secas desfiadas."
+            "If you can't find buffalo mozzarella, you can use cow's mozzarella, but the taste and texture will be different.",
+            "If you don't have fresh tomatoes, you can use ready-made tomato sauce, but look for one of good quality with few preservatives.",
+            "If you don't have basil, you can substitute with fresh oregano or thyme, but basil is traditional for this recipe.",
+            "For a healthier version, instead of wheat flour, you can use whole wheat flour or gluten-free flour."
         ],
         "preparationMethods": [
             {
                 "chefId": 1,
-                "stage": "Preparação das Bananas e Montagem",
+                "stage": "Preparing the Dough",
                 "steps": [
                     {
-                        "stepNumber": "Passo 1",
-                        "description": "Corte os pães ao meio, mas sem separar completamente as metades."
+                        "stepNumber": "Step 1",
+                        "description": "In a large bowl, place the wheat flour, dry yeast, sugar, and salt."
                     },
                     {
-                        "stepNumber": "Passo 2",
-                        "description": "Passe manteiga nas duas metades internas de cada pão."
+                        "stepNumber": "Step 2",
+                        "description": "Add the warm water gradually and mix with a wooden spoon until the dough starts to form."
                     },
                     {
-                        "stepNumber": "Passo 3",
-                        "description": "Aqueça levemente os pães em uma frigideira para dourar a manteiga."
+                        "stepNumber": "Step 3",
+                        "description": "Once the dough starts to form, add the olive oil and continue mixing until incorporated."
+                    },
+                    {
+                        "stepNumber": "Step 4",
+                        "description": "Knead the dough for about 10 minutes until it becomes smooth and soft. Cover the dough with a clean cloth and let it rest for 1 hour in a warm place until it doubles in size."
                     }
                 ]
             },
             {
                 "chefId": 2,
-                "stage": "Preparação das Bananas e Montagem",
+                "stage": "Preparing the Oven",
                 "steps": [
                     {
-                        "stepNumber": "Passo 1",
-                        "description": "Corte o tucumã em tiras finas e uniformes."
+                        "stepNumber": "Step 1",
+                        "description": "Preheat the oven to 250°C (if possible, use a pizza stone in the oven for a crispier base)."
                     },
                     {
-                        "stepNumber": "Passo 2",
-                        "description": "Coloque as tiras de tucumã em uma tigela e reserve."
+                        "stepNumber": "Step 2",
+                        "description": "Place the dough on a floured surface and, using a rolling pin, roll it out into a circle or rectangle (depending on the shape of your baking sheet)."
+                    },
+                    {
+                        "stepNumber": "Step 3",
+                        "description": "Transfer the rolled-out dough to a baking sheet lightly greased with olive oil."
                     }
                 ]
             },
             {
                 "chefId": 3,
-                "stage": "Preparação das Bananas e Montagem",
+                "stage": "Assembling the Pizza",
                 "steps": [
                     {
-                        "stepNumber": "Passo 1",
-                        "description": "Corte o queijo coalho em fatias e grelhe até dourar dos dois lados."
+                        "stepNumber": "Step 1",
+                        "description": "Spread the tomato sauce over the dough, leaving the edges free."
                     },
                     {
-                        "stepNumber": "Passo 2",
-                        "description": "Coloque o queijo grelhado em um prato e reserve."
+                        "stepNumber": "Step 2",
+                        "description": "Place slices of buffalo mozzarella on top of the sauce."
+                    },
+                    {
+                        "stepNumber": "Step 3",
+                        "description": "Sprinkle a little salt and black pepper to taste."
+                    },
+                    {
+                        "stepNumber": "Step 4",
+                        "description": "Bake the pizza in the oven for about 10-15 minutes, or until the dough is golden and crispy, and the cheese is melted and bubbling."
                     }
                 ]
             },
             {
                 "chefId": 4,
-                "stage": "Preparação das Bananas e Montagem",
+                "stage": "Finishing the Pizza",
                 "steps": [
                     {
-                        "stepNumber": "Passo 1",
-                        "description": "Descasque as bananas e corte-as em fatias finas."
+                        "stepNumber": "Step 1",
+                        "description": "Remove the pizza from the oven and add the fresh basil leaves on top."
                     },
                     {
-                        "stepNumber": "Passo 2",
-                        "description": "Em uma frigideira, aqueça as fatias de banana até ficarem levemente douradas."
+                        "stepNumber": "Step 2",
+                        "description": "Drizzle with a little extra virgin olive oil for a final touch of flavor."
                     },
                     {
-                        "stepNumber": "Passo 3",
-                        "description": "Monte os pães, adicionando os ingredientes preparados pelos outros chefs: tiras de tucumã, queijo grelhado e fatias de banana."
-                    },
-                    {
-                        "stepNumber": "Passo 4",
-                        "description": "Leve os pães montados à frigideira quente para aquecer por 2 minutos de cada lado, garantindo que todos os ingredientes fiquem bem integrados."
+                        "stepNumber": "Step 3",
+                        "description": "Cut the pizza into 4 slices and serve immediately."
                     }
                 ]
             }
@@ -595,8 +608,5 @@
             }
         ]
     }
-
-
-
 ]
 
