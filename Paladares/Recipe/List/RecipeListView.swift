@@ -7,79 +7,100 @@
 
 import SwiftUI
 
+// TODO: Colocar as outras imagens 3D aqui (colocar no JSON)
+// TODO: Ajeitar o ScrollView dessa view
+
 struct RecipeListView: View {
     @ObservedObject var viewModel = RecipeViewModel.shared
     @EnvironmentObject private var coordinator: Coordinator
     @Environment(\.sizeCategory) var sizeCategory
-    
+
     let columns = [
-        GridItem(.flexible(), spacing: 70),
-        GridItem(.flexible(), spacing: 70),
-        GridItem(.flexible(), spacing: 70)
+        GridItem(.flexible(), spacing: 10),
+        GridItem(.flexible(), spacing: 10),
+        GridItem(.flexible(), spacing: 10),
+        GridItem(.flexible(), spacing: 10)
     ]
     
     var body: some View {
-        
-        Text("Japonesa:")
-            //.font(.custom("SF Pro", size: 28, relativeTo: .largeTitle))
-            //.fontWeight(.bold)
-            .font(
-                Font.custom("SF Pro", size: 28, relativeTo: .largeTitle)
-            .weight(.bold)
-            )
-            .padding(.leading, -560)
-            .kerning(0.4)
-            .minimumScaleFactor(sizeCategory.customMinScaleFactorListView)
-        
+        ScrollView {
+            VStack(alignment: .leading, spacing: 30) {
+                
+                // Exibe receitas do Brasil
+                Text("Brasileira:")
+                    .font(Font.custom("SF Pro", size: 28, relativeTo: .largeTitle)
+                            .weight(.bold))
+                    .padding(.leading, 110)
+                    .kerning(0.4)
+                    .minimumScaleFactor(sizeCategory.customMinScaleFactorListView)
 
-        LazyVGrid(columns: columns) {
-            ForEach(viewModel.dataLoader.recipes, id: \.id) { recipe in
-                Button (action: {
-                    viewModel.selectedRecipe = recipe
-                    coordinator.push(.recipeDetail)
-                }) {
-                    RecipeGridView(recipe: recipe)
-                        .padding()
-                   
+                LazyVGrid(columns: columns) {
+                    ForEach(viewModel.dataLoader.recipes.filter { $0.country == "Brasil" }, id: \.id) { recipe in
+                        Button(action: {
+                            viewModel.selectedRecipe = recipe
+                            coordinator.push(.recipeDetail)
+                        }) {
+                            RecipeGridView(recipe: recipe)
+                                .padding()
+                        }
+                    }
                 }
-                Spacer()
-            }
-        }
-        .padding()
-        .frame(width: 890)
-        .navigationTitle("Sabores do Mundo")
-        
-        Text("Brasileira:")
-            //.font(.system(.largeTitle))
-            .font(
-                Font.custom("SF Pro", size: 28, relativeTo: .largeTitle)
-            .weight(.bold)
-            )
-            .padding(.leading, -560)
-            //.fontWeight(.bold)
-            .kerning(0.4)
-            .minimumScaleFactor(sizeCategory.customMinScaleFactorListView)
-        
-        LazyVGrid(columns: columns) {
-            ForEach(viewModel.dataLoader.recipes, id: \.id) { recipe in
-                Button (action: {
-                    viewModel.selectedRecipe = recipe
-                    coordinator.push(.recipeDetail)
-                }) {
-                    RecipeGridView(recipe: recipe)
-                        .padding()
-                   
+                .padding(.leading, 580)
+                
+                // Exibe receitas do Japão
+                Text("Japonesa:")
+                    .font(Font.custom("SF Pro", size: 28, relativeTo: .largeTitle)
+                            .weight(.bold))
+                    .padding(.leading, 110)
+                    .kerning(0.4)
+                    .minimumScaleFactor(sizeCategory.customMinScaleFactorListView)
+                
+                LazyVGrid(columns: columns) {
+                    ForEach(viewModel.dataLoader.recipes.filter { $0.country == "Japão" }, id: \.id) { recipe in
+                        Button(action: {
+                            viewModel.selectedRecipe = recipe
+                            coordinator.push(.recipeDetail)
+                        }) {
+                            RecipeGridView(recipe: recipe)
+                                .padding()
+                        }
+                        Spacer()
+                    }
                 }
-                Spacer()
+                .padding(.leading, 280)
+
+                // Exibe receitas da Itália
+                Text("Italiana:")
+                    .font(Font.custom("SF Pro", size: 28, relativeTo: .largeTitle)
+                            .weight(.bold))
+                    .padding(.leading, 110)
+                    .kerning(0.4)
+                    .minimumScaleFactor(sizeCategory.customMinScaleFactorListView)
+
+                LazyVGrid(columns: columns) {
+                    ForEach(viewModel.dataLoader.recipes.filter { $0.country == "Itália" }, id: \.id) { recipe in
+                        Button(action: {
+                            viewModel.selectedRecipe = recipe
+                            coordinator.push(.recipeDetail)
+                        }) {
+                            RecipeGridView(recipe: recipe)
+                                .padding()
+                        }
+                    }
+                }
+                .padding(.leading, 580)
             }
+            .padding()
+            .multilineTextAlignment(.center)
+            .navigationTitle("Sabores do Mundo")
         }
-        .frame(width: 890)
     }
 }
 
+// Extensão para customizar o fator de escala baseado na categoria de tamanho da fonte
 extension ContentSizeCategory {
-    var customMinScaleFactorListView: CGFloat{
-        switch self{
+    var customMinScaleFactorListView: CGFloat {
+        switch self {
         case .extraSmall, .small, .medium:
             return 1.0
         case .large, .extraLarge, .extraExtraLarge:

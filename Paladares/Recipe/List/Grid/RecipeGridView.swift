@@ -12,7 +12,7 @@ struct RecipeGridView: View {
     
     var body: some View {
         ZStack {
-            RecipeGridImageView(image: recipe.image)
+            RecipeGridImageView(recipe: mockRecipeLamen)
 //            Text(recipe.name)
 //                .font(.title)
 //                .fontWeight(.bold)

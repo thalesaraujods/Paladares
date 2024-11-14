@@ -12,6 +12,7 @@ struct Recipe: Codable, Identifiable {
     let id: String
     let name: String
     let image: String
+    let imageList: String
     let country: String
     let people: String
     let time: String
@@ -44,6 +45,7 @@ let mockRecipe = Recipe(
     id: "550e8400-e29b-41d4-a716-446655440001",
     name: "X-Caboquinho",
     image: "xcaboquinho1.jpg",
+    imageList: "",
     country: "Brasil",
     people: "4 pessoas",
     time: "30 minutos",
@@ -85,6 +87,7 @@ let mockRecipeLamen = Recipe(
     id: "550e8400-e29b-41d4-a716-446655440002",
     name: "Lamén Japonês",
     image: "backDetailLamen",
+    imageList: "lamenFood",
     country: "Japão",
     people: "4 pessoas",
     time: "1 hora",
