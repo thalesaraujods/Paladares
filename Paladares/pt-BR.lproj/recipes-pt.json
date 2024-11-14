@@ -305,98 +305,93 @@
     
     {
         "id": "550e8400-e29b-41d4-a716-446655440004",
-        "name": "Onigiri",
+        "name": "Onigiri de Maionese de Atum",
         "image": "backDetailOnigiri",
         "imageList": "",
         "country": "Japan",
-        "people": "4 pessoas",
-        "time": "1 hora",
-        "curiosity": "Curiosidade: Embora popular no Japão, o lámen é originário da China e foi adaptado pelos japoneses, que criaram suas próprias variações regionais e técnicas únicas para o prato.",
-        "utensils": ["Coador de Macarrão", "Panela Grande", "Faca Afiada", "Peneira", "Hashi"],
+        "people": "6 pessoas",
+        "time": "50 minutos",
+        "curiosity": "Curiosidade: O Onigiri era um dos alimentos do samurais pois, devido a sua praticidade e leveza, o Onigiri era enrolado em folhas de bambu e levado pelos samurais em suas viagens",
+        "utensils": ["Panela com Tampa", "Escorredor", "Recipiente para manipular o arroz", "Taça"],
         "ingredients": [
-            { "quantity": "1", "unit": "pacote", "name": "de macarrão para lámen" },
-            { "quantity": "8", "unit": "pedaços", "name": "de lombo de porco" },
-            { "quantity": "2", "unit": "", "name": "ovos" },
-            { "quantity": "4", "unit": "rodelas", "name": "de massa de peixe (kamaboko)" },
-            { "quantity": "4", "unit": "pedaços", "name": "de alga nori" },
-            { "quantity": "Broto de bambu em conserva (opcional)", "unit": "", "name": "" },
-            { "quantity": "2", "unit": "litros", "name": "de água" },
-            { "quantity": "1/2", "unit": "xícara (chá)", "name": "de caldo de carne de porco" },
-            { "quantity": "4", "unit": "colheres (sopa)", "name": "de shoyo" },
-            { "quantity": "3", "unit": "tablets", "name": "de caldo de galinha" },
-            { "quantity": "Sal e pimenta do reino", "unit": "", "name": "" },
-            { "quantity": "Cebolinha", "unit": "", "name": "" }
+            { "quantity": "300", "unit": "gramas", "name": "de arroz japonês" },
+            { "quantity": "1", "unit": "folha", "name": "de Nori" },
+            { "quantity": "1", "unit": "pitada", "name": "de sal" },
+            { "quantity": "150", "unit": "gramas", "name": "de conservas de atum" },
+            { "quantity": "2", "unit": "colheres", "name": "de maionese" },
+            { "quantity": "1", "unit": "colher", "name": "de chá de mostarda" },
+            { "quantity": "", "unit": "", "name": "Nori (algas) cortadas em tiras a gosto" }
         ],
         "suggestions": [
-            "Você pode substituir o porco, por frango desfiado, cogumelos shiitake ou tofu, se preferir;",
+            "Você pode substituir o atum por frango desfiado, ou salmão, o que preferir;",
             "Se não tiver nori, pode usar flocos de alga marinha (wakame) ou até algas secas desfiadas."
         ],
         "preparationMethods": [
             {
                 "chefId": 1,
-                "stage": "Preparação das Bananas e Montagem",
+                "stage": "Preparação do Arroz",
                 "steps": [
                     {
                         "stepNumber": "Passo 1",
-                        "description": "Corte os pães ao meio, mas sem separar completamente as metades."
+                        "description": "Comece por lavar o arroz com água limpa. Colocar o arroz num recipiente e adicionar água. Com a mão, misturar o arroz rapidamente até que a água fique turva."
                     },
                     {
                         "stepNumber": "Passo 2",
-                        "description": "Passe manteiga nas duas metades internas de cada pão."
+                        "description": "Colocar o arroz numa panela com o dobro do seu volume de água fria. Cobrir e deixar ferver."
                     },
                     {
                         "stepNumber": "Passo 3",
-                        "description": "Aqueça levemente os pães em uma frigideira para dourar a manteiga."
-                    }
+                        "description": "Assim que a água ferver, mexer o arroz fora do lume, reduzir ao mínimo e cozinhar durante 15 minutos, coberto."
+                    },
+                    {
+                        "stepNumber": "Passo 4",
+                        "description": "Retirar do calor e deixar repousar durante 10 minutos para que o arroz possa inchar no seu vapor."
+                    },
                 ]
             },
             {
                 "chefId": 2,
-                "stage": "Preparação das Bananas e Montagem",
+                "stage": "Corte da folha de Nori e Mistura de Ingredientes",
                 "steps": [
                     {
                         "stepNumber": "Passo 1",
-                        "description": "Corte o tucumã em tiras finas e uniformes."
+                        "description": "Cortar a folha nori em 6 tiras largas."
                     },
                     {
                         "stepNumber": "Passo 2",
-                        "description": "Coloque as tiras de tucumã em uma tigela e reserve."
+                        "description": "Misturar o atum, maionese e mostarda numa tigela."
                     }
                 ]
             },
             {
                 "chefId": 3,
-                "stage": "Preparação das Bananas e Montagem",
+                "stage": "Moldagem do Arroz",
                 "steps": [
                     {
                         "stepNumber": "Passo 1",
-                        "description": "Corte o queijo coalho em fatias e grelhe até dourar dos dois lados."
+                        "description": "Molhar as mãos e depois cobrir generosamente as palmas das mãos com sal para evitar que o arroz se agarre às mãos."
                     },
                     {
                         "stepNumber": "Passo 2",
-                        "description": "Coloque o queijo grelhado em um prato e reserve."
+                        "description": "Pegue um pouco de arroz na mão e faça uma depressão no meio. Coloque um pouco de recheio no meio."
+                    },
+                    {
+                    "stepNumber": "Passo 3",
+                    "description": "Adicione arroz na sua mão para fechar a bola de arroz. Pressione com a sua segunda mão até ter uma forma triangular."
                     }
                 ]
             },
             {
                 "chefId": 4,
-                "stage": "Preparação das Bananas e Montagem",
+                "stage": "Embrulho na Folha Nori",
                 "steps": [
                     {
                         "stepNumber": "Passo 1",
-                        "description": "Descasque as bananas e corte-as em fatias finas."
+                        "description": "Embrulhe o seu onigiri na folha nori."
                     },
                     {
                         "stepNumber": "Passo 2",
-                        "description": "Em uma frigideira, aqueça as fatias de banana até ficarem levemente douradas."
-                    },
-                    {
-                        "stepNumber": "Passo 3",
-                        "description": "Monte os pães, adicionando os ingredientes preparados pelos outros chefs: tiras de tucumã, queijo grelhado e fatias de banana."
-                    },
-                    {
-                        "stepNumber": "Passo 4",
-                        "description": "Leve os pães montados à frigideira quente para aquecer por 2 minutos de cada lado, garantindo que todos os ingredientes fiquem bem integrados."
+                        "description": "Coloque-os em um prato de forma organizada"
                     }
                 ]
             }
