@@ -128,69 +128,57 @@
         "preparationMethods": [
             {
                 "chefId": 1,
-                "stage": "Preparação das Bananas e Montagem",
+                "stage": "Preparação dos Acompanhamentos e Aquecimento das Tigelas",
                 "steps": [
                     {
                         "stepNumber": "Passo 1",
-                        "description": "Corte os pães ao meio, mas sem separar completamente as metades."
+                        "description": "Comece preparando os acompanhamentos da maneira que preferir (lombo de porco e ovos cozidos) e reserve."
                     },
                     {
                         "stepNumber": "Passo 2",
-                        "description": "Passe manteiga nas duas metades internas de cada pão."
-                    },
-                    {
-                        "stepNumber": "Passo 3",
-                        "description": "Aqueça levemente os pães em uma frigideira para dourar a manteiga."
+                        "description": "Aqueça as tigelas em que o lámen será servido."
                     }
                 ]
             },
             {
                 "chefId": 2,
-                "stage": "Preparação das Bananas e Montagem",
+                "stage": "Fervimento da água",
                 "steps": [
                     {
                         "stepNumber": "Passo 1",
-                        "description": "Corte o tucumã em tiras finas e uniformes."
+                        "description": "Ferva a água e então adicione o caldo de carne e galinha, o shoyu, o sal e o gengibre."
                     },
                     {
                         "stepNumber": "Passo 2",
-                        "description": "Coloque as tiras de tucumã em uma tigela e reserve."
+                        "description": "Deixe tudo ferver e depois cozinhe em fogo baixo."
                     }
                 ]
             },
             {
                 "chefId": 3,
-                "stage": "Preparação das Bananas e Montagem",
+                "stage": "Preparação do Macarrão",
                 "steps": [
                     {
                         "stepNumber": "Passo 1",
-                        "description": "Corte o queijo coalho em fatias e grelhe até dourar dos dois lados."
+                        "description": "Para o macarrão, ferva a água e cozinhe até ficar al dente."
                     },
                     {
                         "stepNumber": "Passo 2",
-                        "description": "Coloque o queijo grelhado em um prato e reserve."
+                        "description": "Escorra e então divida em quatro porções."
                     }
                 ]
             },
             {
                 "chefId": 4,
-                "stage": "Preparação das Bananas e Montagem",
+                "stage": "Montagem do Lamén",
                 "steps": [
                     {
                         "stepNumber": "Passo 1",
-                        "description": "Descasque as bananas e corte-as em fatias finas."
+                        "description": "Para a montagem, coloque primeiro o macarrão, logo depois a sopa, e finalize com os acompanhamentos que preferir. O indicado é que seja uma metade de ovo cozido, dois pedaços de lombo cozido, menmas a gosto, uma fatia de kamaboko e outra de alga nori para cada porção."
                     },
                     {
                         "stepNumber": "Passo 2",
-                        "description": "Em uma frigideira, aqueça as fatias de banana até ficarem levemente douradas."
-                    },
-                    {
-                        "stepNumber": "Passo 3",
-                        "description": "Monte os pães, adicionando os ingredientes preparados pelos outros chefs: tiras de tucumã, queijo grelhado e fatias de banana."
-                    },
-                    {
-                        "stepNumber": "Passo 4",
-                        "description": "Leve os pães montados à frigideira quente para aquecer por 2 minutos de cada lado, garantindo que todos os ingredientes fiquem bem integrados."
+                        "description": "Sirva bem quente em seguida."
                     }
                 ]
             }

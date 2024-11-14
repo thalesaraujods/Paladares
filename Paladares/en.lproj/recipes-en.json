@@ -103,92 +103,80 @@
         "country": "Japan",
         "people": "4 people",
         "time": "1 hour",
-        "curiosity": "Curiosity: Although popular in Japan, ramen originated in China and was adapted by the Japanese, who created their own regional variations and unique techniques for the dish.",
+        "curiosity": "Curiosity: Although popular in Japan, ramen originates from China and was adapted by the Japanese, who created their own regional variations and unique techniques for the dish.",
         "utensils": ["Noodle Strainer", "Large Pot", "Sharp Knife", "Sieve", "Chopsticks"],
         "ingredients": [
-            { "quantity": "1", "unit": "pack", "name": "ramen noodles" },
-            { "quantity": "8", "unit": "pieces", "name": "pork loin" },
+            { "quantity": "1", "unit": "pack", "name": "of ramen noodles" },
+            { "quantity": "8", "unit": "pieces", "name": "of pork loin" },
             { "quantity": "2", "unit": "", "name": "eggs" },
-            { "quantity": "4", "unit": "slices", "name": "fish cake (kamaboko)" },
-            { "quantity": "4", "unit": "pieces", "name": "nori seaweed" },
-            { "quantity": "", "unit": "", "name": "Pickled bamboo shoots (optional)" },
-            { "quantity": "2", "unit": "liters", "name": "water" },
-            { "quantity": "1/2", "unit": "cup", "name": "pork broth" },
-            { "quantity": "4", "unit": "tablespoons", "name": "soy sauce" },
-            { "quantity": "3", "unit": "tablets", "name": "chicken broth cubes" },
-            { "quantity": "", "unit": "", "name": "Salt and black pepper" },
-            { "quantity": "", "unit": "", "name": "Green onions" }
+            { "quantity": "4", "unit": "slices", "name": "of fish cake (kamaboko)" },
+            { "quantity": "4", "unit": "pieces", "name": "of nori seaweed" },
+            { "quantity": "Pickled bamboo shoots (optional)", "unit": "", "name": "" },
+            { "quantity": "2", "unit": "liters", "name": "of water" },
+            { "quantity": "1/2", "unit": "cup", "name": "of pork broth" },
+            { "quantity": "4", "unit": "tablespoons", "name": "of soy sauce" },
+            { "quantity": "3", "unit": "tablets", "name": "of chicken bouillon" },
+            { "quantity": "Salt and black pepper", "unit": "", "name": "" },
+            { "quantity": "Chopped green onions", "unit": "", "name": "" }
         ],
         "suggestions": [
-            "You can substitute pork with shredded chicken, shiitake mushrooms, or tofu, if preferred.",
-            "If you don't have nori, you can use seaweed flakes (wakame) or even dried shredded seaweed."
+            "You can replace the pork with shredded chicken, shiitake mushrooms, or tofu, if preferred;",
+            "If you don't have nori, you can use wakame seaweed flakes or even shredded dried seaweed."
         ],
         "preparationMethods": [
             {
                 "chefId": 1,
-                "stage": "Preparation of Bananas and Assembly",
+                "stage": "Preparing the Toppings and Heating the Bowls",
                 "steps": [
                     {
                         "stepNumber": "Step 1",
-                        "description": "Cut the breads in half, but without fully separating the halves."
+                        "description": "Start by preparing the toppings as you prefer (pork loin and boiled eggs) and set them aside."
                     },
                     {
                         "stepNumber": "Step 2",
-                        "description": "Spread butter on the inner halves of each bread."
-                    },
-                    {
-                        "stepNumber": "Step 3",
-                        "description": "Lightly heat the breads in a pan to brown the butter."
+                        "description": "Heat the bowls where the ramen will be served."
                     }
                 ]
             },
             {
                 "chefId": 2,
-                "stage": "Preparation of Bananas and Assembly",
+                "stage": "Boiling the Water",
                 "steps": [
                     {
                         "stepNumber": "Step 1",
-                        "description": "Cut the tucumã into thin, uniform strips."
+                        "description": "Boil the water and then add the pork and chicken broth, soy sauce, salt, and ginger."
                     },
                     {
                         "stepNumber": "Step 2",
-                        "description": "Place the tucumã strips in a bowl and set aside."
+                        "description": "Let it all boil and then simmer on low heat."
                     }
                 ]
             },
             {
                 "chefId": 3,
-                "stage": "Preparation of Bananas and Assembly",
+                "stage": "Preparing the Noodles",
                 "steps": [
                     {
                         "stepNumber": "Step 1",
-                        "description": "Cut the queijo coalho into slices and grill until golden on both sides."
+                        "description": "For the noodles, boil the water and cook them until al dente."
                     },
                     {
                         "stepNumber": "Step 2",
-                        "description": "Place the grilled cheese on a plate and set aside."
+                        "description": "Drain the noodles and then divide them into four portions."
                     }
                 ]
             },
             {
                 "chefId": 4,
-                "stage": "Preparation of Bananas and Assembly",
+                "stage": "Assembling the Ramen",
                 "steps": [
                     {
                         "stepNumber": "Step 1",
-                        "description": "Peel the bananas and cut them into thin slices."
+                        "description": "For assembling, place the noodles first, then the broth, and finish with your preferred toppings. The recommended toppings are half a boiled egg, two pieces of cooked pork loin, bamboo shoots to taste, a slice of kamaboko, and another slice of nori for each serving."
                     },
                     {
                         "stepNumber": "Step 2",
-                        "description": "In a pan, heat the banana slices until they are lightly golden."
-                    },
-                    {
-                        "stepNumber": "Step 3",
-                        "description": "Assemble the breads, adding the ingredients prepared by the other chefs: tucumã strips, grilled cheese, and banana slices."
-                    },
-                    {
-                        "stepNumber": "Step 4",
-                        "description": "Place the assembled breads in a hot pan and heat for 2 minutes on each side, ensuring that all ingredients are well integrated."
+                        "description": "Serve hot immediately."
                     }
                 ]
             }
