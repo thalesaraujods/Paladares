@@ -484,105 +484,118 @@
     
     {
         "id": "550e8400-e29b-41d4-a716-446655440006",
-        "name": "Dumpling",
+        "name": "Japanese Dumpling",
         "image": "backDetailDumpling",
         "imageList": "",
         "country": "Japan",
-        "people": "4 pessoas",
-        "time": "40 minutos",
-        "curiosity": "Curiosidade:  Com tons de rosa, verde e branco, esses dangos são muito apreciados durante os hanamis (apreciação das flores de cerejeira), adicionando uma atmosfera festiva e alegre a qualquer ocasião",
-        "utensils": ["Bowl grande", "Panela média", "Panela grande", "Espetos de bambu", "Peneira", "Faca ou Tesoura"],
+        "people": "4 people",
+        "time": "1 hour",
+        "curiosity": "Curiosity: Also known as gyoza, it was brought to Japan by soldiers during World War II. After the war, the dish gained popularity because it helped locals survive, both by consuming it to avoid hunger and by selling gyozas.",
+        "utensils": [
+            "Large bowl",
+            "Knife and cutting board",
+            "Grater",
+            "Tablespoon",
+            "Large frying pan with lid",
+            "Pot for boiling water",
+            "Slotted spoon",
+            "Plate"
+        ],
         "ingredients": [
-            { "quantity": "200", "unit": "gramas", "name": "de farinha de arroz glutinoso (ou mochi-ko)" },
-            { "quantity": "150", "unit": "ml", "name": "de água morna" },
-            { "quantity": "1/2", "unit": "colher", "name": "de chá de sal" },
-            { "quantity": "1", "unit": "colher", "name": "de sopa de açúcar (opcional, para um toque doce no dango)" },
-            { "quantity": "1/2", "unit": "colher", "name": "de chá de corante alimentício vermelho" },
-            { "quantity": "1/2", "unit": "colher", "name": "de chá de matcha em pó (pó de chá verde)" },
-            { "quantity": "3", "unit": "colheres", "name": "de sopa de molho de soja" },
-            { "quantity": "3", "unit": "colheres", "name": "de sopa de açúcar" },
-            { "quantity": "1", "unit": "colher", "name": "de sopa de mirin (opcional)" }
+            { "quantity": "250", "unit": "grams", "name": "of ground pork" },
+            { "quantity": "1/2", "unit": "cup", "name": "of finely chopped cabbage" },
+            { "quantity": "2", "unit": "tablespoons", "name": "of chopped green onion" },
+            { "quantity": "2", "unit": "cloves", "name": "of garlic, minced" },
+            { "quantity": "1", "unit": "teaspoon", "name": "of grated fresh ginger" },
+            { "quantity": "4", "unit": "tablespoons", "name": "of soy sauce (shoyu)" },
+            { "quantity": "1", "unit": "tablespoon", "name": "of sesame oil" },
+            { "quantity": "1", "unit": "teaspoon", "name": "of salt" },
+            { "quantity": "1/2", "unit": "teaspoon", "name": "of black pepper" },
+            { "quantity": "1", "unit": "tablespoon", "name": "of cornstarch" },
+            { "quantity": "20", "unit": "pieces", "name": "of gyoza wrappers" },
+            { "quantity": "", "unit": "", "name": "Water" },
+            { "quantity": "1", "unit": "tablespoon", "name": "of rice vinegar (or white vinegar)" },
+            { "quantity": "1", "unit": "teaspoon", "name": "of sesame oil" },
+            { "quantity": "1", "unit": "teaspoon", "name": "of chili paste (optional)" }
         ],
         "suggestions": [
-            "Se você não encontrar a farinha de arroz glutinoso (mochi-ko), pode usar amido de arroz ou farinha de tapioca;",
-            "Em vez de corante alimentício, você pode usar suco de beterraba ou suco de morango natural para obter o tom rosa;",
-            " Se você não encontrar matcha, pode usar pó de chá verde comum, ou suco de espinagre, ou morangos verdes;"
+            "You can substitute pork with ground chicken, beef, or even tofu for a vegetarian version.",
+            "If you don't have cabbage, you can use chopped kale, spinach, or even grated carrot.",
+            "If you don't have cornstarch, you can use wheat flour or rice flour.",
+            "If you don't have soy sauce, it can be substituted with tamari (gluten-free version) or fish sauce for a different flavor."
         ],
         "preparationMethods": [
             {
                 "chefId": 1,
-                "stage": "Preparação da massa de Dango",
+                "stage": "Preparing the Filling",
                 "steps": [
                     {
-                        "stepNumber": "Passo 1",
-                        "description": "Em uma tigela grande, misture a farinha de arroz glutinoso (mochi-ko) com o sal e o açúcar (se estiver usando)."
+                        "stepNumber": "Step 1",
+                        "description": "In a large bowl, place the ground pork."
                     },
                     {
-                        "stepNumber": "Passo 2",
-                        "description": "Adicione aos poucos a água morna enquanto mistura, até que a massa fique consistente, mas ainda um pouco pegajosa. Se necessário, acrescente um pouco mais de água ou farinha de arroz para ajustar a consistência."
+                        "stepNumber": "Step 2",
+                        "description": "Add the finely chopped cabbage (press the cabbage to remove excess water), green onion, minced garlic, grated ginger, soy sauce, sesame oil, salt, pepper, and cornstarch."
                     },
                     {
-                        "stepNumber": "Passo 3",
-                        "description": "Divida a massa em três porções: uma porção para os bolinhos brancos, uma para os bolinhos verdes e uma para os bolinhos rosas."
-                    },
-                    {
-                        "stepNumber": "Passo 4",
-                        "description": "Retirar do calor e deixar repousar durante 10 minutos para que o arroz possa inchar no seu vapor."
-                    },
+                        "stepNumber": "Step 3",
+                        "description": "Mix well until all ingredients are well incorporated. The filling should be sticky but not too liquid."
+                    }
                 ]
             },
             {
                 "chefId": 2,
-                "stage": "Moldagem e Coloração os Dangos",
+                "stage": "Preparing the Dumpling",
                 "steps": [
                     {
-                        "stepNumber": "Passo 1",
-                        "description": "Adicione o corante vermelho (ou suco de beterraba) a uma das porções e misture bem até que a massa fique com a cor desejada."
+                        "stepNumber": "Step 1",
+                        "description": "Place the gyoza wrappers on a flat surface. Add about 1 teaspoon of filling in the center of each gyoza wrapper."
                     },
                     {
-                        "stepNumber": "Passo 2",
-                        "description": "Na segunda porção, adicione o matcha em pó e misture até que fique uniforme. Deixe a terceira porção branca, sem adicionar corante."
+                        "stepNumber": "Step 2",
+                        "description": "Moisten the edges of the dough with a bit of water (you can use your finger or a kitchen brush)."
                     },
                     {
-                    "stepNumber": "Passo 3",
-                    "description": "Modele as três porções de massa em pequenas bolas de aproximadamente 2 cm de diâmetro (fazendo 12 bolinhos no total)."
+                        "stepNumber": "Step 3",
+                        "description": "Fold the dough over to cover the filling and press the edges to seal well. You can use your fingers to create small pleats along the edge to give the traditional gyoza shape."
                     }
                 ]
             },
             {
                 "chefId": 3,
-                "stage": "Cozimento dos Dangos",
+                "stage": "Cooking the Dumpling",
                 "steps": [
                     {
-                        "stepNumber": "Passo 1",
-                        "description": "Em uma panela grande, ferva água."
+                        "stepNumber": "Step 1",
+                        "description": "Heat a large frying pan with 1 tablespoon of sesame oil over medium-high heat. Place the gyozas in the pan with the sealed side down, and cook until they are golden on the bottom (about 3-4 minutes)."
                     },
                     {
-                        "stepNumber": "Passo 2",
-                        "description": "Quando a água estiver fervendo, coloque as bolinhas de dango na água com cuidado. Cozinhe por cerca de 5 a 8 minutos, ou até que elas subam à superfície."
+                        "stepNumber": "Step 2",
+                        "description": "Add about 1/4 cup of water to the frying pan (to generate steam) and cover immediately. Cook for about 5-7 minutes or until the gyozas are cooked through and the water has evaporated."
                     },
                     {
-                    "stepNumber": "Passo 3",
-                    "description": "Retire os bolinhos com uma escumadeira e coloque-os em um recipiente com água fria para esfriar um pouco."
+                        "stepNumber": "Step 3",
+                        "description": "Remove the gyozas from the pan and place them on a plate."
                     }
                 ]
             },
             {
                 "chefId": 4,
-                "stage": "Montagem dos Dangos",
+                "stage": "Preparing the Dipping Sauce",
                 "steps": [
                     {
-                        "stepNumber": "Passo 1",
-                        "description": "Após os dangos esfriarem um pouco, coloque-os em espetos de bambu, alternando as cores (ex: 1 branco, 1 verde, 1 rosa)."
+                        "stepNumber": "Step 1",
+                        "description": "In a small bowl, mix soy sauce, rice vinegar, sesame oil, and if desired, add chili paste for a spicy kick."
                     },
                     {
-                        "stepNumber": "Passo 2",
-                        "description": "Se desejar, prepare o molho de molho misturando o molho de soja, o açúcar e o mirin em uma panela, aqueça até o açúcar dissolver completamente. Sirva o molho ao lado para que cada pessoa mergulhe os dangos conforme preferir"
+                        "stepNumber": "Step 2",
+                        "description": "Serve the hot gyozas with the dipping sauce."
                     }
                 ]
             }
         ]
     }
+
 
 
 ]
