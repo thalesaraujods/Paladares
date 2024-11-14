@@ -14,14 +14,14 @@ struct RecipeDetailIngredientsView: View {
     @Environment(\.sizeCategory) var sizeCategory
     
     var body: some View {
-        VStack(alignment: .leading, spacing: 20) {
+        VStack {
             
             Text("Ingredientes")
                 .font(.system(.title))
                 .fontWeight(.bold)
                 .foregroundColor(Color(red: 0.22, green: 0.56, blue: 0.24))
                 .padding(.bottom, 40)
-                .padding(.leading, -30)
+                .padding(.leading, -430)
                 .minimumScaleFactor(sizeCategory.customMinScaleFactorIngredientsView)
             
             VStack (alignment: .leading){
@@ -40,7 +40,7 @@ struct RecipeDetailIngredientsView: View {
                     .padding(.vertical, 5)
                 }
             }
-            .padding(.leading, -330)
+            .padding(.leading, -300)
             .padding(.vertical, 40)
             .padding(.horizontal, 400)
             .background {
