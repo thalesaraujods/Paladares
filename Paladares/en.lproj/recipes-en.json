@@ -382,98 +382,106 @@
     
     {
         "id": "550e8400-e29b-41d4-a716-446655440005",
-        "name": "Dango de Três Cores",
+        "name": "Three-Color Dango",
         "image": "backDetailDango",
         "imageList": "",
         "country": "Japan",
-        "people": "6 pessoas",
-        "time": "50 minutos",
-        "curiosity": "Curiosidade: O Onigiri era um dos alimentos do samurais pois, devido a sua praticidade e leveza, o Onigiri era enrolado em folhas de bambu e levado pelos samurais em suas viagens",
-        "utensils": ["Panela com Tampa", "Escorredor", "Recipiente para manipular o arroz", "Taça"],
+        "people": "4 people",
+        "time": "40 minutes",
+        "curiosity": "Curiosity: With shades of pink, green, and white, these dangos are highly appreciated during hanami (cherry blossom viewing), adding a festive and joyful atmosphere to any occasion.",
+        "utensils": ["Large bowl", "Medium pot", "Large pot", "Bamboo skewers", "Strainer", "Knife or Scissors"],
         "ingredients": [
-            { "quantity": "300", "unit": "gramas", "name": "de arroz japonês" },
-            { "quantity": "1", "unit": "folha", "name": "de Nori" },
-            { "quantity": "1", "unit": "pitada", "name": "de sal" },
-            { "quantity": "150", "unit": "gramas", "name": "de conservas de atum" },
-            { "quantity": "2", "unit": "colheres", "name": "de maionese" },
-            { "quantity": "1", "unit": "colher", "name": "de chá de mostarda" },
-            { "quantity": "", "unit": "", "name": "Nori (algas) cortadas em tiras a gosto" }
+            { "quantity": "200", "unit": "grams", "name": "of glutinous rice flour (or mochi-ko)" },
+            { "quantity": "150", "unit": "ml", "name": "of warm water" },
+            { "quantity": "1/2", "unit": "teaspoon", "name": "of salt" },
+            { "quantity": "1", "unit": "tablespoon", "name": "of sugar (optional, for a sweet touch on the dango)" },
+            { "quantity": "1/2", "unit": "teaspoon", "name": "of food coloring (red)" },
+            { "quantity": "1/2", "unit": "teaspoon", "name": "of matcha powder (green tea powder)" },
+            { "quantity": "3", "unit": "tablespoons", "name": "of soy sauce" },
+            { "quantity": "3", "unit": "tablespoons", "name": "of sugar" },
+            { "quantity": "1", "unit": "tablespoon", "name": "of mirin (optional)" }
         ],
         "suggestions": [
-            "Você pode substituir o atum por frango desfiado, ou salmão, o que preferir;",
-            "Se não tiver nori, pode usar flocos de alga marinha (wakame) ou até algas secas desfiadas."
+            "If you cannot find glutinous rice flour (mochi-ko), you can use rice starch or tapioca flour;",
+            "Instead of food coloring, you can use beet juice or natural strawberry juice to get the pink tone;",
+            "If you can't find matcha, you can use regular green tea powder, spinach juice, or green strawberries."
         ],
         "preparationMethods": [
             {
                 "chefId": 1,
-                "stage": "Preparação do Arroz",
+                "stage": "Preparing the Dango Dough",
                 "steps": [
                     {
-                        "stepNumber": "Passo 1",
-                        "description": "Comece por lavar o arroz com água limpa. Colocar o arroz num recipiente e adicionar água. Com a mão, misturar o arroz rapidamente até que a água fique turva."
+                        "stepNumber": "Step 1",
+                        "description": "In a large bowl, mix the glutinous rice flour (mochi-ko) with salt and sugar (if using)."
                     },
                     {
-                        "stepNumber": "Passo 2",
-                        "description": "Colocar o arroz numa panela com o dobro do seu volume de água fria. Cobrir e deixar ferver."
+                        "stepNumber": "Step 2",
+                        "description": "Gradually add warm water while mixing until the dough is consistent but still slightly sticky. If needed, add a little more water or rice flour to adjust the consistency."
                     },
                     {
-                        "stepNumber": "Passo 3",
-                        "description": "Assim que a água ferver, mexer o arroz fora do lume, reduzir ao mínimo e cozinhar durante 15 minutos, coberto."
+                        "stepNumber": "Step 3",
+                        "description": "Divide the dough into three portions: one for the white dumplings, one for the green dumplings, and one for the pink dumplings."
                     },
                     {
-                        "stepNumber": "Passo 4",
-                        "description": "Retirar do calor e deixar repousar durante 10 minutos para que o arroz possa inchar no seu vapor."
-                    },
+                        "stepNumber": "Step 4",
+                        "description": "Remove from heat and let the dough rest for 10 minutes to allow the rice to puff up in its steam."
+                    }
                 ]
             },
             {
                 "chefId": 2,
-                "stage": "Corte da folha de Nori e Mistura de Ingredientes",
+                "stage": "Shaping and Coloring the Dangos",
                 "steps": [
                     {
-                        "stepNumber": "Passo 1",
-                        "description": "Cortar a folha nori em 6 tiras largas."
+                        "stepNumber": "Step 1",
+                        "description": "Add the red food coloring (or beet juice) to one portion and mix well until the dough achieves the desired color."
                     },
                     {
-                        "stepNumber": "Passo 2",
-                        "description": "Misturar o atum, maionese e mostarda numa tigela."
+                        "stepNumber": "Step 2",
+                        "description": "In the second portion, add matcha powder and mix until the color is uniform. Leave the third portion white without adding any coloring."
+                    },
+                    {
+                        "stepNumber": "Step 3",
+                        "description": "Shape the three portions of dough into small balls of approximately 2 cm in diameter (making 12 dumplings in total)."
                     }
                 ]
             },
             {
                 "chefId": 3,
-                "stage": "Moldagem do Arroz",
+                "stage": "Cooking the Dangos",
                 "steps": [
                     {
-                        "stepNumber": "Passo 1",
-                        "description": "Molhar as mãos e depois cobrir generosamente as palmas das mãos com sal para evitar que o arroz se agarre às mãos."
+                        "stepNumber": "Step 1",
+                        "description": "In a large pot, bring water to a boil."
                     },
                     {
-                        "stepNumber": "Passo 2",
-                        "description": "Pegue um pouco de arroz na mão e faça uma depressão no meio. Coloque um pouco de recheio no meio."
+                        "stepNumber": "Step 2",
+                        "description": "When the water is boiling, carefully add the dango balls. Cook for about 5 to 8 minutes, or until they rise to the surface."
                     },
                     {
-                    "stepNumber": "Passo 3",
-                    "description": "Adicione arroz na sua mão para fechar a bola de arroz. Pressione com a sua segunda mão até ter uma forma triangular."
+                        "stepNumber": "Step 3",
+                        "description": "Remove the dumplings with a slotted spoon and place them in a container with cold water to cool down a bit."
                     }
                 ]
             },
             {
                 "chefId": 4,
-                "stage": "Embrulho na Folha Nori",
+                "stage": "Assembling the Dangos",
                 "steps": [
                     {
-                        "stepNumber": "Passo 1",
-                        "description": "Embrulhe o seu onigiri na folha nori."
+                        "stepNumber": "Step 1",
+                        "description": "Once the dango have cooled down a bit, place them on bamboo skewers, alternating the colors (e.g., 1 white, 1 green, 1 pink)."
                     },
                     {
-                        "stepNumber": "Passo 2",
-                        "description": "Coloque-os em um prato de forma organizada"
+                        "stepNumber": "Step 2",
+                        "description": "If desired, prepare the sauce by mixing soy sauce, sugar, and mirin in a pot. Heat until the sugar completely dissolves. Serve the sauce on the side so each person can dip their dango as they like."
                     }
                 ]
             }
         ]
     }
+
 
 ]
 

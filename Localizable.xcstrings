@@ -255,7 +255,14 @@
       }
     },
     "Não" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No"
+          }
+        }
+      }
     },
     "Nenhum passo disponível para o Chef %lld" : {
       "localizations" : {
@@ -354,7 +361,14 @@
       }
     },
     "Sim" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yes"
+          }
+        }
+      }
     },
     "Sugestões" : {
       "localizations" : {
@@ -387,7 +401,14 @@
       }
     },
     "Você deseja mesmo sair da receita?" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Are you sure you want to exit the recipe?"
+          }
+        }
+      }
     },
     "X-Caboquinho" : {
       "extractionState" : "manual",
