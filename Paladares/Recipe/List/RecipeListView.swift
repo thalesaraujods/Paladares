@@ -43,9 +43,10 @@ struct RecipeListView: View {
                             RecipeGridView(recipe: recipe)
                                 .padding()
                         }
+                        Spacer()
                     }
                 }
-                .padding(.leading, 580)
+                .padding(.leading, 270)
                 
                 // Exibe receitas do Japão
                 Text("Japonesa:")
