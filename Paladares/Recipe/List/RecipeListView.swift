@@ -26,27 +26,27 @@ struct RecipeListView: View {
         ScrollView {
             VStack(alignment: .leading, spacing: 30) {
                 
-                // Exibe receitas do Brasil
-                Text("Brasileira:")
-                    .font(Font.custom("SF Pro", size: 28, relativeTo: .largeTitle)
-                            .weight(.bold))
-                    .padding(.leading, 110)
-                    .kerning(0.4)
-                    .minimumScaleFactor(sizeCategory.customMinScaleFactorListView)
-
-                LazyVGrid(columns: columns) {
-                    ForEach(viewModel.dataLoader.recipes.filter { $0.country == "Brazil" }, id: \.id) { recipe in
-                        Button(action: {
-                            viewModel.selectedRecipe = recipe
-                            coordinator.push(.recipeDetail)
-                        }) {
-                            RecipeGridView(recipe: recipe)
-                                .padding()
-                        }
-                        Spacer()
-                    }
-                }
-                .padding(.leading, 270)
+//                // Exibe receitas do Brasil
+//                Text("Brasileira:")
+//                    .font(Font.custom("SF Pro", size: 28, relativeTo: .largeTitle)
+//                            .weight(.bold))
+//                    .padding(.leading, 110)
+//                    .kerning(0.4)
+//                    .minimumScaleFactor(sizeCategory.customMinScaleFactorListView)
+//
+//                LazyVGrid(columns: columns) {
+//                    ForEach(viewModel.dataLoader.recipes.filter { $0.country == "Brazil" }, id: \.id) { recipe in
+//                        Button(action: {
+//                            viewModel.selectedRecipe = recipe
+//                            coordinator.push(.recipeDetail)
+//                        }) {
+//                            RecipeGridView(recipe: recipe)
+//                                .padding()
+//                        }
+//                        Spacer()
+//                    }
+//                }
+//                .padding(.leading, 270)
                 
                 // Exibe receitas do Japão
                 Text("Japonesa:")
