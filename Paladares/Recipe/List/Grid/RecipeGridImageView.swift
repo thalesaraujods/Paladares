@@ -14,20 +14,13 @@ struct RecipeGridImageView: View {
     
     var body: some View {
         ZStack {
-            Image(recipe.imageList)
+            Image(recipe.image)
                 .resizable()
                 .scaledToFill() // Preenche o frame completamente
-                .frame(width: 201, height: 201)
+                .frame(width: 452, height: 166)
                 .cornerRadius(27)
                 .clipped()
-                .rotationEffect(Angle(degrees: 10))
-                .padding(.leading, 220)
-                .background{
-                    Rectangle()
-                        .frame(width: 452, height: 166)
-                        .cornerRadius(27)
-                        .foregroundStyle(Color(red: 0.85, green: 0.31, blue: 0.2))
-                }
+                
         }
     }
 }
