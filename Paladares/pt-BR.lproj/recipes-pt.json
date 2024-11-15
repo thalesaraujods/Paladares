@@ -91,7 +91,91 @@
         ]
     },
     
-    
+    {
+        "id": "550e8400-e29b-41d4-a716-446655440007",
+        "name": "Bolo de Fubá",
+        "image": "",
+        "imageList": "",
+        "country": "Brazil",
+        "people": "4 pessoas",
+        "time": "1 hora",
+        "curiosity": "Essa receita feita com farinha de milho – o fubá – foi criada durante o Brasil Colonial, como uma alternativa mais barata aos bolos feitos com a cara farinha de trigo importada de Portugal.",
+        "utensils": ["Tigela grande", "Fouet (batedor de arame) ou uma colher de pau para misturar a massa", "Forma redonda ou retangular", "Colher de medida (ou 1 xícara de chá)", "Peneira", "Forno"],
+        "ingredients": [
+            { "quantity": "1", "unit": "xícara (chá)", "name": "de fubá" },
+            { "quantity": "1/2", "unit": "xícara (chá)", "name": "de farinha de trigo" },
+            { "quantity": "1/2", "unit": "xícara (chá)", "name": "de açúcar" },
+            { "quantity": "1/2", "unit": "xícara (chá)", "name": "de leite" },
+            { "quantity": "2", "unit": "", "name": "ovos" },
+            { "quantity": "1/4", "unit": "de xícara (chá)", "name": "de óleo" },
+            { "quantity": "1", "unit": "colher (sopa)", "name": "de fermento em pó" },
+            { "quantity": "1", "unit": "pitada", "name": "de sal" },
+            { "quantity": "1", "unit": "colher (chá)", "name": "de erva-doce ou raspas de limão para dar um toque especial (opcional)" }
+        ],
+        "suggestions": [
+            "Se desejar, coloque 1 colher (chá) de erva-doce na massa para dar um sabor típico de bolo de fubá caseiro;",
+            "Se quiser um toque mais fresco, adicione raspas de limão à massa;",
+            "Para um sabor mais delicioso, adicione 1/2 xícara de queijo ralado (como queijo minas ou parmesão) à massa. Isso deixa o bolo mais cremoso e saboroso."
+        ],
+        "preparationMethods": [
+            {
+                "chefId": 1,
+                "stage": "Pré-aquecimento do Forno",
+                "steps": [
+                    {
+                        "stepNumber": "Passo 1",
+                        "description": "Ligue o forno a 180°C (temperatura média) e deixe aquecer enquanto você prepara a massa."
+                    }
+                ]
+            },
+            {
+                "chefId": 2,
+                "stage": "Mistura de Ingredientes",
+                "steps": [
+                    {
+                        "stepNumber": "Passo 1",
+                        "description": "Em uma tigela grande, peneire o fubá, a farinha de trigo, o açúcar, o sal e o fermento em pó. Reserve."
+                    },
+                    {
+                        "stepNumber": "Passo 2",
+                        "description": "Em outra tigela, bata os ovos com o óleo (ou manteiga derretida) até ficarem bem misturados. Adicione o leite e continue batendo."
+                    },
+                    {
+                        "stepNumber": "Passo 3",
+                        "description": "Faça uma cavidade no centro dos ingredientes secos e despeje a mistura líquida. Misture com o fouet ou a colher de pau até formar uma massa homogênea. Se quiser, adicione a erva-doce ou raspas de limão nesta hora."
+                    }
+                ]
+            },
+            {
+                "chefId": 3,
+                "stage": "Preparo da Forma",
+                "steps": [
+                    {
+                        "stepNumber": "Passo 1",
+                        "description": "Unte uma forma (redonda ou retangular) com óleo ou manteiga e enfarinhe levemente."
+                    },
+                    {
+                        "stepNumber": "Passo 2",
+                        "description": "Coloque a massa na forma e espalhe uniformemente."
+                    }
+                ]
+            },
+            {
+                "chefId": 4,
+                "stage": "Assar o Bolo",
+                "steps": [
+                    {
+                        "stepNumber": "Passo 1",
+                        "description": "Leve a forma ao forno pré-aquecido e asse por cerca de 30-40 minutos, ou até que, ao espetar um palito no centro do bolo, ele saia limpo."
+                    },
+                    {
+                        "stepNumber": "Passo 2",
+                        "description": "Retire o bolo do forno e deixe esfriar por alguns minutos antes de desenformar."
+                    }
+                ]
+            }
+        ]
+    },
     
     {
         "id": "550e8400-e29b-41d4-a716-446655440002",

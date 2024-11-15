@@ -96,6 +96,100 @@
     },
     
     {
+        "id": "550e8400-e29b-41d4-a716-446655440007",
+        "name": "Cornmeal Cake",
+        "image": "",
+        "imageList": "",
+        "country": "Brazil",
+        "people": "4 people",
+        "time": "1 hour",
+        "curiosity": "This recipe made with corn flour – cornmeal – was created during the Colonial Brazil period as a cheaper alternative to cakes made with wheat flour imported from Portugal.",
+        "utensils": [
+            "Large bowl",
+            "Whisk (wire whisk) or a wooden spoon to mix the batter",
+            "Round or rectangular baking pan",
+            "Measuring cup (or 1 cup)",
+            "Sieve",
+            "Oven"
+        ],
+        "ingredients": [
+            { "quantity": "1", "unit": "cup", "name": "of cornmeal" },
+            { "quantity": "1/2", "unit": "cup", "name": "of all-purpose flour" },
+            { "quantity": "1/2", "unit": "cup", "name": "of sugar" },
+            { "quantity": "1/2", "unit": "cup", "name": "of milk" },
+            { "quantity": "2", "unit": "", "name": "eggs" },
+            { "quantity": "1/4", "unit": "cup", "name": "of oil" },
+            { "quantity": "1", "unit": "tablespoon", "name": "of baking powder" },
+            { "quantity": "1", "unit": "pinch", "name": "of salt" },
+            { "quantity": "1", "unit": "teaspoon", "name": "of fennel seeds or lemon zest for a special touch (optional)" }
+        ],
+        "suggestions": [
+            "If you like, add 1 teaspoon of fennel seeds to the batter for a traditional cornmeal cake flavor.",
+            "For a fresher touch, add lemon zest to the batter.",
+            "For a more delicious flavor, add 1/2 cup of grated cheese (like Minas cheese or Parmesan) to the batter. This will make the cake creamier and tastier."
+        ],
+        "preparationMethods": [
+            {
+                "chefId": 1,
+                "stage": "Preheat the Oven",
+                "steps": [
+                    {
+                        "stepNumber": "Step 1",
+                        "description": "Preheat the oven to 180°C (medium heat) and let it warm up while you prepare the batter."
+                    }
+                ]
+            },
+            {
+                "chefId": 2,
+                "stage": "Mix Ingredients",
+                "steps": [
+                    {
+                        "stepNumber": "Step 1",
+                        "description": "In a large bowl, sift the cornmeal, all-purpose flour, sugar, salt, and baking powder. Set aside."
+                    },
+                    {
+                        "stepNumber": "Step 2",
+                        "description": "In another bowl, beat the eggs with the oil (or melted butter) until well mixed. Add the milk and continue whisking."
+                    },
+                    {
+                        "stepNumber": "Step 3",
+                        "description": "Make a well in the center of the dry ingredients and pour the liquid mixture into it. Mix with the whisk or wooden spoon until a smooth batter forms. If you wish, add fennel seeds or lemon zest at this stage."
+                    }
+                ]
+            },
+            {
+                "chefId": 3,
+                "stage": "Prepare the Pan",
+                "steps": [
+                    {
+                        "stepNumber": "Step 1",
+                        "description": "Grease a round or rectangular pan with oil or butter and lightly flour it."
+                    },
+                    {
+                        "stepNumber": "Step 2",
+                        "description": "Pour the batter into the pan and spread it evenly."
+                    }
+                ]
+            },
+            {
+                "chefId": 4,
+                "stage": "Bake the Cake",
+                "steps": [
+                    {
+                        "stepNumber": "Step 1",
+                        "description": "Place the pan in the preheated oven and bake for about 30-40 minutes, or until a toothpick inserted into the center of the cake comes out clean."
+                    },
+                    {
+                        "stepNumber": "Step 2",
+                        "description": "Remove the cake from the oven and let it cool for a few minutes before removing it from the pan."
+                    }
+                ]
+            }
+        ]
+    }
+
+    
+    {
         "id": "550e8400-e29b-41d4-a716-446655440002",
         "name": "Japanese Ramen",
         "image": "backDetailLamen",
