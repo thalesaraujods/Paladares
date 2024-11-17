@@ -14,86 +14,42 @@ struct RecipeListView: View {
     @ObservedObject var viewModel = RecipeViewModel.shared
     @EnvironmentObject private var coordinator: Coordinator
     @Environment(\.sizeCategory) var sizeCategory
-
+    
     let columns = [
-        GridItem(.flexible(), spacing: 10),
-        GridItem(.flexible(), spacing: 10),
         GridItem(.flexible(), spacing: 10),
         GridItem(.flexible(), spacing: 10)
     ]
     
     var body: some View {
         ScrollView {
-            VStack(alignment: .leading, spacing: 30) {
-                
-//                // Exibe receitas do Brasil
-//                Text("Brasileira:")
-//                    .font(Font.custom("SF Pro", size: 28, relativeTo: .largeTitle)
-//                            .weight(.bold))
-//                    .padding(.leading, 110)
-//                    .kerning(0.4)
-//                    .minimumScaleFactor(sizeCategory.customMinScaleFactorListView)
-//
-//                LazyVGrid(columns: columns) {
-//                    ForEach(viewModel.dataLoader.recipes.filter { $0.country == "Brazil" }, id: \.id) { recipe in
-//                        Button(action: {
-//                            viewModel.selectedRecipe = recipe
-//                            coordinator.push(.recipeDetail)
-//                        }) {
-//                            RecipeGridView(recipe: recipe)
-//                                .padding()
-//                        }
-//                        Spacer()
-//                    }
-//                }
-//                .padding(.leading, 270)
+            VStack(alignment: .leading, spacing: 26) {
                 
                 // Exibe receitas do Japão
                 Text("Japonesa:")
-                    .font(Font.custom("SF Pro", size: 28, relativeTo: .largeTitle)
-                            .weight(.bold))
-                    .padding(.leading, 110)
+                    .font(Font.custom("SF Compact Rounded", size: 32, relativeTo: .largeTitle)
+                        .weight(.bold))
+                    .padding(.leading, 65)
                     .kerning(0.4)
                     .minimumScaleFactor(sizeCategory.customMinScaleFactorListView)
                 
-                LazyVGrid(columns: columns) {
+                LazyVGrid(columns: columns, spacing: 34) {
                     ForEach(viewModel.dataLoader.recipes.filter { $0.country == "Japan" }, id: \.id) { recipe in
                         Button(action: {
                             viewModel.selectedRecipe = recipe
                             coordinator.push(.recipeDetail)
                         }) {
                             RecipeGridView(recipe: recipe)
-                                .padding(.leading, 340)
-                        }
-                        Spacer()
-                    }
-                }
-               // .padding(.leading, 290)
-
-                // Exibe receitas da Itália
-                Text("Italiana:")
-                    .font(Font.custom("SF Pro", size: 28, relativeTo: .largeTitle)
-                            .weight(.bold))
-                    .padding(.leading, 110)
-                    .kerning(0.4)
-                    .minimumScaleFactor(sizeCategory.customMinScaleFactorListView)
-
-                LazyVGrid(columns: columns) {
-                    ForEach(viewModel.dataLoader.recipes.filter { $0.country == "Italy" }, id: \.id) { recipe in
-                        Button(action: {
-                            viewModel.selectedRecipe = recipe
-                            coordinator.push(.recipeDetail)
-                        }) {
-                            RecipeGridView(recipe: recipe)
-                                .padding()
+                                //.padding(.leading, 340)
                         }
                     }
                 }
-                .padding(.leading, 580)
+                .minimumScaleFactor(sizeCategory.customMinScaleFactorListView)
+                
             }
             .padding()
             .multilineTextAlignment(.center)
             .navigationTitle("Sabores do Mundo")
+            .navigationBarTitleDisplayMode(.large)
         }
     }
 }

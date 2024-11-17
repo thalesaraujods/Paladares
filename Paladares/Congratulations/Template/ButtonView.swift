@@ -16,7 +16,7 @@ struct ButtonView: View {
             .font(.system(.body))
             .fontWeight(.bold)
             .padding()
-            .background(Color(red: 0.2, green: 0.6, blue: 0.93))
+            .background(Color(red: 0.3, green: 0.69, blue: 0.31))
             .foregroundColor(Color.white)
             .cornerRadius(64)
             .minimumScaleFactor(sizeCategory.customMinScaleFactorCongratsEndView)

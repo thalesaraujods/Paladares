@@ -9,19 +9,27 @@ import SwiftUI
 
 struct RecipeGridImageView: View {
     
-   // var image: String
+    // var image: String
     let recipe: Recipe
     
     var body: some View {
         ZStack {
-            Image(recipe.image)
-                .resizable()
-                .scaledToFill() // Preenche o frame completamente
-                .frame(width: 452, height: 166)
+            Rectangle()
                 .cornerRadius(27)
-                .clipped()
-                
+                .foregroundColor(Color.templateRecipeList)
+            HStack {
+                Spacer()
+                Image(recipe.imageList)
+                    .resizable()
+                    .scaledToFit()
+                    .clipped()
+                    
+            }
+            .frame(width: 552, height: 166)
+            .clipped()
+            
         }
+        .frame(width: 552, height: 166)
     }
 }
 

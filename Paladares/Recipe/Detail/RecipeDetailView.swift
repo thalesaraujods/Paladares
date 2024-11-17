@@ -114,7 +114,8 @@ struct RecipeDetailView: View {
             }
             .frame(width: 1000)
             .padding(.bottom, 10)
-            .navigationTitle(recipe.name)
+            .navigationTitle("")
+            .navigationBarTitleDisplayMode(.inline)
         }
     }
 }

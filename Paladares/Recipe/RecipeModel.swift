@@ -86,7 +86,7 @@ let mockRecipe = Recipe(
 let mockRecipeLamen = Recipe(
     id: "550e8400-e29b-41d4-a716-446655440002",
     name: "Lamén Japonês",
-    image: "backDetailLamen",
+    image: "lamenBack",
     imageList: "lamenFood",
     country: "Japão",
     people: "4 pessoas",

@@ -192,7 +192,7 @@
     {
         "id": "550e8400-e29b-41d4-a716-446655440002",
         "name": "Japanese Ramen",
-        "image": "backDetailLamen",
+        "image": "lamenBack",
         "imageList": "lamenFood",
         "country": "Japan",
         "people": "4 people",
@@ -395,8 +395,8 @@
     {
         "id": "550e8400-e29b-41d4-a716-446655440004",
         "name": "Tuna Mayo Onigiri",
-        "image": "backDetailOnigiri",
-        "imageList": "",
+        "image": "onigiriBack",
+        "imageList": "onigiriFood",
         "country": "Japan",
         "people": "6 people",
         "time": "50 minutes",
@@ -490,8 +490,8 @@
     {
         "id": "550e8400-e29b-41d4-a716-446655440005",
         "name": "Three-Color Dango",
-        "image": "backDetailDango",
-        "imageList": "",
+        "image": "dangoBack",
+        "imageList": "dangoFood",
         "country": "Japan",
         "people": "4 people",
         "time": "40 minutes",
@@ -592,8 +592,8 @@
     {
         "id": "550e8400-e29b-41d4-a716-446655440006",
         "name": "Japanese Dumpling",
-        "image": "backDetailDumpling",
-        "imageList": "",
+        "image": "dumplingBack",
+        "imageList": "dumplingFood",
         "country": "Japan",
         "people": "4 people",
         "time": "1 hour",

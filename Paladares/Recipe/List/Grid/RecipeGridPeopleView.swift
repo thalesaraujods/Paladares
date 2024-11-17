@@ -1,18 +1,18 @@
 //
-//  RecipeListTimeView.swift
+//  RecipeGridPeopleView.swift
 //  Paladares
 //
-//  Created by Thales Araújo on 31/10/24.
+//  Created by Thales Araújo on 16/11/24.
 //
 
 import SwiftUI
 
-struct RecipeGridTimeView: View {
+struct RecipeGridPeopleView: View {
     
     @Environment(\.sizeCategory) var sizeCategory
-    var timer: String
+    var people: String
     var body: some View {
-        Label(timer, systemImage: "clock.fill")
+        Label(people, systemImage: "person.2.fill")
             .font(.system(size: 16, weight: .semibold)) // Reduzi o tamanho da fonte
             .foregroundColor(Color.buttonsRecipeList)
             .padding(.horizontal, 8) // Ajustei os paddings
@@ -27,7 +27,7 @@ struct RecipeGridTimeView: View {
 }
 
 extension ContentSizeCategory {
-    var customMinScaleGridTimeView: CGFloat{
+    var customMinScaleGridPeopleView: CGFloat{
         switch self{
         case .extraSmall, .small, .medium:
             return 1.0
@@ -40,5 +40,5 @@ extension ContentSizeCategory {
 }
 
 #Preview {
-    RecipeGridTimeView(timer: "3 horas")
+    RecipeGridPeopleView(people: "4 pessoas")
 }
