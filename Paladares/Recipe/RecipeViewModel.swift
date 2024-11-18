@@ -48,6 +48,7 @@ class ReadData: ObservableObject {
         
         // Monta o nome do arquivo JSON com o prefixo "recipe-" e o código do idioma
         let fileName = "recipes-\(currentLanguage)"
+        print(fileName)
         
         
         // Tenta localizar o arquivo JSON no bundle
