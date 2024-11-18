@@ -23,7 +23,7 @@ struct RecipePreparationView: View {
     let chefsIcons: [Image] = [Image(.iconChef1), Image(.iconChef2), Image(.iconChef3), Image(.iconChef4)]
     
     var body: some View {
-        guard let recipe = viewModel.selectedRecipe else {
+        guard let recipe = viewModel.selectedRecipe /*viewModel.dataLoader.recipes.first*/ else {
             return AnyView(Text("Nenhuma receita selecionada."))
         }
         
@@ -38,8 +38,7 @@ struct RecipePreparationView: View {
                             stepIndex == totalSteps[index] - 1
                         }
                     }
-//                    UIScreen.main.bounds.width
-//                    UIScreen.main.bounds.height
+                    
                     // Menu lateral de seleção de chefs
                     ChefSelectionView(
                         selectedChefId: $selectedChefId,
@@ -102,6 +101,10 @@ struct RecipePreparationView: View {
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .padding()
                 .navigationBarBackButtonHidden(true)
+//                .onAppear {
+//                    print(UIScreen.main.bounds.width)
+//                    print(UIScreen.main.bounds.height)
+//                }
         )
     }
 }

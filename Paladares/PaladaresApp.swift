@@ -9,6 +9,9 @@ import SwiftUI
 
 @main
 struct PaladaresApp: App {
+    init(){
+        UIBarButtonItem.appearance().tintColor = UIColor.buttonsRecipeList
+    }
     
     var body: some Scene {
         WindowGroup {

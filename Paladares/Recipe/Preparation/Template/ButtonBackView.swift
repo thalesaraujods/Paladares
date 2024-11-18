@@ -13,34 +13,36 @@ struct ButtonBackView: View {
     @Binding var showExitConfirmation: Bool
     
     var body: some View {
-        HStack {
-            Button(action: {
-                showExitConfirmation = true
-            }) {
-                Image(systemName: "xmark")
-                    .resizable()
-                    .frame(width: 15, height: 15)
-                    .font(.system(.body))
-                    .fontWeight(.semibold)
-                    .foregroundColor(Color(red: 0.24, green: 0.24, blue: 0.24).opacity(0.5))
-                    .cornerRadius(1000)
-                    .background{
-                        Circle()
-                            .frame(width: 35, height: 35)
-                            .foregroundStyle(Color(red: 0.5, green: 0.5, blue: 0.5).opacity(0.2))
-                    }
-                    .padding()
-                
+        GeometryReader { geometry in
+            HStack {
+                Button(action: {
+                    showExitConfirmation = true
+                }) {
+                    Image(systemName: "xmark")
+                        .resizable()
+                        .frame(width: geometry.size.width * 0.011, height: geometry.size.height * 0.015)
+                        .font(.system(.body))
+                        .fontWeight(.semibold)
+                        .foregroundColor(Color(red: 0.24, green: 0.24, blue: 0.24).opacity(0.5))
+                        .cornerRadius(1000)
+                        .background{
+                            Circle()
+                                .frame(width: geometry.size.width * 0.026, height: geometry.size.height * 0.034)
+                                .foregroundStyle(Color(red: 0.5, green: 0.5, blue: 0.5).opacity(0.2))
+                        }
+                        .padding()
+                    
+                }
+                Spacer()
             }
-            Spacer()
-        }
-        .frame(width: 1300)
-        .alert("Você deseja mesmo sair da receita?", isPresented: $showExitConfirmation) {
-            Button("Não", role: .cancel) {
-                showExitConfirmation = false
-            }
-            Button("Sim", role: .destructive) {
-                coordinator.pop() // Retorna para a tela anterior
+            .frame(width: geometry.size.width * 0.95)
+            .alert("Você deseja mesmo sair da receita?", isPresented: $showExitConfirmation) {
+                Button("Não", role: .cancel) {
+                    showExitConfirmation = false
+                }
+                Button("Sim", role: .destructive) {
+                    coordinator.pop() // Retorna para a tela anterior
+                }
             }
         }
     }
