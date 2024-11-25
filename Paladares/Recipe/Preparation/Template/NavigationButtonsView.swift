@@ -14,6 +14,10 @@ struct NavigationButtonsView: View {
     let foregroundColor: Color // Cor que muda de acordo com o chef selecionado
     let onFinish: () -> Void // Ação ao finalizar todos os passos
     
+    // dimensoes
+    let widthScreen = UIScreen.main.bounds.width
+    let heightScreen = UIScreen.main.bounds.height
+    
     var body: some View {
         HStack {
             // Botão Voltar
@@ -25,7 +29,7 @@ struct NavigationButtonsView: View {
                 Image(systemName: "arrow.left")
                     .resizable()
                     .scaledToFit()
-                    .frame(width: 35, height: 35)
+                    .frame(width: widthScreen*0.0403, height: heightScreen*0.0537)
                     .padding(27)
                     .background(foregroundColor)
                     .foregroundColor(.white)
@@ -44,7 +48,7 @@ struct NavigationButtonsView: View {
                 }) {
                     Text("Finalizar")
                         .font(.custom("SF Pro", size: 24, relativeTo: .headline))
-                        .frame(width: 192, height: 84)
+                        .frame(width: widthScreen*0.1406, height: heightScreen*0.0820)
                         .background(foregroundColor)
                         .foregroundColor(.white)
                         .cornerRadius(40)
@@ -59,7 +63,7 @@ struct NavigationButtonsView: View {
                     Image(systemName: "arrow.right")
                         .resizable()
                         .scaledToFit()
-                        .frame(width: 35, height: 35)
+                        .frame(width: widthScreen*0.0403, height: heightScreen*0.0537)
                         .padding(27)
                         .background(foregroundColor)
                         .foregroundColor(.white)
@@ -69,7 +73,7 @@ struct NavigationButtonsView: View {
                 .opacity(currentStepIndex == totalSteps - 1 ? 0 : 1) // Reduz a opacidade no último passo
             }
         }
-        .frame(width: 824)
+        .frame(width: widthScreen*0.6032)
         .padding()
     }
 }

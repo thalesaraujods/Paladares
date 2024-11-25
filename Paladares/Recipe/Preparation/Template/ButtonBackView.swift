@@ -12,37 +12,39 @@ struct ButtonBackView: View {
     @EnvironmentObject private var coordinator: Coordinator
     @Binding var showExitConfirmation: Bool
     
+    // dimensoes
+    let widthScreen = UIScreen.main.bounds.width
+    let heightScreen = UIScreen.main.bounds.height
+    
     var body: some View {
-        GeometryReader { geometry in
-            HStack {
-                Button(action: {
-                    showExitConfirmation = true
-                }) {
-                    Image(systemName: "xmark")
-                        .resizable()
-                        .frame(width: geometry.size.width * 0.011, height: geometry.size.height * 0.015)
-                        .font(.system(.body))
-                        .fontWeight(.semibold)
-                        .foregroundColor(Color(red: 0.24, green: 0.24, blue: 0.24).opacity(0.5))
-                        .cornerRadius(1000)
-                        .background{
-                            Circle()
-                                .frame(width: geometry.size.width * 0.026, height: geometry.size.height * 0.034)
-                                .foregroundStyle(Color(red: 0.5, green: 0.5, blue: 0.5).opacity(0.2))
-                        }
-                        .padding()
-                    
-                }
-                Spacer()
+        HStack {
+            Button(action: {
+                showExitConfirmation = true
+            }) {
+                Image(systemName: "xmark")
+                    .resizable()
+                    .frame(width: widthScreen * 0.011, height: heightScreen * 0.015)
+                    .font(.system(.body))
+                    .fontWeight(.semibold)
+                    .foregroundColor(Color(red: 0.24, green: 0.24, blue: 0.24))
+                    .cornerRadius(1000)
+                    .background{
+                        Circle()
+                            .frame(width: widthScreen * 0.026, height: heightScreen * 0.034)
+                            .foregroundStyle(Color(red: 0.5, green: 0.5, blue: 0.5).opacity(0.2))
+                    }
+                    .padding()
+                
             }
-            .frame(width: geometry.size.width * 0.95)
-            .alert("Você deseja mesmo sair da receita?", isPresented: $showExitConfirmation) {
-                Button("Não", role: .cancel) {
-                    showExitConfirmation = false
-                }
-                Button("Sim", role: .destructive) {
-                    coordinator.pop() // Retorna para a tela anterior
-                }
+            Spacer()
+        }
+        .frame(width: widthScreen * 0.95)
+        .alert("Você deseja mesmo sair da receita?", isPresented: $showExitConfirmation) {
+            Button("Não", role: .cancel) {
+                showExitConfirmation = false
+            }
+            Button("Sim", role: .destructive) {
+                coordinator.pop() // Retorna para a tela anterior
             }
         }
     }

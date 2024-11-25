@@ -13,6 +13,10 @@ struct StepByStepView: View {
     @Binding var selectedChefId: Int
     @Binding var currentStepIndex: [Int]
     
+    // dimensoes
+    let widthScreen = UIScreen.main.bounds.width
+    let heightScreen = UIScreen.main.bounds.height
+    
     var body: some View {
         TabView(selection: $currentStepIndex[selectedChefId - 1]) {
             if let chefSteps = recipe.preparationMethods.first(where: { $0.chefId == selectedChefId })?.steps {
@@ -32,7 +36,7 @@ struct StepByStepView: View {
             }
         }
         .tabViewStyle(PageTabViewStyle())
-        .frame(maxWidth: 824, maxHeight: 500)
+        .frame(maxWidth: widthScreen*0.6032, maxHeight: heightScreen*0.4882)
     }
 }
 

@@ -22,8 +22,12 @@ struct RecipePreparationView: View {
     let chefsShadowsColors: [Color] = [.colorChef1, .colorChef2, .colorChef3, .colorChef4]
     let chefsIcons: [Image] = [Image(.iconChef1), Image(.iconChef2), Image(.iconChef3), Image(.iconChef4)]
     
+    // dimensoes
+    let widthScreen = UIScreen.main.bounds.width
+    let heightScreen = UIScreen.main.bounds.height
+    
     var body: some View {
-        guard let recipe = viewModel.selectedRecipe /*viewModel.dataLoader.recipes.first*/ else {
+        guard let recipe = /*viewModel.selectedRecipe*/ viewModel.dataLoader.recipes.first else {
             return AnyView(Text("Nenhuma receita selecionada."))
         }
         
@@ -45,7 +49,7 @@ struct RecipePreparationView: View {
                         shadowColor: $shadowColor,
                         preparationMethods: recipe.preparationMethods
                     )
-                    .frame(width: 260)
+                    .frame(width: widthScreen*0.1903)
                     .minimumScaleFactor(sizeCategory.customMinScaleFactorStepView)
                     
                     // Conteúdo principal
@@ -63,7 +67,7 @@ struct RecipePreparationView: View {
                                 .font(.custom("SF Pro", size: 48, relativeTo: .largeTitle))
                                 .fontWeight(.semibold)
                                 .foregroundColor(Color.shadeGray)
-                                .frame(width: 824, alignment: .leading)
+                                .frame(width: widthScreen*0.6032, alignment: .leading)
                                 .minimumScaleFactor(sizeCategory.customMinScaleFactorStepView)
                             
                             Spacer()
@@ -94,17 +98,13 @@ struct RecipePreparationView: View {
                     .padding()
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
                 }
-                .frame(width: 1170, height: 850)
+                .frame(width: widthScreen*0.8565, height: heightScreen*0.8301)
                 .padding()
                 
             }
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .padding()
                 .navigationBarBackButtonHidden(true)
-//                .onAppear {
-//                    print(UIScreen.main.bounds.width)
-//                    print(UIScreen.main.bounds.height)
-//                }
         )
     }
 }
