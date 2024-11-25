@@ -21,11 +21,11 @@ struct HomeView: View {
                 .frame(width: 152, height: 152)
             
             VStack (spacing: 15){
-                Text("Olá, bem-vindo!")
+                Text("home_welcome")
                     .font(.system(.largeTitle))
                     .fontWeight(.bold)
                 
-                Text("Paladares é um espaço onde você poderá cozinhar e \nexplorar novas culturas junto com seus amigos")
+                Text("home_description")
                     .font(.system(.body))
                     .fontWeight(.medium)
                     .kerning(0.8)
@@ -39,7 +39,7 @@ struct HomeView: View {
             Button(action: {
                 coordinator.push(.recipeList)
             }) {
-                Label("Começar", systemImage: "")
+                Label("home_button", systemImage: "")
                     .font(.system(.body))
                     .fontWeight(.bold)
                     .frame(width: 576, height: 70)

@@ -16,7 +16,7 @@ struct RecipeDetailCuriousView: View {
     var body: some View {
         VStack {
 
-            Text("Curiosidade")
+            Text("recipe_detail_curiosity")
                 .font(.system(.title))
                 .fontWeight(.bold)
                 .padding(.bottom, 40)

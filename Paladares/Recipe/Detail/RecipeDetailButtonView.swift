@@ -9,7 +9,7 @@ import SwiftUI
 
 struct RecipeDetailButtonView: View {
     var body: some View {
-        Text("Iniciar Preparo")
+        Text("recipe_detail_button")
             .font(.system(.title2))
             .fontWeight(.semibold)
             .foregroundStyle(Color.white)

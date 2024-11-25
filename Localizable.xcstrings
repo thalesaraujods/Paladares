@@ -4,26 +4,6 @@
     "" : {
 
     },
-    "-" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "-"
-          }
-        }
-      }
-    },
-    "%lld" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%lld"
-          }
-        }
-      }
-    },
     "•  %@" : {
       "localizations" : {
         "en" : {
@@ -60,58 +40,6 @@
         }
       }
     },
-    "+" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "+"
-          }
-        }
-      }
-    },
-    "4 pessoas" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "4 people"
-          }
-        }
-      }
-    },
-    "Ajuste as preferências para personalizar sua experiência e comece a aventura na cozinha!" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Adjust the preferences to personalize your experience and start your adventure in the kitchen!"
-          }
-        }
-      }
-    },
-    "Bem-vindo ao Paladares!" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Welcome to Paladares!"
-          }
-        }
-      }
-    },
-    "Brasileira:" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Brazilian:"
-          }
-        }
-      }
-    },
     "Chef %lld" : {
       "localizations" : {
         "en" : {
@@ -138,62 +66,12 @@
         }
       }
     },
-    "Começar" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Start"
-          }
-        }
-      }
-    },
-    "Continuar" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Continue"
-          }
-        }
-      }
-    },
-    "Cozinheiros" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Chefs"
-          }
-        }
-      }
-    },
     "Curiosidade" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Curiosity"
-          }
-        }
-      }
-    },
-    "Degustadores" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tasters"
-          }
-        }
-      }
-    },
-    "Escolha um País" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Choose a Country"
           }
         }
       }
@@ -208,6 +86,57 @@
         }
       }
     },
+    "home_button" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Start"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Começar"
+          }
+        }
+      }
+    },
+    "home_description" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Paladares is a space where you can cook and explore new cultures with your friends."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Paladares é um espaço onde você poderá cozinhar e explorar novas culturas junto com seus amigos."
+          }
+        }
+      }
+    },
+    "home_welcome" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Welcome to Paladares!"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Olá, bem-vindo!"
+          }
+        }
+      }
+    },
     "Ingredientes" : {
       "localizations" : {
         "en" : {
@@ -218,33 +147,12 @@
         }
       }
     },
-    "Iniciante" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Beginner"
-          }
-        }
-      }
-    },
     "Iniciar Preparo" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Start Preparation"
-          }
-        }
-      }
-    },
-    "Italiana:" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Italian:"
           }
         }
       }
@@ -289,36 +197,6 @@
         }
       }
     },
-    "Nível de Habilidade" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Skill Level"
-          }
-        }
-      }
-    },
-    "Olá, bem-vindo!" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Hello, welcome!"
-          }
-        }
-      }
-    },
-    "Paladares é um espaço onde você poderá cozinhar e \nexplorar novas culturas junto com seus amigos" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Paladares is a space where you can cook and explore new cultures with your friends."
-          }
-        }
-      }
-    },
     "Parabéns!" : {
       "localizations" : {
         "en" : {
@@ -345,22 +223,80 @@
         }
       }
     },
+    "recipe_detail_button" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Start Preparation"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Iniciar preparo"
+          }
+        }
+      }
+    },
+    "recipe_detail_curiosity" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Curiosity"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Curiosidade"
+          }
+        }
+      }
+    },
+    "recipe_detail_ingredients" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ingredients"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ingredientes"
+          }
+        }
+      }
+    },
+    "recipe_list_title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Flavors of the World"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sabores do Mundo"
+          }
+        }
+      }
+    },
     "Retornar ao Menu" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Return to Menu"
-          }
-        }
-      }
-    },
-    "Sabores do Mundo" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Flavors of the World"
           }
         }
       }
@@ -411,17 +347,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Are you sure you want to exit the recipe?"
-          }
-        }
-      }
-    },
-    "X-Caboquinho" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "X-Caboquinho"
           }
         }
       }

@@ -48,7 +48,7 @@ struct RecipeListView: View {
             }
             .padding()
             .multilineTextAlignment(.center)
-            .navigationTitle("Sabores do Mundo")
+            .navigationTitle("recipe_list_title")
             .navigationBarTitleDisplayMode(.large)
         }
     }

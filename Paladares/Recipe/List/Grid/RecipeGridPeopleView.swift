@@ -40,5 +40,5 @@ extension ContentSizeCategory {
 }
 
 #Preview {
-    RecipeGridPeopleView(people: "4 pessoas")
+    RecipeGridPeopleView(people: mockRecipeLamen.people)
 }

@@ -9,7 +9,6 @@ import SwiftUI
 
 struct RecipeGridImageView: View {
     
-    // var image: String
     let recipe: Recipe
     
     var body: some View {
