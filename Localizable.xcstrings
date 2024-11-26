@@ -2,86 +2,55 @@
   "sourceLanguage" : "pt-BR",
   "strings" : {
     "" : {
-
+      "shouldTranslate" : false
     },
-    "•  %@" : {
+    "congratulations_button" : {
+      "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "•  %@"
-          }
-        }
-      }
-    },
-    "• %@" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "• %@"
-          }
-        }
-      }
-    },
-    "• %@ %@" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "• %1$@ %2$@"
+            "value" : "Return to menu"
           }
         },
         "pt-BR" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "• %1$@ %2$@"
+            "state" : "translated",
+            "value" : "Retornar ao Menu"
           }
         }
       }
     },
-    "Chef %lld" : {
+    "congratulations_message" : {
+      "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Chef %lld"
-          }
-        }
-      }
-    },
-    "Chef %lld: %@" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Chef %1$lld: %2$@"
+            "value" : "You have completed this recipe, keep exploring new cultures!"
           }
         },
         "pt-BR" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "Chef %1$lld: %2$@"
+            "state" : "translated",
+            "value" : "Você concluiu esta receita, continue explorando \n novas culturas!"
           }
         }
       }
     },
-    "Curiosidade" : {
+    "congratulations_title" : {
+      "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Curiosity"
+            "value" : "Congratulations!"
           }
-        }
-      }
-    },
-    "Finalizar" : {
-      "localizations" : {
-        "en" : {
+        },
+        "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Finish"
+            "value" : "Parabéns!"
           }
         }
       }
@@ -137,88 +106,53 @@
         }
       }
     },
-    "Ingredientes" : {
+    "option_affirmative" : {
+      "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ingredients"
+            "value" : "Yes"
           }
-        }
-      }
-    },
-    "Iniciar Preparo" : {
-      "localizations" : {
-        "en" : {
+        },
+        "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Start Preparation"
+            "value" : "Sim"
           }
         }
       }
     },
-    "Japonesa:" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Japanese:"
-          }
-        }
-      }
-    },
-    "Não" : {
+    "option_negative" : {
+      "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "No"
           }
-        }
-      }
-    },
-    "Nenhum passo disponível para o Chef %lld" : {
-      "localizations" : {
-        "en" : {
+        },
+        "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "No steps available for the Chef%lld"
+            "value" : "Não"
           }
         }
       }
     },
-    "Nenhuma receita selecionada." : {
+    "recipe_detail_alert_message" : {
+      "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "No recipe selected."
-          }
-        }
-      }
-    },
-    "Parabéns!" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Congratulations!"
-          }
-        }
-      }
-    },
-    "Passo %lld/%lld" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Step %1$lld/%2$lld"
+            "value" : "Do you really want to get out of the recipe?"
           }
         },
         "pt-BR" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "Passo %1$lld/%2$lld"
+            "state" : "translated",
+            "value" : "Você deseja mesmo sair da receita?"
           }
         }
       }
@@ -274,6 +208,56 @@
         }
       }
     },
+    "recipe_detail_suggestions" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Suggestions"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sugestões"
+          }
+        }
+      }
+    },
+    "recipe_detail_utensils" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Essential Utensils"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Utensílios Essenciais"
+          }
+        }
+      }
+    },
+    "recipe_list_country_japan" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Japanese:"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Japonesa:"
+          }
+        }
+      }
+    },
     "recipe_list_title" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -291,62 +275,83 @@
         }
       }
     },
-    "Retornar ao Menu" : {
+    "recipe_preparation_button_chef %lld" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Return to Menu"
+            "value" : "Chef %lld"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chef %lld"
           }
         }
       }
     },
-    "Sim" : {
+    "recipe_preparation_button_finish" : {
+      "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Yes"
+            "value" : "Finish"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Finalizar"
           }
         }
       }
     },
-    "Sugestões" : {
+    "recipe_preparation_chef %lld: %@" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Suggestions"
+            "value" : "Chef %1$lld: %2$@"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chef %1$lld: %2$@"
           }
         }
       }
     },
-    "Utensílios Essenciais" : {
+    "recipe_preparation_methods_not_found %lld" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Essential Utensils"
+            "value" : "No steps available for the Chef %lld"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nenhum passo disponível para o Chef %lld"
           }
         }
       }
     },
-    "Você concluiu esta receita, continue explorando \n novas culturas!" : {
+    "recipe_preparation_step %lld/%lld" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "You have completed this recipe, keep exploring new cultures!"
+            "value" : "Step %1$lld/%2$lld"
           }
-        }
-      }
-    },
-    "Você deseja mesmo sair da receita?" : {
-      "localizations" : {
-        "en" : {
+        },
+        "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Are you sure you want to exit the recipe?"
+            "value" : "Passo %1$lld/%2$lld"
           }
         }
       }

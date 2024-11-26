@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SentenceView: View {
     var body: some View {
-        Text("Você concluiu esta receita, continue explorando \n novas culturas!")
+        Text("congratulations_message")
             .font(.system(.body))
             .fontWeight(.bold)
             .foregroundStyle(.corCinza2)

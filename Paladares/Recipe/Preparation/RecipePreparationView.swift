@@ -27,85 +27,81 @@ struct RecipePreparationView: View {
     let heightScreen = UIScreen.main.bounds.height
     
     var body: some View {
-        guard let recipe = /*viewModel.selectedRecipe*/ viewModel.dataLoader.recipes.first else {
-            return AnyView(Text("Nenhuma receita selecionada."))
-        }
+        let recipe = viewModel.selectedRecipe!
         
-        return AnyView(
-            VStack{
-                ButtonBackView(showExitConfirmation: $showExitConfirmation)
-                HStack {
-                    let totalSteps = recipe.preparationMethods.map { $0.steps.count }
-                    
-                    var allStepsCompleted: Bool {
-                        currentStepIndex.enumerated().allSatisfy { index, stepIndex in
-                            stepIndex == totalSteps[index] - 1
-                        }
-                    }
-                    
-                    // Menu lateral de seleção de chefs
-                    ChefSelectionView(
-                        selectedChefId: $selectedChefId,
-                        shadowColor: $shadowColor,
-                        preparationMethods: recipe.preparationMethods
-                    )
-                    .frame(width: widthScreen*0.1903)
-                    .minimumScaleFactor(sizeCategory.customMinScaleFactorStepView)
-                    
-                    // Conteúdo principal
-                    VStack(alignment: .leading, spacing: 20) {
-                        if let selectedChef = recipe.preparationMethods.first(where: { $0.chefId == selectedChefId }) {
-                            // Exibição do progresso
-                            Text("Passo \(currentStepIndex[selectedChefId - 1] + 1)/\(selectedChef.steps.count)")
-                                .font(.custom("SF Pro", size: 24, relativeTo: .headline))
-                                .fontWeight(.medium)
-                                .foregroundColor(Color.shadeGray)
-                                .minimumScaleFactor(sizeCategory.customMinScaleFactorStepView)
-                            
-                            // Nome do chef e etapa
-                            Text("Chef \(selectedChef.chefId): \(selectedChef.stage)")
-                                .font(.custom("SF Pro", size: 48, relativeTo: .largeTitle))
-                                .fontWeight(.semibold)
-                                .foregroundColor(Color.shadeGray)
-                                .frame(width: widthScreen*0.6032, alignment: .leading)
-                                .minimumScaleFactor(sizeCategory.customMinScaleFactorStepView)
-                            
-                            Spacer()
-                            
-                            // Exibição dos passos usando StepByStepView
-                            StepByStepView(
-                                recipe: recipe,
-                                selectedChefId: $selectedChefId,
-                                currentStepIndex: $currentStepIndex
-                            )
-                            .minimumScaleFactor(sizeCategory.customMinScaleFactorStepView)
-                            
-                            Spacer()
-                            
-                            // Botões de navegação entre passos
-                            NavigationButtonsView(
-                                currentStepIndex: $currentStepIndex[selectedChefId - 1],
-                                allStepsCompleted: .constant(allStepsCompleted),
-                                totalSteps: selectedChef.steps.count,
-                                foregroundColor: chefsShadowsColors[selectedChefId - 1], // Cor do chef selecionado
-                                onFinish: {
-                                    coordinator.push(.congratulations)
-                                }
-                            )
-                            .minimumScaleFactor(sizeCategory.customMinScaleFactorStepView)
-                        }
-                    }
-                    .padding()
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
-                }
-                .frame(width: widthScreen*0.8565, height: heightScreen*0.8301)
-                .padding()
+        VStack{
+            ButtonBackView(showExitConfirmation: $showExitConfirmation)
+            HStack {
+                let totalSteps = recipe.preparationMethods.map { $0.steps.count }
                 
-            }
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                var allStepsCompleted: Bool {
+                    currentStepIndex.enumerated().allSatisfy { index, stepIndex in
+                        stepIndex == totalSteps[index] - 1
+                    }
+                }
+                
+                // Menu lateral de seleção de chefs
+                ChefSelectionView(
+                    selectedChefId: $selectedChefId,
+                    shadowColor: $shadowColor,
+                    preparationMethods: recipe.preparationMethods
+                )
+                .frame(width: widthScreen*0.1903)
+                .minimumScaleFactor(sizeCategory.customMinScaleFactorStepView)
+                
+                // Conteúdo principal
+                VStack(alignment: .leading, spacing: 20) {
+                    if let selectedChef = recipe.preparationMethods.first(where: { $0.chefId == selectedChefId }) {
+                        // Exibição do progresso
+                        Text("recipe_preparation_step \(currentStepIndex[selectedChefId - 1] + 1)/\(selectedChef.steps.count)")
+                            .font(.custom("SF Pro", size: 24, relativeTo: .headline))
+                            .fontWeight(.medium)
+                            .foregroundColor(Color.shadeGray)
+                            .minimumScaleFactor(sizeCategory.customMinScaleFactorStepView)
+                        
+                        // Nome do chef e etapa
+                        Text("recipe_preparation_chef \(selectedChef.chefId): \(selectedChef.stage)")
+                            .font(.custom("SF Pro", size: 48, relativeTo: .largeTitle))
+                            .fontWeight(.semibold)
+                            .foregroundColor(Color.shadeGray)
+                            .frame(width: widthScreen*0.6032, alignment: .leading)
+                            .minimumScaleFactor(sizeCategory.customMinScaleFactorStepView)
+                        
+                        Spacer()
+                        
+                        // Exibição dos passos usando StepByStepView
+                        StepByStepView(
+                            recipe: recipe,
+                            selectedChefId: $selectedChefId,
+                            currentStepIndex: $currentStepIndex
+                        )
+                        .minimumScaleFactor(sizeCategory.customMinScaleFactorStepView)
+                        
+                        Spacer()
+                        
+                        // Botões de navegação entre passos
+                        NavigationButtonsView(
+                            currentStepIndex: $currentStepIndex[selectedChefId - 1],
+                            allStepsCompleted: .constant(allStepsCompleted),
+                            totalSteps: selectedChef.steps.count,
+                            foregroundColor: chefsShadowsColors[selectedChefId - 1], // Cor do chef selecionado
+                            onFinish: {
+                                coordinator.push(.congratulations)
+                            }
+                        )
+                        .minimumScaleFactor(sizeCategory.customMinScaleFactorStepView)
+                    }
+                }
                 .padding()
-                .navigationBarBackButtonHidden(true)
-        )
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+            }
+            .frame(width: widthScreen*0.8565, height: heightScreen*0.8301)
+            .padding()
+            
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .padding()
+        .navigationBarBackButtonHidden(true)
     }
 }
 

@@ -46,7 +46,7 @@ struct NavigationButtonsView: View {
                 Button(action: {
                     onFinish()
                 }) {
-                    Text("Finalizar")
+                    Text("recipe_preparation_button_finish")
                         .font(.custom("SF Pro", size: 24, relativeTo: .headline))
                         .frame(width: widthScreen*0.1406, height: heightScreen*0.0820)
                         .background(foregroundColor)

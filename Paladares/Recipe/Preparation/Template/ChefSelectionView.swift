@@ -38,7 +38,7 @@ struct ChefSelectionView: View {
                             .scaledToFit()
                             .frame(width: widthScreen*0.0827, height: heightScreen*0.1104)
                             .shadow(color: selectedChefId == chef.chefId ? chefColor : .clear, radius: selectedChefId == chef.chefId ? 15 : 0)
-                        Text("Chef \(chef.chefId)")
+                        Text("recipe_preparation_button_chef \(chef.chefId)")
                             .foregroundColor(.black)
                             .font(.custom("SF Pro", size: 24, relativeTo: .body))
                     }

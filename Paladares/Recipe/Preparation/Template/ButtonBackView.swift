@@ -39,11 +39,11 @@ struct ButtonBackView: View {
             Spacer()
         }
         .frame(width: widthScreen * 0.95)
-        .alert("Você deseja mesmo sair da receita?", isPresented: $showExitConfirmation) {
-            Button("Não", role: .cancel) {
+        .alert("recipe_detail_alert_message", isPresented: $showExitConfirmation) {
+            Button("option_negative", role: .cancel) {
                 showExitConfirmation = false
             }
-            Button("Sim", role: .destructive) {
+            Button("option_affirmative", role: .destructive) {
                 coordinator.pop() // Retorna para a tela anterior
             }
         }

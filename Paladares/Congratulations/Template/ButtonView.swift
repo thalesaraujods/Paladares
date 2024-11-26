@@ -12,7 +12,7 @@ struct ButtonView: View {
     @Environment(\.sizeCategory) var sizeCategory
     
     var body: some View {
-        Label("Retornar ao Menu", systemImage: "")
+        Label("congratulations_button", systemImage: "")
             .font(.system(.body))
             .fontWeight(.bold)
             .padding()
