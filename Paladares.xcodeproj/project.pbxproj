@@ -8,12 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		3B46158D2CD2B6AF00E4086A /* FlagsKit in Frameworks */ = {isa = PBXBuildFile; productRef = 3B46158C2CD2B6AF00E4086A /* FlagsKit */; };
-		D9B90FED2CE5199E008A3A16 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = D9B90FEC2CE5199E008A3A16 /* Localizable.xcstrings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3B7DBB042CC2FFD4004AC177 /* Paladares.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Paladares.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		D9B90FEC2CE5199E008A3A16 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -52,7 +50,6 @@
 		3B7DBAFB2CC2FFD4004AC177 = {
 			isa = PBXGroup;
 			children = (
-				D9B90FEC2CE5199E008A3A16 /* Localizable.xcstrings */,
 				3B7DBB062CC2FFD4004AC177 /* Paladares */,
 				3B7DBB052CC2FFD4004AC177 /* Products */,
 			);
@@ -135,7 +132,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D9B90FED2CE5199E008A3A16 /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
