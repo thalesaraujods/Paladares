@@ -16,7 +16,7 @@ struct RecipeDetailIngredientsView: View {
     var body: some View {
         VStack {
             
-            Text("Ingredientes")
+            Text("recipe_detail_ingredients")
                 .font(.system(.title))
                 .fontWeight(.bold)
                 .foregroundColor(Color(red: 0.22, green: 0.56, blue: 0.24))
@@ -27,7 +27,7 @@ struct RecipeDetailIngredientsView: View {
             VStack (alignment: .leading){
                 ForEach(recipe.ingredients, id: \.name) { ingredient in
                     HStack {
-                        Text("• \(ingredient.quantity) \(ingredient.unit)")
+                        Text("•" + " \(ingredient.quantity) \(ingredient.unit)")
                             .foregroundColor(Color(red: 0.22, green: 0.56, blue: 0.24))
                             .fontWeight(.semibold)
                             .minimumScaleFactor(sizeCategory.customMinScaleFactorIngredientsView)

@@ -17,7 +17,7 @@ struct RecipeDetailUtensilsView: View {
         VStack {
             VStack(alignment: .leading, spacing: 20) {
                 // Título da seção
-                Text("Utensílios Essenciais")
+                Text("recipe_detail_utensils")
                     .font(.system(.title))
                     .fontWeight(.bold)
                     .foregroundColor(Color(red: 0.22, green: 0.56, blue: 0.24))
@@ -28,7 +28,7 @@ struct RecipeDetailUtensilsView: View {
                 // Lista de utensílios
                 VStack(alignment: .leading, spacing: 10) {
                     ForEach(recipe.utensils, id: \.self) { utensil in
-                        Text("•  \(utensil)")
+                        Text("•" + "  \(utensil)")
                             .font(
                                 Font.custom("SF Pro", size: 19, relativeTo: .body)
                             

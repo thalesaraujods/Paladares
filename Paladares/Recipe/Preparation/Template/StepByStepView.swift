@@ -30,7 +30,7 @@ struct StepByStepView: View {
                     .tag(index)
                 }
             } else {
-                Text("Nenhum passo disponível para o Chef \(selectedChefId)")
+                Text("recipe_preparation_methods_not_found \(selectedChefId)")
                     .font(.body)
                     .foregroundColor(.gray)
             }

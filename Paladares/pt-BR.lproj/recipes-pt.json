@@ -454,8 +454,8 @@
                         "description": "Pegue um pouco de arroz na mão e faça uma depressão no meio. Coloque um pouco de recheio no meio."
                     },
                     {
-                    "stepNumber": "Passo 3",
-                    "description": "Adicione arroz na sua mão para fechar a bola de arroz. Pressione com a sua segunda mão até ter uma forma triangular."
+                        "stepNumber": "Passo 3",
+                        "description": "Adicione arroz na sua mão para fechar a bola de arroz. Pressione com a sua segunda mão até ter uma forma triangular."
                     }
                 ]
             },
@@ -540,8 +540,8 @@
                         "description": "Na segunda porção, adicione o matcha em pó e misture até que fique uniforme. Deixe a terceira porção branca, sem adicionar corante."
                     },
                     {
-                    "stepNumber": "Passo 3",
-                    "description": "Modele as três porções de massa em pequenas bolas de aproximadamente 2 cm de diâmetro (fazendo 12 bolinhos no total)."
+                        "stepNumber": "Passo 3",
+                        "description": "Modele as três porções de massa em pequenas bolas de aproximadamente 2 cm de diâmetro (fazendo 12 bolinhos no total)."
                     }
                 ]
             },
@@ -558,8 +558,8 @@
                         "description": "Quando a água estiver fervendo, coloque as bolinhas de dango na água com cuidado. Cozinhe por cerca de 5 a 8 minutos, ou até que elas subam à superfície."
                     },
                     {
-                    "stepNumber": "Passo 3",
-                    "description": "Retire os bolinhos com uma escumadeira e coloque-os em um recipiente com água fria para esfriar um pouco."
+                        "stepNumber": "Passo 3",
+                        "description": "Retire os bolinhos com uma escumadeira e coloque-os em um recipiente com água fria para esfriar um pouco."
                     }
                 ]
             },
@@ -645,8 +645,8 @@
                         "description": "Umedeça as bordas da massa com um pouco de água (pode usar o dedo ou um pincel de cozinha)."
                     },
                     {
-                    "stepNumber": "Passo 3",
-                    "description": "Dobre a massa ao meio para cobrir o recheio e pressione as bordas para selar bem. Você pode usar os dedos para criar pequenas pregas na borda para dar o formato típico dos gyozas."
+                        "stepNumber": "Passo 3",
+                        "description": "Dobre a massa ao meio para cobrir o recheio e pressione as bordas para selar bem. Você pode usar os dedos para criar pequenas pregas na borda para dar o formato típico dos gyozas."
                     }
                 ]
             },
@@ -663,8 +663,8 @@
                         "description": " Adicione cerca de 1/4 de xícara de água na frigideira (para gerar vapor) e tampe imediatamente. Cozinhe por cerca de 5-7 minutos ou até que os gyozas estejam cozidos por dentro e a água tenha evaporado."
                     },
                     {
-                    "stepNumber": "Passo 3",
-                    "description": "Retire os gyozas da frigideira e coloque-os em um prato."
+                        "stepNumber": "Passo 3",
+                        "description": "Retire os gyozas da frigideira e coloque-os em um prato."
                     }
                 ]
             },
@@ -685,4 +685,4 @@
         ]
     }
 ]
-
+ 

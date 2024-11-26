@@ -14,7 +14,7 @@ struct CongratsView: View {
     var body: some View {
         VStack (spacing: 30){
             Image(.congrats)
-            Text("Parabéns!")
+            Text("congratulations_title")
                 .font(.system(.largeTitle))
                 .fontWeight(.bold)
                 .kerning(0.4)

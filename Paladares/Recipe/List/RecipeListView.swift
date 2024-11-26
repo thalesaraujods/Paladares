@@ -25,7 +25,7 @@ struct RecipeListView: View {
             VStack(alignment: .leading, spacing: 26) {
                 
                 // Exibe receitas do Japão
-                Text("Japonesa:")
+                Text("recipe_list_country_japan")
                     .font(Font.custom("SF Compact Rounded", size: 32, relativeTo: .largeTitle)
                         .weight(.bold))
                     .padding(.leading, 65)
@@ -48,7 +48,7 @@ struct RecipeListView: View {
             }
             .padding()
             .multilineTextAlignment(.center)
-            .navigationTitle("Sabores do Mundo")
+            .navigationTitle("recipe_list_title")
             .navigationBarTitleDisplayMode(.large)
         }
     }

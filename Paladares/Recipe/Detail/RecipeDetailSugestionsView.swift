@@ -16,7 +16,7 @@ struct RecipeDetailSugestionsView: View {
     var body: some View {
         VStack {
             VStack(alignment: .leading, spacing: 20) {
-                Text("Sugestões")
+                Text("recipe_detail_suggestions")
                     .font(.system(.title))
                     .fontWeight(.bold)
                     .padding(.bottom, 40)
@@ -26,7 +26,7 @@ struct RecipeDetailSugestionsView: View {
                 
                 VStack(alignment: .leading, spacing: 10) {
                     ForEach(recipe.suggestions, id: \.self) { suggestion in
-                        Text("• \(suggestion)")
+                        Text("•" + " \(suggestion)")
                             .font(
                                 Font.custom("SF Pro", size: 19, relativeTo: .body)
                             
